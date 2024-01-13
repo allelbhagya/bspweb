@@ -1,0 +1,2629 @@
+Sensor_ID,Tagnames
+[1:0],INT_PROC_40_DB.InterruptTimeStamp[9]
+[1:1],INT_PROC_40_DB.InterruptTimeStamp[10]
+[1:2],INT_PROC_40_DB.InterruptTimeStamp[11]
+[1:3],INT_PROC_40_DB.InterruptTimeStamp[12]
+[1:4],L1_DCVR_WORK_DB.DriveIn.SpeedFeedback
+[1:5],L1_DCVR_WORK_DB.DriveIn.TorqueFeedback
+[1:6],L1_DCVR_WORK_DB.DriveOut.SpeedRef
+[1:7],OPT_Avg_PH0C_Measures Counter
+[1:8],OPT_Avg_PH0C_Measures Counter
+[1:9],OPT_Avg_PH0A_Measures Counter
+[1:10],OPT_Avg_PH0B_Measures Counter
+[1:11],E35_DCVAH_TheorPos
+[1:12],L1_DCVAH Act Position
+[1:13],L1_PR5 Act Speed
+[1:14],L1_PR5 Set Speed
+[1:15],L1_PR5 Act Torque
+[1:16],L1_PR5 Set Torque
+[1:17],L1_PR1_ActSpeed
+[1:18],L1_PR1_SetSpeed
+[1:19],L1_PR1_ActTorque
+[1:20],L1_PR1_SetTorque
+[1:21],L1_CVR KNIVES POSITION
+[1:22],L1_PR2_ActSpeed
+[1:23],L1_PR2_SetSpeed
+[1:24],L1_PR2_ActTorque
+[1:25],L1_PR3_ActSpeed
+[1:26],L1_PR3_SetSpeed
+[1:27],L1_PR3_ActTorque
+[1:28],ACT-DATA1_DB.WB12_WR_FLR_VLV
+[1:29],ACT-DATA1_DB.WB34_WR_FLR_VLV
+[1:30],L1 bar temperature
+[1:31],L1_PR4_ActSpeed
+[1:32],L1_PR4_SetSpeed
+[1:33],L1_PR4_ActTorque
+[1:34],L1_DCVRD Act Position
+[1:35],L1_DCVR Set Position for PID
+[1:36],L1_DCVR Act Position
+[1:37],L1_DCVR Theor speed
+[1:38],L1_DCVR PID OUTPUT
+[1:39],L1_CVR_Calibr Speed Factor Measured
+[1:40],Speed from SpeedMeter L1
+[1:41],SpeedMeter Bar motion L1
+[1:42],SpeedMeter measured calib.f.  K L1
+[1:43],L1_WB12_ANALOG_IN_DB.InPressureFilt
+[1:44],L1_WB12_ANALOG_IN_DB.OutPressureFilt
+[1:45],L1_WB34_ANALOG_IN_DB.InPressureFilt
+[1:46],L1_WB34_ANALOG_IN_DB.OutPressureFilt
+[1:47],Calibr speed for DCVAH L1
+[1:48],Speed calibr factor L1
+[1:49],L1 SYNCHRONIZE PC ERROR POSITION DURING CYCLE
+[1:50],Speed calibr factor with HMD L1
+[1:51],L1_WB12 Actual Flow Rate
+[1:52],L1_WB34 Actual Flow Rate
+[1:53],L1_PR2 head tracking close
+[1:54],L1_PR3 head tracking close
+[1:55],L1_PR2 machine distance from tracking zero point
+[1:56],L1_PR3 machine distance from tracking zero point
+[1:59],E35_CVAH_Actual torque
+[1:60],L1_PR2 Roll Closing Pressure
+[1:61],L1_PR3 Roll Closing Pressure
+[1:62],L1_PR4 Roll Closing Pressure
+[1:63],L1_PR5 Roll Closing Pressure
+[1:64],L1_WB12_Pressure Set
+[1:65],L1_WB34_Pressure Set
+[1:66],L1_WB12_VLV_POS
+[1:67],L1_WB34_VLV_POS
+[1:68],E35_CVAH_ActualRotorPosition
+[1:69],L1_PR2 ACTUAL CURRENT
+[1:70],L1_PR3 ACTUAL CURRENT
+[1:71],L1_PR1 ACTUAL CURRENT
+[1:72],L1_CVAH ACTUAL CURRENT
+[1:73],E35_DCVAH_Actual torque
+[1:74],L1_CVR Speed feedback from drive
+[1:75],L1_CVR torque feedback from drive
+[1:76],L1_CVR output current feedback from drive
+[1:77],L1_CVR Speed reference to drive
+[1:78],L1_DCVR Speed feedback from drive
+[1:79],L1_DCVR torque feedback from drive
+[1:80],L1_DCVR output current feedback from drive
+[1:81],L1_DCVR Speed reference to drive
+[1.0],L1_CVR_WORK_DB.Automatic
+[1.1],L1_CVR_WORK_DB.MissedStart
+[1.2],L1_CVR_WORK_DB.RunConsent1
+[1.3],L1_CVR_WORK_DB.RunConsent2
+[1.4],L1_CVR_WORK_DB.START_Permissive
+[1.5],L1_CVR_WORK_DB.StopMemo
+[1.6],L1_CVR_WORK_DB.SpeedRefEnable
+[1.7],L1_CVR_WORK_DB.ShearMotionEnable
+[1.8],L1_PR1_WORK_DB.DriveIn.Status.Started
+[1.9],L1_PR1_WORK_DB.MissedStart
+[1.10],L1_PR1_WORK_DB.Runconsent1
+[1.11],L1_PR1_WORK_DB.Runconsent2
+[1.12],L1_PR1_WORK_DB.START_Permissive
+[1.13],L1_PR1_WORK_DB.MissedRun_Confirm
+[1.14],L1_CVR_WORK_DB.DriveIn.Status.SpeedNotZero
+[1.15],L1_CVR_WORK_DB.DriveIn.Status.Started
+[1.16],L1_DCVR_WORK_DB.DriveIn.Status.ReadyToPreset
+[1.17],L1_DCVR_WORK_DB.DriveIn.Status.PresetConfirm
+[1.18],L1_DCVR_WORK_DB.DriveIn.Status.Started
+[1.19],L1_DCVR_WORK_DB.Automatic
+[1.20],L1_DCVR_WORK_DB.MissedStart
+[1.21],L1_DCVR_WORK_DB.RunConsent1
+[1.22],L1_DCVR_WORK_DB.RunConsent2
+[1.23],L1_DCVR_WORK_DB.RunConsent3
+[1.24],L1_CVR_WORK_DB.CutEnable
+[1.25],L1_DVRD L1 Opt chop command
+[1.26],L1_CVR_WORK_DB.OptChopSyncReq
+[1.27],L1_CVR_WORK_DB.StartTailSyncroRequest
+[1.28],L1_CVR_WORK_DB.TailCutSyncReqMemo
+[1.29],L1_CVR_WORK_DB.OptChopSyncReqMemo
+[1.30],L1_CVR_WORK_DB.OptShShiftCalcReqCVRAux
+[1.31],L1_CVR_POS_DB.OUT_PositionKnown
+[1.32],L1_DCVR_WORK_DB.ChoppingMemoryActive
+[1.33],L1_DCVR_WORK_DB.ManChopReqMem
+[1.34],L1_DCVR Line 1 Chop any case
+[1.35],L1_DCVR_WORK_DB.UpstrCondChopRequest
+[1.36],L1_DCVR_WORK_DB.UpstrUncondChopRequest
+[1.37],L1_DCVR_POS_DB.OUT_PositionKnown
+[1.38],L1_DCVR PH0 StatL1
+[1.39],L1_DCVR PH01 StatL1
+[1.40],L1_DCVR_WORK_DB.ON_Permissive
+[1.41],L1_DCVR_WORK_DB.CYCLE_Permissive
+[1.42],L1_DCVR_WORK_DB.AUTOCHOP_RequestOFF
+[1.43],L1_DCVR_WORK_DB.CutEnable
+[1.44],L1_DCVR L1 Speed ref enable
+[1.45],L1_DCVR_WORK_DB.CMD_NotAllowed_DrvNotRdy
+[1.46],L1_DCVR_WORK_DB.CMD_NotAllowed_DrvLocal
+[1.47],L1_DCVR_WORK_DB.DriveCommFlt
+[1.48],L1_DCVR L1 Go To Chopping line
+[1.49],L1_PR2_WORK_DB.AutoChopShearReq
+[1.50],L1_PR3_WORK_DB.AutoChopShearReq
+[1.51],L1_WB12_WORK_DB.AutoChopShearReq
+[1.52],L1_WB34_WORK_DB.AutoChopShearReq
+[1.53],L1_PR4_WORK_DB.AutoChopShearReq
+[1.54],CVRD Preset Confirm
+[1.55],CVRD Start Confirm
+[1.56],L1_DCVR PH1 Stat
+[1.57],L1_DCVR Head Count
+[1.58],L1_DCVR Tail Count
+[1.59],L1_DCVR Bar present at knives cross point
+[1.60],L1_DCVR BarOutofShear
+[1.61],L1_DCVR Towards Rolling
+[1.62],L1_DCVR Towards Chopping
+[1.63],L1_DCVR Go To Rolling line
+[1.64],L1_DCVRD Position known
+[1.65],L1_DCVRD Drive  Preset confirm
+[1.66],L1_DCVRD Drive  Start confirm
+[1.67],L1_DCVRD Drive  fault
+[1.68],L1_DCVRD Drive  Missed run confirm
+[1.69],L1_DCVRD Run consent 1
+[1.70],L1_DCVRD Run consent 2
+[1.71],L1_DCVRD CHOP REQUEST
+[1.72],L1_CVRD Drive fault
+[1.73],L1_CVRD Preset Comand
+[1.74],L1_CVRD  Missed Start
+[1.75],L1_CVRD Run Consent 1
+[1.76],L1_CVRD Run Consent 2
+[1.77],L1_CVRD Run Consent 3
+[1.78],L1_CVRD Run permissive
+[1.79],L1_CVRD Drive communication
+[1.80],Chopping request for TAIL OPT overshoot
+[1.81],L1_DCVRD Drive  Preset cmd
+[1.82],L1_DVRD PH0 Stat
+[1.83],L1_DCVRD PH01 Stat
+[1.84],L1_DCVRD PH1 Stat
+[1.85],Valid Tail PH0A L1
+[1.86],Valid Tail PH0B L1
+[1.87],Valid Tail PH0C L1
+[1.88],L1_DCVRD CHOP REQ Cut Enable DCVRD
+[1.89],L1_DCVRD Drive Comm fault
+[1.90],L1_DCVRD CHOP REQ Chopping memory
+[1.91],L1_DCVRD_WORK_DB.ChpReqMemory
+[1.92],L1_CVRD Upstream condition chop req
+[1.93],L1_CVRD Upstream uncondition chop req
+[1.94],L1_DCVRD_WORK_DB.ChpReqOther_TAIL OPT overshoot
+[1.95],L1_DCVRD CHOP REQ Missed Div cut
+[1.96],Valid Tail PH0P L1
+[1.97],Valid Tail PH1 L1
+[1.98],Valid Tail SH1 L1
+[1.99],Valid Tail SH2 L1
+[1.100],Valid Tail SH3 L1
+[1.101],Valid tail before CVAH L1
+[1.102],Valid Tail Before SH3 L1
+[1.103],L1_DCVRD_BAR_TRK_DB.IncomingTail
+[1.104],Valid Tail PH0D L1
+[1.105],Valid Tail PH0E L1
+[1.106],Valid Tail PH0FL1
+[1.107],Valid Tail PH0G L1
+[1.108],Valid Tail PH0HL1
+[1.109],Valid Tail PH0L L1
+[1.110],Valid Tail PH0M L1
+[1.111],Valid Tail PH0N L1
+[1.112],DCVAH Pos known L1
+[1.113],HMD 04 Head Wind Enable
+[1.114],HMD 04 Tail Wind Enable
+[1.115],HMD 05 Head Wind Enable
+[1.116],HMD 05 Tail Wind Enable
+[1.117],HMD 06 Head Wind Enable
+[1.118],HMD 06 Tail Wind Enable
+[1.119],HMD 07 Head Wind Enable
+[1.120],L1_DVRD HeadCount
+[1.121],L1_DVRD TailCount
+[1.122],L1_DCVRD Barat knives cross point
+[1.123],L1_DCVRD BarOutofShear
+[1.124],L1_DVRD PH1 NoViewAlarm
+[1.125],L1_CVAH_Start Permissive
+[1.126],L1_DCVRD CHOP REQ from CVAH
+[1.127],L1_DCVRD CHOP REQ Cobble
+[1.128],HMD 12 Tail Wind Enable
+[1.129],HMD 13Head Wind Enable
+[1.130],HMD 13 Tail Wind Enable
+[1.131],HMD 16Head Wind Enable
+[1.132],HMD 16Tail Wind Enable
+[1.133],HMD 18Head Wind Enable
+[1.134],HMD 18Tail Wind Enable
+[1.135],HMD 19Head Wind Enable
+[1.136],HMD 07 Tail Wind Enable
+[1.137],HMD 09 Head Wind Enable
+[1.138],HMD 09 Tail Wind Enable
+[1.139],HMD 10 Head Wind Enable
+[1.140],HMD 10 Tail Wind Enable
+[1.141],HMD 11Head Wind Enable
+[1.142],HMD 11 Tail Wind Enable
+[1.143],HMD 12 Head Wind Enable
+[1.144],L1_DCVAH_ Start Confirme
+[1.145],L1_DCVAH Drive fault
+[1.146],L1_DCVAH Automatic
+[1.147],L1_DCVRD CHOP REQ Bar continuity
+[1.148],L1_DCVAH_WORK_DB.DriveAlarmsType3
+[1.149],L1_DCVAH Run consent 1
+[1.150],L1_DCVAH Run consent 2
+[1.151],L1_DCVAH Run consent 3
+[1.152],HMD 19Tail Wind Enable
+[1.153],HMD 29Head Wind Enable
+[1.154],HMD 29Tail Wind Enable
+[1.155],HMD 30 Head Wind Enable L1
+[1.156],HMD 30 Tail Wind Enable L1
+[1.157],HMD 31 Head Wind Enable L1
+[1.158],HMD 31 Tail Wind Enable L1
+[1.159],JD01E10_COMM_DB.CPU1_MPI_FROM.CVR_AUT_CHP_CMD
+[1.160],L1_DCVAH_ Start Comand L1
+[1.161],JD01E20_COMM_DB.CPU1_MPI_FROM.CVR_CHOP_REQ
+[1.162],L1_DCVAH BAXC
+[1.163],L1_DCVAH_BAR_TRK_DB.OUT.ValidTailCVAH
+[1.164],L1_DCVAH_CUTS_TWC_DB.IN_BarAtKnivesCross
+[1.165],L1_DCVAH_CUTS_TWC_DB.IN_BarFromCVR
+[1.166],OPT Valid Tail before DCVR (Shear 3) L1
+[1.167],L1_DCVAH_CUTS_TWC_DB.IN_VTail
+[1.168],L1_DCVAH_WORK_DB.RunConsent1_Tout
+[1.169],L1_DCVAH_WORK_DB.RunConsent2_Tout
+[1.170],L1_DCVAH_ Run Permissive
+[1.171],L1_DCVAH Speed Ref Enable
+[1.172],L1_DCVAH_ Brake is open
+[1.173],L1_DCVAH_WORK_DB.EncoderFault
+[1.174],L1_DCVRD CHOP REQ from DCVAH
+[1.175],L1_DCVAH Preset Comand
+[1.176],L1_OWS_Chop_Enable
+[1.177],L1_DCVRD CHOP REQ form E40
+[1.178],L1_DCVRD CHOP REQ from PR5
+[1.179],L1_DCVRD CHOP REQ Comm with E10
+[1.180],L1_DCVRD CHOP REQ Comm with E40_2
+[1.181],Bar temp high at TB Line-1
+[1.182],E35PLC01 Mat.det. HMD34 CVRD entry L1
+[1.183],E35PLC01 Mat.det. HMD35 TWC1A entry
+[1.184],L1_DCVR OPT shear Chop  Early  Req flag L1
+[1.185],L1_DCVAH_CUTS_TWC_DB.OUT.OptShearShiftCalcReq_CVR
+[1.186],L1_DCVR OPT Chop cmd
+[1.187],L1_DCVAH Ok For Div Cut
+[1.188],OPTIM IMPOSSIBLE L1
+[1.189],L1_DCVAH_CUTS_TWC_DB.EnoughTailLeft
+[1.190],OWS_ColdCutRecEnable L1
+[1.191],OWS_TailSpreadEnable L1
+[1.192],SpeedMeter Measure Valid
+[1.193],E35PLC01 Mat.det. HMD38 TWC1A entry (HW Interrupt)
+[1.194],E35PLC01 Mat.det. HMD38 TWC1B entry (HW Interrupt)
+[1.195],E10PLC01 Mat.det. HMD19 S18 exit L1
+[1.196],E10PLC01 Mat.det. HMD26 CVR entry L1
+[1.197],E10PLC01 Mat.det. HMD27 Looper at FFB entry L1
+[1.198],E10PLC01 Mat.det. HMD28 FFB exit L1
+[1.199],EnableMachInThisLine
+[1.200],E35PLC01 Mat.det. HMD36 TWC1B entry
+[1.201],Cobble detection box before FFB L1
+[1.202],Cobble detection in CVR shear L1 before FFB
+[1.203],"L1_CVRD cobble det. inside shear box, LS"
+[1.204],"L1_CVAH cobble det. inside shear box, LS"
+[1.205],HMD_26 head filter CVR Entry
+[1.206],HMD_26 tail  filter CVR Entry
+[1.207],SpeedMeter Bar Presence
+[1.208],"L1_PR2 Rolls closing/opening, sol.valve"
+[1.209],"L1_PR3 Rolls closing/opening, sol.valve"
+[1.210],"L1_PR4 Rolls closing/opening, sol.valve"
+[1.211],CVR Short Piece Travel Line1
+[1.212],Line-1 CVR Door-1 Closed
+[1.213],Line-1 CVR Door-2 Closed
+[1.214],L1_DCVR HMI ON Command
+[1.215],L1_DCVR Preset Command
+[1.216],CVR_PH01_NoViewAlarm
+[1.217],CVR_PH01_BLK
+[1.218],CVR_PH01_NoViewAlarmONS
+[1.219],DCVAH L1 SYNC cycle L1/L2
+[1.220],Speed Meter Measurement Done M400.0
+[1.221],L1_PR1 Closing Comand
+[1.222],HMD_26 head filter CVR Entry output
+[1.223],HMD_26 tail  filter CVR Entry output
+[1.224],L1_DCVR Start Command
+[1.225],L1_DCVR Brake Request Open
+[1.226],L1_DCVR Position Search Active
+[1.227],E35_HMD19 VISION FAULT
+[1.228],E35_HMD19 ON WINDOW FAULT
+[1.229],E35_HMD19 OFF WINDOW FAULT
+[1.230],E35_HMD7 VISION FAULT
+[1.231],E35_HMD7 ON WINDOW FAULT
+[1.232],E35_HMD7 OFF WINDOW FAULT
+[1.233],"L1_DCVR_CUT_CYCLE_DB"".OUT_CycleRunning"
+[1.234],L1_DCVR JOG FWD LCS
+[1.235],L1_DCVR JOG REV LCS
+[1.236],L1_DCVRD_BA_DRV_ALM01
+[1.237],L1_DCVRD_BA_DRV_ALM03
+[1.238],L1_DCVRD_BA_DRV_ALM05
+[1.239],L1_DCVRD_BA_DRV_ALM09
+[1.240],L1_DCVRD_BA_DRV_ALM11
+[1.241],L1_DCVRD_BA_DRV_ALM12
+[1.242],L1_CVR Lub Flow switch
+[1.243],L1_WB1 Cover closed
+[1.244],L1_WB2 Cover closed
+[1.248],E35_STAND 18 GUIDE CHECK
+[2:0],L1_DCVR Tail Cutoff Length
+[2:1],L1_DCVR First head position
+[2:2],L1_DCVR Out.Tail Position
+[2:3],Speed from SpeedMeter L1 PID
+[2:4],OPT #CVR Tail Cut off length equ L1
+[2:5],Remaining length before Div shear + tolerance
+[2:6],PH0A Last Headl Distance Measured L1
+[2:7],PH0A Last Tail Distance Measured L1
+[2:8],PH0A Head Dist Count L1
+[2:9],PH0A Tail Dist Count L1
+[2:10],PH0B Head Dist Count L1
+[2:11],PH0B Tail Dist Count L1
+[2:12],OPT L1 INT Remaining length before Div shear
+[2:13],OPT_Avg_PH0C_AveragDist from HMD to HMD after Last Stand
+[2:14],PH0D Head Dist L1
+[2:15],PH0D Tail Dist L1
+[2:16],PH0D_Avg_Dist from HMD to HMD after Last Stand L1
+[2:17],PH0E Head Dist L1
+[2:18],PH0E Tail Dist L1
+[2:19],PH0E_Avg_Dist from HMD to HMD after Last Stand L1
+[2:20],PH0F Head Dist L1
+[2:21],PH0F Tail Dist L1
+[2:22],PH0F_Avg_Dist from HMD to HMD after Last Stand L1
+[2:23],PH0A Head Dist L1
+[2:24],PH0A Tail Dist L1
+[2:25],OPT_Avg_PH0A_AveragDist from HMD to HMD after Last Stand
+[2:26],PH0G Head Dist L1
+[2:27],PH0G Tail Dist L1
+[2:28],PH0G_Avg_Dist from HMD to HMD after Last Stand L1
+[2:29],PH0H Head Dist L1
+[2:30],PH0H Tail Dist L1
+[2:31],PH0H_Avg_Dist from HMD to HMD after Last Stand L1
+[2:32],PH0L Head Dist L1
+[2:33],PH0L Tail Dist L1
+[2:35],2:35
+[2:36],2:36
+[2:37],2:37
+[2:38],2:38
+[2:39],2:39
+[2:40],2:40
+[2:41],2:41
+[2:42],2:42
+[2:43],2:43
+[2:44],2:44
+[2:45],2:45
+[2:46],2:46
+[2:47],2:47
+[2:48],2:48
+[2:49],2:49
+[2:50],2:50
+[2:51],2:51
+[2:52],2:52
+[2:53],2:53
+[2:54],2:54
+[2:55],2:55
+[2:56],2:56
+[2:57],2:57
+[2:58],2:58
+[2:59],OPT #CVR Tail Cut off length equ L2
+[3:0],PH0L_Avg_Dist from HMD to HMD after Last Stand L1
+[3:1],PH0M Head Dist L1
+[3:2],PH0M Tail Dist L1
+[3:3],PH0M_Avg_Dist from HMD to HMD after Last Stand L1
+[3:4],PH0N Head Dist L1
+[3:5],PH0N Tail Dist L1
+[3:6],PH0N_Avg_Dist from HMD to HMD after Last Stand L1
+[3:7],PH0P Head Dist L1
+[3:8],PH0P Tail Dist L1
+[3:9],PH0P_Avg_Dist from HMD to HMD after Last Stand L1
+[3:10],SH1 Average Dist to HMD last stand L1
+[3:11],PH0B Head Dist L1
+[3:12],PH0B Tail Dist L1
+[3:13],OPT_Avg_PH0B_AveragDist from HMD to HMD after Last Stand
+[3:14],L1_DCVRD  Out.Tail Position
+[3:15],L1_DCVRD Tracking BLST_Count
+[3:16],L1_DCVRD Tracking BLST_ForceValue
+[3:17],L1_DCVRD_First Head Position
+[3:18],L1_DCVAH First Head Pos
+[3:19],L1_DCVAH New Head Pos
+[3:20],L1_DCVAH Tail Pos
+[3:21],L1_DCVAH Remain Length before L1_CVAH
+[3:22],OPT #ShrChopReqLength L1
+[3:23],L1_DCVR Req length to chop before DCVR for opt
+[3:24],L1_DCVAH_CUTS_TWC_DB.IN_TailPosition
+[3:25],L1_DCVR Remain length before DCVR
+[3:26],Cut Table 2 L1
+[3:27],Cut Table 3 L1
+[3:28],Cut Table 4 L1
+[3:29],Cut Table 5 L1
+[3:30],Cut Table 6 L1
+[3:31],Cut Table 7 L1
+[3:32],Cut Table 8 L1
+[3:33],Cut Table 9 L1
+[3:34],Cut Table 10 L1
+[3:35],Cut Table 11 L1
+[3:36],Cut Table 12 L1
+[3:37],Cut Table 13 L1
+[3:38],Cut Table 14 L1
+[3:39],Cut Table 15 L1
+[3:40],Cut Table 16 L1
+[3:41],OWS_SalesLength L1
+[3:42],Cut Table 17 L1
+[3:43],OWS_SalesNum L1
+[3:44],OWS_DivLenCorr L1
+[3:45],OWS_FirstDivCutCorr L1
+[3:46],OPT Full Size Bars L1
+[3:47],OPT Last Bar Length L1
+[3:48],OWS_OptBarMinSaleNr L1
+[3:49],L1_DCVAH__OPT_TAIL LENGTH
+[3:50],OPT Langth to be chopped L1
+[3:51],OWS_LastBarMinSaleNr L1
+[3:52],OPT Full size bar for optimise L1
+[3:53],OWS_MaxChoppingLength L1
+[3:54],OWS_MinTailRecover L1
+[3:55],OWS_NominalDivCutLength L1
+[3:56],OWS_LastBarMinLength L1
+[3:57],OWS_SampleLength L1
+[3:58],OPT L1 DCVAH Choosen Div length
+[3:59],Cut Table 0 L1
+[4:0],Cut Table 1 L1
+[4:1],PID_L1_DCVRD_POS_ENC
+[4:2],L1_CVR Ramp Set Value
+[4:3],L1_CVR Ramp Actual Value
+[4:18],OPT Length to recover
+[5:0],L2_DCVRD Act Position
+[5:1],L2_DCVAH Act Position
+[5:2],L2_PR5  Act Speed
+[5:3],L2_PR5 Set Speed
+[5:4],L2_PR5 Act Torque
+[5:5],L2_PR5 Set Torque
+[5:6],ACT-DATA1_DB.WBT1_WR_BAR_TEMP4F
+[5:7],ACT-DATA1_DB.WB34_WR_FLR_VLV
+[5:8],L2_DCVRD Speed Ref to Drive
+[5:9],ACT-DATA1_DB.WB12_WR_FLR_VLV
+[5:10],5:10
+[5:11],5:11
+[5:12],L2_DCVAH Move Counts
+[5:13],L2_DCVAH Move Counts
+[5:14],OPT_Avg_PH0A_Measures Counter
+[5:15],OPT_Avg_PH0B_Measures Counter
+[5:16],OPT_Avg_PH0C_Measures Counter
+[5:17],E36_DCVAH_TheorPos
+[5:18],L2_PR2_ActTorque
+[5:19],L2_PR2_ActSpeed
+[5:20],L2_PR2_SetSpeed
+[5:21],L2_PR3_ActTorque
+[5:22],L2_PR3_ActSpeed
+[5:23],L2_PR3_SetSpeed
+[5:24],L2_PR4_ActTorque
+[5:25],L2_PR4_ActSpeed
+[5:26],L2_PR4_SetSpeed
+[5:27],L2_PR1_ActSpeed
+[5:28],L2_PR1_SetSpeed
+[5:29],L2_PR1_ActTorque
+[5:30],L2_PR1_SetSpeed
+[5:31],to be written
+[5:32],INT_PROC_40_DB.InterruptTimeStamp[11]
+[5:33],INT_PROC_40_DB.InterruptTimeStamp[12]
+[5:34],ACT-DATA1_DB-L2.WB12_WR_FLR_VLV
+[5:35],ACT-DATA1_DB-L2.WB34_WR_FLR_VLV
+[5:36],CVRL-2 KNIVES POSITION
+[5:37],L2 bar temperature before TB
+[5:40],Speed From SpeedMeter L2
+[5:41],Speed calibr factor with HMD L2
+[5:42],SpeedMeter Bar motion L2
+[5:43],L2_DCVRD Set Position for PID
+[5:44],L2_DCVRD Actual Position for PID
+[5:45],L2_WB34_ANALOG_IN_DB.InPressureFilt
+[5:46],L2_DCVR Act Position
+[5:47],L2_WB34_ANALOG_IN_DB.outPressureFilt
+[5:48],L2_WB12_ANALOG_IN_DB.InPressureFilt
+[5:49],L2_DCVR Set Position for PID
+[5:50],Speed calibr factor L2
+[5:51],Calibr speed for L2_DCVAH
+[5:52],SpeedMeter measured calib.f.  K L2
+[5:53],L2_CVR_Calibr Speed gactor Measured
+[5:54],L2 SYNCHRONIZE PC ERROR POSITION DURING CYCLE
+[5:55],L2_DCVR PID OUTPUT
+[5:56],L2_DCVR Theor speed L2
+[5:57],Line-2 bar temp before cooling bed
+[5:58],L2_WB12 FlowRate
+[5:59],L2_WB34 FlowRate
+[5:60],L2_PR2 head tracking close
+[5:61],L2_PR3 head tracking close
+[5:63],L2_PR2 Roll Closing Pressure
+[5:64],L2_PR3 Roll Closing Pressure
+[5:65],L2_PR4 Roll Closing Pressure
+[5:66],L2_PR5 Roll Closing Pressure
+[5:67],L2_CVAH_actual _torque
+[5:68],L2_PR3 ACTUAL CURRENT
+[5:69],L2_PR1 ACTUAL CURRENT
+[5:70],L2_DCVAH_Actual Torque
+[5:71],L2_DCVAH_Actual Speed
+[5:72],L2_DCVAH_Theor Speed
+[5:74],L2_DCVAH_Position error
+[5:75],L2_DCVAH_Speed Reference
+[5:76],L2_CVAH_Actual Rotor position
+[5:77],L2_DCVAH_Synchronisation error at cut
+[5:81],L2_PR4 ACTUAL CURRENT
+[5.0],L2_DVRD Chop Req PR5
+[5.1],L2_DVRD Chop Req Cobble
+[5.2],L2_DVRD Chop Req Bar Continuity
+[5.3],L2_DVRD Chop Req Missed div cut
+[5.4],L2_CVR_Work_DB.RunConsent1
+[5.5],L2_DVRD Chop Req Memory
+[5.6],L2_CVR_Work_DB.RunConsent2
+[5.7],L2_CVR_Work_DB.MissedStart
+[5.8],L2_DCVRD Chop Req Off
+[5.9],L2_DCVRD Chop Req from E40_1
+[5.10],L2_DCVRD Chop Req from E10
+[5.11],L2_DCVRD Chop Req from E40_2
+[5.12],L2_DCVRD Chop Req Cut Enable
+[5.13],L2_DCVRD Chop Req Chopping Memory
+[5.14],L2_DCVRD Chop Req DCVAH
+[5.15],L2_DCVRD Chop Req CVAH
+[5.16],CVRD Pos Known
+[5.17],L2_DCVRD Run consent 1
+[5.18],L2_DCVRD Run consent 2
+[5.19],L2_DCVRD Missed run confirm
+[5.20],L2_DCVRD Drive Preset confirm
+[5.21],L2_DCVRD Drive Preset cmd
+[5.22],L2_DCVRD Drive fault
+[5.23],L2_DCVRD Drive communication fault
+[5.24],L2_DCVRD Upstream shear Condition chop req
+[5.25],L2_DCVRD Upstream shear UnCondition chop req
+[5.26],L2_CVR_WORK_DB.DriveIn.Status.Started
+[5.27],CVRD Cut Enable
+[5.28],L2_DCVRD Missed Run confirm
+[5.29],L2_DCVRD Position known
+[5.30],L2_DCVRD Run Permissive
+[5.31],CVRD Run Permissive
+[5.32],E10PLC01 Mat.det. HMD31 FFB exit L2
+[5.33],E36PLC01 Mat.det. HMD37 CVRD entry L2
+[5.34],E36PLC01 Mat.det. HMD38 TWC2A entry
+[5.35],E36PLC01 Mat.det. HMD39 TWC2B entry
+[5.36],"CVRD cobble det. inside shear box, LS L2"
+[5.37],"CVAH cobble det. inside shear box, LS L2"
+[5.38],L2_DCVRD Automatic
+[5.39],L2_DCVRD Toward Rolling
+[5.40],L2_CVR_WORK_DB.START_Permissive
+[5.41],L2_DCVRD Drive START CMD
+[5.42],L2_DCVRD Drive sts START confirm
+[5.43],L2_PR1_WORK_DB.RunConsent2
+[5.44],E10PLC01 Mat.det. HMD19 S18 exit L2
+[5.45],E10PLC01 Mat.det. HMD29 CVR entry L2
+[5.46],E10PLC01 Mat.det. HMD31 FFB entry L2
+[5.47],L2_PR1_WORK_DB.RunConsent1
+[5.48],L2_PR1_WORK_DB.MissedStart
+[5.49],L2_DCVRD Cut Order to Diverter
+[5.50],L2_DCVRD Cut Execution enable
+[5.51],OPTIM IMPOSSIBLE L2
+[5.52],L2_DCVAH Ok For Div Cutl2
+[5.53],L2_DCVAH Automatic
+[5.54],L2_DCVAH Speed ref Enable
+[5.55],L2_DCVAH  BAXC
+[5.56],L2_DCVRD Toward Chopping
+[5.57],L2_DCVRD Goto Rolling position
+[5.58],L2_DCVRD Goto Chopping position
+[5.59],L2_DCVRD Start preposition Memo
+[5.60],L2_DCVRD Chopping command
+[5.61],L2_PR1_WORK_DB.START_Permissive
+[5.62],L2_DCVRD Cycle Running
+[5.63],L2_DCVRD Speed Reference Enable
+[5.64],L2_DCVR Go To Chopping line
+[5.65],Valid Tail Before SH3
+[5.66],Valid Tail PH0A L2
+[5.67],Valid Tail PH0B L2
+[5.68],Valid Tail PH0C L2
+[5.69],Valid Tail PH0D L2
+[5.70],Valid Tail PH0E L2
+[5.71],Valid Tail PH0F L2
+[5.72],L2_PR1_WORK_DB.DriveIn.Status.Started
+[5.73],L2_DCVAH SYNC cycle L1/L2
+[5.74],L2_DVRD Opt chop command
+[5.75],L2_DCVR Automatic
+[5.76],L2_DCVR Speed ref enable
+[5.77],L2_DCVR OPT shear Chop  Early  Req flag
+[5.78],Valid tail before CVAH
+[5.79],L2_DCVR Go To Rolling line
+[5.80],Valid Tail SH2 L2
+[5.81],Valid Tail SH3 L2
+[5.82],L2_DCVAH_BAR_TRK_DB.OUT.ValidTailCVAHl2
+[5.83],L2_DCVR Towards Rolling
+[5.84],L2_DCVR Towards Chopping
+[5.85],L2_DCVR OPT chop cmd
+[5.86],L2_DCVR BAXC
+[5.87],L2_DCVR Head Count
+[5.88],Valid Tail PH0G L2
+[5.89],Valid Tail PH0H L2
+[5.90],Valid Tail PH0L L2
+[5.91],Valid Tail PH0M L2
+[5.92],Valid Tail PH0N L2
+[5.93],Valid Tail PH0P L2
+[5.94],Valid Tail PH1 L2
+[5.95],Valid Tail SH1 L2
+[5.96],HMD 29Tail Wind Enable L2
+[5.97],L2_DCVR PH0 Stat
+[5.98],L2_DCVR PH01 Stat
+[5.99],L2_DCVR PH1 Stat
+[5.100],L2_DCVAH_CUTS_TWC_DB.IN_VTailBefOptShr
+[5.101],SpeedMeter Bar Presence
+[5.102],SpeedMeter Measure Valid
+[5.103],L2_DCVAH_CUTS_TWC_DB.IN_BarAtKnivesCrossl2
+[5.104],L2_DCVR Tail Count
+[5.105],L2_DCVRD_BAR_TRK_DB.IncomingTail
+[5.106],L2_DCVRD_BAR_TRK_DB.TailCount
+[5.107],L2_DCVAH_CUTS_TWC_DB.EnoughTailLeft
+[5.108],L2_DCVAH_CUTS_TWC_DB.IN_VTail
+[5.109],HMD 19Head Wind Enable L2
+[5.110],HMD 19Tail Wind Enable L2
+[5.111],HMD 29Head Wind Enable L2
+[5.112],L2_DCVRD PH01 Stat
+[5.113],L2_DCVRD PH1 Stat
+[5.114],L2_DCVRD PH1 NoViewAlarm
+[5.115],L2_DCVRD HeadCount
+[5.116],L2_DCVRD TailCount
+[5.117],L2_PR1 oil flow min
+[5.118],HMD 30 Head Wind Enable L2
+[5.119],HMD 30 Tail Wind Enable L2
+[5.120],"L2_PR2 Rolls closing/opening, sol.valve"
+[5.121],"L2_PR3 Rolls closing/opening, sol.valve"
+[5.122],"L2_PR4 Rolls closing/opening, sol.valve"
+[5.123],L2_DCVAH_CUTS_TWC_DB.IN_BarFromCVR
+[5.124],OWS_ColdCutRecEnable L2
+[5.125],OWS_TailSpreadEnable L2
+[5.126],OWS_Chop_Enable L2
+[5.127],L2_DCVRD PH0 Stat
+[5.128],L2_DCVAH Run consent 1
+[5.129],L2_DCVAH Run consent 2
+[5.130],L2_DCVAH Run consent 3
+[5.131],L2_DCVAH Preset Comand
+[5.132],L2_DCVAH Drive fault
+[5.133],L2_DCVR Bar present at knives cross point
+[5.134],L2_DCVR BarOutofShear
+[5.135],L2_DCVRD BarOutofShear
+[5.136],HMD 31 Head Wind Enable L2
+[5.137],HMD 31 Taild Wind Enable L2
+[5.138],L2_DCVAH_ Run Permissive
+[5.139],L2_DCVAH_ Brake is open
+[5.140],L2_DCVAH_ Start Comand
+[5.141],L2_DCVAH_ Start Confirme
+[5.142],L2_CVAH_Start Permissive
+[5.143],L2_DCVAH Pos known
+[5.144],HMD_29 Tail filter CVR Entry
+[5.145],HMD_29 head filter CVR Entry output
+[5.146],HMD_29 tail filter CVR Entry output
+[5.147],L2_CVR_WORK_DB.DriveIn.Status.SpeedNotZero
+[5.148],L2_CVR_WORK_DB.DriveIn.Status.Started
+[5.149],L2_CVR_WORK_DB.MissedStart
+[5.150],L2_CVR_WORK_DB.StopMemo
+[5.151],L2_CVR_WORK_DB.SpeedRefEnable
+[5.152],L2_DCVRD Barat knives cross point
+[5.153],L2_DCVR Chop any case
+[5.154],Cobble detection in CVR shear L2 before FFB
+[5.155],L2_PR1 Closing comand
+[5.156],Cobble detection box before FFB L2
+[5.157],E36PLC01 Mat.det. HMD38 TWC2A entry (HW Interrupt)
+[5.158],E36PLC01 Mat.det. HMD39 TWC2B entry (HW Interrupt)
+[5.159],HMD_29 head filter CVR Entry
+[5.160],L2_DCVR_WORK_DB.RunConsent1
+[5.161],L2_DCVR_WORK_DB.RunConsent2
+[5.162],L2_DCVR_WORK_DB.RunConsent3
+[5.163],L2_DCVR_WORK_DB.ON_Permissive
+[5.164],L2_DCVR_WORK_DB.CYCLE_Permissive
+[5.165],L2_DCVR_WORK_DB.AUTOCHOP_RequestOFF
+[5.166],L2_DCVR_WORK_DB.CutEnable
+[5.167],L2_DCVR_WORK_DB.CMD_NotAllowed_DrvNotRdy
+[5.168],L2_CVR_WORK_DB.ShearMotionEnable
+[5.169],L2_CVR_WORK_DB.CutEnable
+[5.170],L2_CVR_POS_DB.OUT_PositionKnown
+[5.171],L2_DCVR_WORK_DB.DriveIn.Status.ReadyToPreset
+[5.172],L2_DCVR_WORK_DB.DriveIn.Status.PresetConfirm
+[5.173],L2_DCVR_WORK_DB.DriveIn.Status.Started
+[5.174],L2_DCVR_WORK_DB.DriveIn.Status.Started
+[5.175],L2_DCVR_WORK_DB.MissedStart
+[5.176],L2_WB12_WORK_DB.AutoChopShearReq
+[5.177],L2_WB34_WORK_DB.AutoChopShearReq
+[5.178],L2_PR4_WORK_DB.AutoChopShearReq
+[5.179],L2_DCVRD_WORK_DB.UpstrUncondChopRequest
+[5.180],CVR_Auto Chopping_CMD
+[5.181],CVR_Chopping_REQ
+[5.182],HMI_ALARMS_DB.PLC_BA_PLC_NET_FLT09
+[5.183],Chopping request for TAIL OPT overshoot
+[5.185],L2_DCVR_WORK_DB.ChoppingMemoryActive
+[5.186],L2_DCVR_WORK_DB.ManChopReqMem
+[5.187],L2_DCVR_WORK_DB.UpstrCondChopRequest
+[5.188],L2_DCVR_WORK_DB.UpstrUncondChopRequest
+[5.189],L2_DCVR_POS_DB.OUT_PositionKnown
+[5.190],L2_PR2_WORK_DB.AutoChopShearReq
+[5.191],L2_PR3_WORK_DB.AutoChopShearReq
+[5.192],L2_WB1 Cover closed
+[5.193],L2_WB2 Cover closed
+[5.194],L2 DCVRD Chopping for long tail
+[5.195],L2_PR2 Emergency from drive
+[5.196],L2_PR2 Run consent 1
+[5.197],L2_PR2 Run consent 2
+[5.198],L2_PR2 Run consent 3
+[5.199],L2_PR2 Gear box oil flow switch
+[5.200],L2_DCVRD_WORK_DB.ChpReqOther_TAIL OPT overshoot
+[5.201],L2_DCVRD_WORK_DB.ChpReqMemory
+[5.202],L2_CVR_PH01_NoViewAlarmONS
+[5.203],L2_CVR_PH01_NoViewAlarm
+[5.204],L2_CVR_PH01_BLK
+[5.205],L2_DCVR_WORK_DB.DriveCommFlt
+[5.206],E36_STAND 18 GUIDE CHECK
+[6:0],L2_PR2 machine distance from tracking zero point
+[6:1],L2_PR3 machine distance from tracking zero point
+[6:2],Speed From SpeedMeter L2 PID
+[6:3],L2_DCVRD_First Head Position Line 2
+[6:4],L2_DCVAH __OPT_TAIL LENGTH
+[6:5],L2_DCVAH First Head Pos
+[6:6],L2_DCVAH New Head Pos
+[6:7],L2_DCVAH Tail PosL2
+[6:8],L2_DCVAH Remain Length before CVAH L2
+[6:9],L2_DCVR First head position
+[6:10],L2_DCVR Remain length before DCVR
+[6:11],L2_DCVR Req length to chop before DCVR for opt
+[6:12],L2_DCVR Tail Cut off Length
+[6:13],OPT L2 DCVAH Choosen Div length
+[6:14],OPT L2 INT Remaining length before Div shear
+[6:15],SH1 Average Dist to HMD last stand L2
+[6:16],PH0A Last Tail Distance Measured L2
+[6:17],PH0A Last Head Distance Measured L2
+[6:18],PH0A Head Dist L2
+[6:19],PH0A Tail Dist L2
+[6:20],PH0B Head Dist L2
+[6:21],PH0B Tail Dist L2
+[6:22],PH0A Head Dist Count L2
+[6:23],PH0A Tail Dist Count L2
+[6:24],PH0B Head Dist Count L2
+[6:25],PH0B Tail Dist Count L2
+[6:26],OPT_Avg_PH0A_AveragDist from HMD to HMD after Last Stand
+[6:27],OPT_Avg_PH0B_AveragDist from HMD to HMD after Last Stand
+[6:28],OPT_Avg_PH0C_AveragDist from HMD to HMD after Last Stand
+[6:29],Remaining length before Div shear + tolerance
+[6:30],OPT Full Size Bars L2
+[6:31],OPT Last Bar Length L2
+[6:32],OPT Tail Length L2
+[6:33],OPT Langth to be chopped L2
+[6:34],OPT Full size bar for optimise L2
+[6:35],OPT #ShrChopReqLength L2
+[6:36],6:36
+[6:37],6:37
+[6:38],6:38
+[6:39],6:39
+[6:40],6:40
+[6:41],6:41
+[6:42],6:42
+[6:43],6:43
+[6:44],6:44
+[6:45],6:45
+[6:46],6:46
+[6:47],6:47
+[6:48],6:48
+[6:49],6:49
+[6:50],6:50
+[6:51],6:51
+[6:52],6:52
+[6:53],6:53
+[6:54],6:54
+[6:55],6:55
+[6:56],6:56
+[6:57],6:57
+[6:58],6:58
+[6:59],6:59
+[7:0],OPT #CVR Tail Cut off length equ L2
+[7:1],OWS_SalesLength L2
+[7:2],OWS_SalesNum L2
+[7:3],OWS_DivLenCorr L2
+[7:4],OWS_FirstDivCutCorr L2
+[7:5],OWS_OptBarMinSaleNr L2
+[7:6],OWS_LastBarMinSaleNr L2
+[7:7],OWS_MaxChoppingLength L2
+[7:8],OWS_MinTailRecover L2
+[7:9],OWS_NominalDivCutLength L2
+[7:10],OWS_LastBarMinLength L2
+[7:11],OWS_SampleLength L2
+[7:12],L2_DCVAH_BAR_TRK_DB.OUT.TailPosition
+[7:13],L2_DCVRD Tracking BLST_Count
+[7:14],L2_DCVRD Tracking BLST_ForceValue
+[7:15],L2_DCVAH_CUTS_TWC_DB.IN_TailPosition
+[7:16],PH0D Head Dist L2
+[7:17],PH0D Tail Dist L2
+[7:18],PH0D_Avg_Dist from HMD to HMD after Last Stand L2
+[7:19],PH0E Head Dist L2
+[7:20],PH0E Tail Dist L2
+[7:21],PH0E_Avg_Dist from HMD to HMD after Last Stand L2
+[7:22],PH0F Head Dist L2
+[7:23],PH0F Tail Dist L2
+[7:24],PH0F_Avg_Dist from HMD to HMD after Last Stand L2
+[7:25],PH0G Head Dist L2
+[7:26],PH0G Tail Dist L2
+[7:27],PH0G_Avg_Dist from HMD to HMD after Last Stand L2
+[7:28],PH0H Head Dist L2
+[7:29],PH0H Tail Dist L2
+[7:30],PH0H_Avg_Dist from HMD to HMD after Last Stand L2
+[7:31],PH0L Head Dist L2
+[7:32],PH0L Tail Dist L2
+[7:33],PH0L_Avg_Dist from HMD to HMD after Last Stand L2
+[7:34],PH0M Head Dist L2
+[7:35],PH0M Tail Dist L2
+[7:36],PH0M_Avg_Dist from HMD to HMD after Last Stand L2
+[7:37],PH0N Head Dist L2
+[7:38],PH0N Tail Dist L2
+[7:39],PH0N_Avg_Dist from HMD to HMD after Last Stand L2
+[7:40],PH0P Head Dist L2
+[7:41],PH0P Tail Dist L2
+[7:42],PH0P_Avg_Dist from HMD to HMD after Last Stand L2
+[7:43],L2_DCVR Out.Tail Position
+[7:44],L2_DCVRD  Out.Tail Position
+[7:45],PID_DCVRD_POS_ENC
+[7:46],PID_DCVR_POS_ENC
+[7:47],SPARE
+[7:48],spare
+[7:49],spare
+[7:50],spare
+[7:51],spare
+[7:52],spare
+[7:53],spare
+[7:54],7:54
+[7:55],7:55
+[7:56],7:56
+[7:57],7:57
+[7:58],7:58
+[7:59],7:59
+[8:0],8:0
+[8:1],8:1
+[8:2],8:2
+[8:3],8:3
+[8:4],8:4
+[8:5],8:5
+[8:6],8:6
+[8:7],8:7
+[8:8],8:8
+[8:9],8:9
+[8:10],8:10
+[8:11],8:11
+[8:12],8:12
+[8:13],8:13
+[8:14],8:14
+[8:18],WB12_ANALOG_IN_DB.outPressureFilt
+[8:19],OPT Length to recover
+[8:20],Cut Table 0 L2
+[8:21],Cut Table 1 L2
+[8:22],Cut Table 2 L2
+[8:23],Cut Table 3 L2
+[8:24],Cut Table 4 L2
+[8:25],Cut Table 5 L2
+[8:26],Cut Table 6 L2
+[8:27],Cut Table 7 L2
+[8:28],Cut Table 8 L2
+[8:29],Cut Table 9 L2
+[8:30],Cut Table 10 L2
+[8:31],Cut Table 11 L2
+[8:32],Cut Table 12 L2
+[8:33],Cut Table 13 L2
+[8:34],Cut Table 14 L2
+[8:35],Cut Table 15 L2
+[8:36],Cut Table 16 L2
+[8:37],Cut Table 17 L2
+[9:0],Stand 01_Torque
+[9:1],Stand 02_Torque
+[9:2],Stand 03_Torque
+[9:3],Stand 04_Torque
+[9:4],Stand 05_Torque
+[9:5],Stand 06_Torque
+[9:6],Stand 07_Torque
+[9:7],Stand 08_Torque
+[9:8],Stand 09_Torque
+[9:9],Stand 10_Torque
+[9:10],Stand 11_Torque
+[9:11],Stand 12_Torque
+[9:12],Stand 13_Torque
+[9:13],Stand 14_Torque
+[9:14],Stand 15_Torque
+[9:15],Stand 16_Torque
+[9:16],Stand 17_Torque
+[9:17],Stand 18_Torque
+[9:18],Vrt_Dev01_HeadPos
+[9:19],Vrt_Dev01_TailPos
+[9:20],Vrt_Dev02_HeadPos
+[9:21],Vrt_Dev02_TailPos
+[9:22],Stand 01_LineSpeed
+[9:23],Stand 01_RPM
+[9:24],Stand 02_LineSpeed
+[9:25],Stand 02_RPM
+[9:26],Stand 03_LineSpeed
+[9:27],Stand 03_RPM
+[9:28],Stand 04_LineSpeed
+[9:29],Stand 04_RPM
+[9:30],Stand 05_LineSpeed
+[9:31],Stand 05_RPM
+[9:32],Stand 06_LineSpeed
+[9:33],Stand 06_RPM
+[9:34],Stand 07_LineSpeed
+[9:35],Stand 07_RPM
+[9:36],Stand 08_LineSpeed
+[9:37],Stand 08_RPM
+[9:38],Stand 09_LineSpeed
+[9:39],Stand 09_RPM
+[9:40],BC Billet last interbillet on stand 01
+[9:41],Stand 10_LineSpeed
+[9:42],Stand 10_RPM
+[9:43],Stand 11_LineSpeed
+[9:44],Stand 11_RPM
+[9:45],Stand 12_LineSpeed
+[9:46],Stand 12_RPM
+[9:47],Stand 13_LineSpeed
+[9:48],Stand 13_RPM
+[9:49],Stand 14_LineSpeed
+[9:50],Stand 14_RPM
+[9:51],Stand 15_LineSpeed
+[9:52],Stand 15_RPM
+[9:53],Stand 16_LineSpeed
+[9:54],Stand 16_RPM
+[9:55],Stand 17_LineSpeed
+[9:56],Stand 17_RPM
+[9:57],Stand 18_LineSpeed
+[9:58],Stand 18_RPM
+[9:59],Stand 01_HeadPosition from Upstreamdevice
+[9:60],BC set Interbillet value from HMI
+[9:61],Loop_Height Stand 9-10
+[9:62],Loop_Height Stand 10-11
+[9:63],Loop_Height Stand 11-12
+[9:64],Loop_Height Stand 12-13
+[9:65],Loop_Height Stand 13-14
+[9:66],Loop_Height Stand 14-15
+[9:67],Loop_HeightStand 15-16
+[9:68],Loop_Height Stand 16-17
+[9:69],Loop_Height Stand 17-18
+[9:70],Mill Discharge time
+[9:71],BC Billet discharge delay after billet discharge command
+[9:72],BC Interbillet correction value
+[9:73],RT_2_FEA_ACT_SPEED
+[9:74],RT_1_FEA_SET_SPEED
+[9:75],RT_2_FEA_SET_SPEED
+[9:76],FFB Line 1 Loop Height
+[9:77],FFB Line 2 Loop Height
+[9:78],FFB Line 1 Speed Reference (Internal Unit)
+[9:79],FFB Line 2 Speed Reference (Internal Unit)
+[9:80],BILLCALL-WRK_DB.DischargeDelay
+[9:81],BILLCALL-WRK_DB.DischDelayCnt
+[9:83],9:83
+[9.0],Stand 09 downstream HMD material detection signal (=JD31A09FAV-B001)
+[9.1],Stand 10 downstream HMD material detection signal (=JD31A10FAV-B001)
+[9.2],Stand 11 downstream HMD material detection signal (=JD31A11FAV-B001)
+[9.3],Stand 12 downstream HMD material detection signal (=JD31B01CVS-B011)
+[9.4],Stand 13 upstream HMD material detection signal (=JD31A12FAV-B001)
+[9.5],Stand 13 downstream HMD material detection signal (=JD41A13FAV-B001)
+[9.6],Stand 14 downstream HMD material detection signal (=JD41A14FAV-B001)
+[9.7],Stand 15 downstream HMD material detection signal (=JD41A15FAV-B001)
+[9.8],Furnace exit HMD material detection signal (=JD11B01VUF-B002)
+[9.9],Stand 01 upstream HMD material detection signal (=JD11B01TRU-B001)
+[9.10],HMD on Fce exit R.Table material detection signal (=JD21A01DOM-B011)
+[9.11],Stand 02 downstream HMD material detection signal (=JD21A02DVM-B011)
+[9.12],Stand 04 downstream HMD material detection signal (=JD21A04DVM-B011)
+[9.13],Stand 06 downstream HMD material detection signal (=JD21A06DVM-B011)
+[9.14],Stand 07 upstream HMD material detection signal (=JD21B01CVS-B011)
+[9.15],Stand 08 downstream HMD material detection signal (=JD31A08DVM-B011)
+[9.16],Stand 12 downstream looper lifting command
+[9.17],Stand 13 downstream looper lifting command
+[9.18],Stand 14 downstream looper lifting command
+[9.19],Stand 15 downstream looper lifting command
+[9.20],Stand 16 downstream looper lifting command
+[9.21],Stand 17 downstream looper lifting command
+[9.22],WR FFB looper lifting command
+[9.23],Stand 01_Material_Presence
+[9.24],Stand 16 downstream HMD material detection signal (=JD41A16FAV-B001)
+[9.25],Stand 17 downstream HMD material detection signal (=JD41A17FAV-B001)
+[9.26],Stand 18 downstream HMD material detection signal (=JD41A18FAV-B011)
+[9.27],Billet call command
+[9.28],Snap shear at mill entry close [NC]
+[9.29],Stand 9 downstream looper lifting command
+[9.30],Stand 10 downstream looper lifting command
+[9.31],Stand 11 downstream looper lifting command
+[9.32],Stand 10_Material_Presence
+[9.33],Stand 11_Material_Presence
+[9.34],Stand 12_Material_Presence
+[9.35],Stand 13_Material_Presence
+[9.36],Stand 14_Material_Presence
+[9.37],Stand 15_Material_Presence
+[9.38],Stand 16_Material_Presence
+[9.39],Stand 17_Material_Presence
+[9.40],Stand 02_Material_Presence
+[9.41],Stand 03_Material_Presence
+[9.42],Stand 04_Material_Presence
+[9.43],Stand 05_Material_Presence
+[9.44],Stand 06_Material_Presence
+[9.45],Stand 07_Material_Presence
+[9.46],Stand 08_Material_Presence
+[9.47],Stand 09_Material_Presence
+[9.48],HMD 24 TMB #3 upstream HMD
+[9.49],Billet call distance reached
+[9.50],HMD22 HeadCountUpdate
+[9.51],HMD22 TailCountUpdate
+[9.52],Billet call Pushbutton
+[9.53],Furnace disch AUTO
+[9.54],Billet call enable
+[9.55],Call time elapsed
+[9.56],Stand 18_Material_Presence
+[9.57],VIRTDEV01_Material_Presence
+[9.58],VIRTDEV02_Material_Presence
+[9.59],Billet discharge command
+[9.60],HMD 20 WRod Prebox1 upstream HMD
+[9.61],HMD 21 WRod SH7 upstream HMD
+[9.62],HMD 22 WRod SH7 downstream HMD
+[9.63],HMD 23 FFB #3 exit  HMD
+[9.64],Looper FFB L1 In Ctrl Stop
+[9.65],Looper FFB L1Ctrl Start
+[9.66],Looper FFB L1 Dwn Mat Presence
+[9.67],Looper FFB L1 Ctrl Enabling
+[9.68],Stand 18 Mat Presence
+[9.69],BC Interbillet correction enable
+[9.70],Looper FFB L2 HMD 27 Status
+[9.71],Looper FFB L2 In Ctrl Stop
+[9.72],Billet in last position
+[9.73],BILLET CALL CMD to FURNACE
+[9.74],Permissive for Auto Discharging
+[9.75],BC Billet discharge command one shot
+[9.76],FFB Line 1 Looper Cmd
+[9.77],FFB Line 2 Looper Cmd
+[9.78],BC Billet discharge command cond. memory
+[9.79],Looper FFB L1 HMD 27 Status
+[9.80],"FFB 2 Lopper FFB 1Lopper ""SECT6_STOP"""
+[9.81],BILLCALL-WRK_DB.RouFirstMatPres
+[9.82],S01TRK_DB.MaterialPresence
+[9.83],Stand 01 TRK_DB.LoadOn
+[9.84],AUX_PERFOR_MILL_DB.Line1BilletInOns
+[9.85],COM_DB_LEV2-TRK.FirstMatPres
+[9.86],AUTO_CRP
+[9.87],S07CMD_DB.ContinuityAlm
+[9.88],Looper FFB L2Ctrl Start
+[9.89],Looper FFB L2 Dwn Mat Presence
+[9.90],Looper FFB L2 Ctrl Enabling
+[9.91],BC Billet discharge distance reached one shot
+[9.92],"FFB 1Lopper ""SECT3_STOP"""
+[9.93],"FFB 1Lopper ""SECT5_STOP"""
+[9.94],"FFB 1Lopper ""SH4_Line1_CRP_ON"""
+[9.95],"FFB 2Lopper ""SH4_Line2_CRP_ON"""
+[9.96],Stand 16 CMD_DB.ContinuityAlm
+[9.97],Stand 17 CMD_DB.ContinuityAlm
+[9.98],Stand 18 CMD_DB.ContinuityAlm
+[9.99],E40_COMM_DB.MPIDataToCpu1.Sh2AutoCropCmd
+[9.100],FFB1CMD_DB.ContinuityAlm
+[9.101],MAT_PRESENCE
+[9.102],E35_COMM_DB.MPIDataToCpu1.Line1CVRAutoCropCmd
+[9.103],E40_COMM_DB.MPIDataToCpu1.Sh1AutoCropCmd
+[9.104],Stand 08 CMD_DB.ContinuityAlm
+[9.105],S09CMD_DB.ContinuityAlm
+[9.106],S10CMD_DB.ContinuityAlm
+[9.107],S11CMD_DB.ContinuityAlm
+[9.108],S12CMD_DB.ContinuityAlm
+[9.109],S13CMD_DB.ContinuityAlm
+[9.110],S14CMD_DB.ContinuityAlm
+[9.111],S15CMD_DB.ContinuityAlm
+[9.112],Stand 08 Tens Ctrl On
+[9.113],Stand 09 Tens Ctrl On
+[9.114],E10_HMD_26 material presence
+[9.115],E10_HMD_26 material presence_test
+[9.116],E10_HMD_29 material presence
+[9.117],E10_HMD_29 material presence_test
+[9.118],HMD26TRK_DB.ContinuityAlarm
+[9.119],HMD27TRK_DB.ContinuityAlarm
+[9.120],FFB3CMD_DB.ContinuityAlm
+[9.121],Stand 01 Tens Ctrl On
+[9.122],Stand 02 Tens Ctrl On
+[9.123],Stand 03 Tens Ctrl On
+[9.124],Stand 04 Tens Ctrl On
+[9.125],Stand 05 Tens Ctrl On
+[9.126],Stand 06 Tens Ctrl On
+[9.127],Stand 07 Tens Ctrl On
+[9.128],HMD16TRK_DB.ContinuityAlarm
+[9.129],HMD17TRK_DB.ContinuityAlarm
+[9.130],HMD18TRK_DB.ContinuityAlarm
+[9.131],HMD19TRK_DB.ContinuityAlarm
+[9.132],S18TRK_DB.ContinuityAlarm
+[9.133],S17TRK_DB.ContinuityAlarm
+[9.134],S16TRK_DB.ContinuityAlarm
+[9.135],S15TRK_DB.ContinuityAlarm
+[9.136],HMD28TRK_DB.ContinuityAlarm
+[9.137],HMD29TRK_DB.ContinuityAlarm
+[9.138],HMD30TRK_DB.ContinuityAlarm
+[9.139],HMD31TRK_DB.ContinuityAlarm
+[9.140],HMD12TRK_DB.ContinuityAlarm
+[9.141],HMD13TRK_DB.ContinuityAlarm
+[9.142],HMD14TRK_DB.ContinuityAlarm
+[9.143],HMD15TRK_DB.ContinuityAlarm
+[9.144],control enabling Stand 15
+[9.145],looper on Stand 15
+[9.146],control stop Stand 15
+[9.147],down stream hmd Stand 15
+[9.148],BC Billet call distance reached one shot
+[9.149],HMD filter looper Stand 16
+[9.150],looper control start Stand 16
+[9.151],looper off Stand 16
+[9.152],S14TRK_DB.ContinuityAlarm
+[9.153],S13TRK_DB.ContinuityAlarm
+[9.154],S12TRK_DB.ContinuityAlarm
+[9.155],FFB2CMD_DB.ContinuityAlm
+[9.156],E36_COMM_DB.MPIDataToCpu1.Line2CVRAutoCropCmd
+[9.157],HMD filter looper Stand 15
+[9.158],looper control start Stand 15
+[9.159],looper off Stand 15
+[9.160],looper on Stand 17
+[9.161],control stop Stand 17
+[9.162],down stream hmd Stand 17
+[9.163],BILLCALL-WRK_DB.HMD01TailMemo
+[9.164],VIRT-DEV01_TRK_DB.MaterialPresence
+[9.165],Billet call enableFlag_extended
+[9.166],Last bellet call Ok_Extended
+[9.167],HMD01TRK_DB.HMDFiltered
+[9.168],control enabling Stand 16
+[9.169],looper on Stand 16
+[9.170],control stop Stand 16
+[9.171],down stream hmd Stand 16
+[9.172],HMD filter looper Stand 17
+[9.173],looper control start Stand 17
+[9.174],looper off Stand 17
+[9.175],control enabling Stand 17
+[9.176],DRM02 MCB CLOSE
+[9.177],DRM03 MCB CLOSE
+[9.178],DRM04 MCB CLOSE
+[9.179],DRM05 MCB CLOSE
+[9.180],DRM06 MCB CLOSE
+[9.181],DRM07 MCB CLOSE
+[9.182],DRM08 MCB CLOSE
+[9.183],DRM09 MCB CLOSE
+[9.184],HMD01TRK_DB.IN_HMD
+[9.185],Billet_Too_Close
+[9.186],Max speed alarm
+[9.187],BC Billet Discharge Enable
+[9.188],BC Billet discharge delay elasped
+[9.189],BC First Billet Call Memory
+[9.190],Only billet Call trigger enable
+[9.191],DRM01 MCB CLOSE
+[9.192],FURNACE EXIT LASER DETECTION
+[9.193],Auto chopping hmi status
+[9.194],Tension control hmi status
+[9.195],RRU8 drive ready
+[9.196],DRA RRU on confirm
+[9.197],Stand 01 fast stop
+[9.198],Stand 02 fast stop
+[9.199],Stand 03 fast stop
+[9.200],Stand 04 fast stop
+[9.201],Stand 05 fast stop
+[9.202],Stand 06 fast stop
+[9.203],RT1 FEA RUN
+[9.204],RT2 FEA RUN
+[9.205],RT2 EMG SLOW
+[9.206],FFB1 Material Presence
+[9.207],FFB2 Material Presence
+[9.208],stand 01 comm fault (#21)
+[9.209],stand 02 comm fault (#21)
+[9.210],stand 03 comm fault (#21)
+[9.211],stand 04 comm fault (#21)
+[9.212],stand 05 comm fault (#21)
+[9.213],stand 06 comm fault (#21)
+[9.214],stand 07 comm fault (#21)
+[9.215],stand 08 comm fault (#21)
+[9.216],stand 09 comm fault (#21)
+[9.217],stand 10 comm fault (#21)
+[9.218],stand 11 comm fault (#21)
+[9.219],stand 12 comm fault (#21)
+[9.220],stand 13 comm fault (#21)
+[9.221],stand 14 comm fault (#21)
+[9.222],stand 15 comm fault (#21)
+[9.223],stand 16 comm fault (#21)
+[9.224],stand 17 comm fault (#21)
+[9.225],stand 18 comm fault (#21)
+[9.226],Ghost Rolling
+[9.227],stand 18 drive comm alarm
+[9.228],RT2 fast stop
+[9.229],RT2 Run consent 1
+[9.230],RT2 Run consent 2
+[9.231],RT2 Run consent 3
+[9.232],RT2 drive communication fault
+[9.233],RT2 first stand biting overspeed enabling
+[9.234],E10 raedy to roll_F_EXIT
+[9.235],E10 raedy to roll_ROUGHING
+[9.236],E10 raedy to roll_INT MILL
+[9.237],E10 raedy to roll_FIN  MILL
+[9.238],E10 raedy to roll_FFB L1
+[9.239],E10 raedy to roll_FFB L2
+[9.240],S12TRK_DB.LoadOn
+[9.241],S13TRK_DB.LoadOn
+[9.242],S14TRK_DB.LoadOn
+[9.243],S15TRK_DB.LoadOn
+[9.244],S16TRK_DB.LoadOn
+[9.245],S17TRK_DB.LoadOn
+[9.246],S18TRK_DB.LoadOn
+[9.247],Roughing Auto stop HMI bit status
+[9.248],Furnace Auto Discharge HMI bit status
+[9.249],Cascade --
+[9.250],Cascade -
+[9.251],Cascade +
+[9.252],Cascade ++
+[10:0],BILLCALL-WRK_DB.SetInterbillet
+[10:1],BILLCALL-WRK_DB.RouInterbilletCnt
+[10:2],BILLCALL-WRK_DB.CallTimeCnt
+[10:3],BILLCALL-WRK_DB.BilletCallTime
+[10:4],BILLCALL-WRK_DB.RouRollTimeCnt
+[10:5],CurrentBilletRollingTimeInStand1
+[10:6],LastBilletRollingTimeInStand1
+[10:7],Fce_Delay
+[10:8],FFB Line 1 Loop Height
+[10:9],FFB Line 2 Loop Height
+[10:10],BC call tail position 1
+[10:11],BC call tail position 2
+[10:12],BC Effective call tail position
+[10:13],Stand 01 HeadTailDifference
+[10:14],Stand 01 HeadPosFromRMStart
+[10:15],Stand 01 TailPosFromRMStart
+[10:16],FFB1 Head POS for looper
+[10:17],FFB1 Looper On dist
+[10:18],FFB2 Head POS for looper
+[10:19],FFB2 Looper On dist
+[10:20],LEV2-BILL-DATA.FirstStandNoLoadTime
+[10:21],RHF communication timer
+[10:22],BilletDelay
+[10:23],S1HeadAbsolutePosition
+[10:24],S1TailAbsolutePosition
+[10:25],Virt2HeadAbsolutePosition
+[10:26],Virt2TailAbsolutePosition
+[10:27],Total Distance Run by bar head (MD 266)
+[10:28],Total Distance Run by bar tail (MD 270)
+[10:29],RT2 REF SPEED
+[10:30],RT1_1 REF SPEED
+[10:31],Billets out counter
+[10:32],Stand 17 speed ref
+[10:33],Stand 18 speed ref
+[10:34],Line-1 FFB speed ref
+[10:35],Line-2 FFB speed ref
+[10:44],Stand 16 speed ref
+[10:45],Stand 1 speed ref
+[10:46],Stand 2 speed ref
+[10:47],Stand 3 speed ref
+[10:48],Stand 4 speed ref
+[10:49],Stand 5 speed ref
+[10:50],Stand 6 speed ref
+[10:51],Stand 7 speed ref
+[10:52],Stand 8 speed ref
+[10:53],Stand 9 speed ref
+[10:54],Stand 10 speed ref
+[10:55],Stand 11 speed ref
+[10:56],Stand 12 speed ref
+[10:57],Stand 13 speed ref
+[10:58],Stand 14 speed ref
+[10:59],Stand 15 speed ref
+[12:0],Stand 01_TailPosition from Upstreamdevice
+[12:1],Stand 02_HeadPosition from Upstreamdevice
+[12:2],Stand 02_TailPosition from Upstreamdevice
+[12:3],Stand 03_HeadPosition from Upstreamdevice
+[12:4],Stand 03_TailPosition from Upstreamdevice
+[12:5],WR_FFB LoopHeight Actual
+[12:6],WR_FFB LoopHeight Set
+[12:7],WR_FFB Linear speed cm/s
+[12:8],WR_FFB RPM
+[12:9],WR_FFB Torque
+[12:10],WR_FFB Current
+[12:11],WR_TMB1 Linear speed cm/s
+[12:12],WR_TMB1 RPM
+[12:13],WR_TMB1 Torque
+[12:14],WR_TMB2 Linear speed cm/s
+[12:15],WR_TMB2 RPM
+[12:16],WR_TMB2 Torque
+[12:17],HMD22 Head Position from upstream Stand
+[12:18],HMD22 Tail Position from upstream Stand
+[12:19],FFB Line 1 Torque Act
+[12:20],FFB Line 1 RPM Act
+[12:21],FFB Line 1 Line Speed
+[12:22],FFB Line 2 Torque Act
+[12:23],FFB Line 2 RPM Act
+[12:24],FFB Line 2 Line Speed
+[12:25],ACT-DATA1_DB.BilletInCnt
+[12:26],LEV2TRK_DB1.TopEventCounter
+[12:27],Billet weight from Furnace PLC
+[12:28],DRM01 DC VOLTAGE
+[12:29],DRM01 DC CURRENT
+[12:30],DRM02 DC VOLTAGE
+[12:31],DRM02 DC CURRENT
+[12:32],DRM03 DC VOLTAGE
+[12:33],DRM03 DC CURRENT
+[12:34],DRM04 DC VOLTAGE
+[12:35],DRM04 DC CURRENT
+[12:36],DRM05 DC VOLTAGE
+[12:37],DRM05 DC CURRENT
+[12:38],Stand 13_SET_RPM
+[12:39],12:39
+[12:40],12:40
+[12:42],Stand 16 current
+[12:43],Stand 18 current
+[12:44],Master speed percentage
+[12:45],DRM06 DC VOLTAGE
+[12:46],DRM06 DC CURRENT
+[12:47],DRM07 DC VOLTAGE
+[12:48],DRM07 DC CURRENT
+[12:49],E35DRM01 DC VOLTAGE
+[12:50],E35DRM01 DC CURRENT
+[12:51],E36DRM01 DC VOLTAGE
+[12:52],E36DRM01 DC CURRENT
+[12:53],Stand 01 current
+[12:54],Stand 02 current
+[12:55],Stand 03 current
+[12:56],Stand 04 current
+[12:57],Stand 05 current
+[12:58],Stand 06 current
+[12:59],Stand 07 current
+[12:60],Stand 08 current
+[12:61],Stand 09 current
+[12:62],Stand 10 current
+[12:63],Stand 11 current
+[12:64],Stand 12 current
+[12:65],Stand 13 current
+[12:66],Stand 14 current
+[12:67],Stand 15 current
+[12:68],Stand 17 current
+[12:69],FFB1 Motor Current
+[12:70],FFB2 Motor Current
+[12:71],PR0 Motor Current
+[12:72],PR0 Motor Torque
+[12:73],PR0 Motor RPM
+[13:0],STAND 1 ENTRY BILLET TEMPERATURE
+[13:1],AIROIL1_DB.HMI_VAL.NextCycleTime
+[13:2],AIROIL2_DB.HMI_VAL.NextCycleTime
+[13:3],FFB Line-1 Module-6 B602 temp
+[13:4],FFB LINE-2 MODULE 4 B03 TEMP
+[13:5],AIROIL1_DB.HMI_VAL.NextCycleTime
+[13:6],FFB Line-1 Module 4 B01Temp
+[13:7],FFB LINE-2 MODULE 4 B03 TEMP
+[13:8],FFB LINE-2 MODULE 4 B04 TEMP
+[13:9],Lub 3 delivery oil pressure control valve
+[13:10],Lub 4 delivery oil pressure control valve
+[13:31],Grease 1 (stand 13-18) line 1 timeout
+[13:32],Grease 1 (stand 13-18) line 2 timeout
+[13:33],Grease 1 A(stand 1-12) line 1 timeout
+[13:34],Grease 1 A(stand 1-12) line 2 timeout
+[13:60],Mill Finishinng Area Lubrication Delivery Pressure
+[13:61],Descalar delivery pressure
+[13:62],Lub 3 delivery oil pressure feedback
+[13:63],Lub 4 delivery oil pressure feedback
+[13:64],FFB#1_COOLING WATER FLOW VALUE
+[13:65],FFB#2_COOLING WATER FLOW VALUE
+[13:66],S04_Groove encoder position feedback
+[13:67],S06_Groove encoder position feedback
+[13:68],S08_Groove encoder position feedback
+[13:69],S10_Groove encoder position feedback
+[13:70],S12_Groove encoder position feedback
+[13:71],S14_Groove encoder position feedback
+[13:72],S16_Groove encoder position feedback
+[13:73],S18_Groove encoder position feedback
+[13:74],Finishing mill lubrication tank oil level
+[13:75],Main header instrument air pressure
+[13:76],Main header compressed air presssure
+[13:77],Lub 3 tank 1 oil level(%)
+[13:78],Lub 4 Tank 1 oil level(%)
+[13.0],GRS1_SP_ENDPRS1_L2
+[13.1],GRS1_SP_ENDPRS2_L2
+[13.2],GRS1_DB.Line2PressOkFilt
+[13.3],GRS1_DB.Line1PressOkFilt
+[13.4],GRS1_DB.Cycle1TimeOut
+[13.5],GRS1_DB.Cycle2TimeOut
+[13.6],GRS1_DB.UnitOutOfService
+[13.7],GRS1_DB.AutoCycleLine1
+[13.8],PR0_Open Position
+[13.9],PR0_ roll closing valve
+[13.10],Furnace Exit Snap shear blades open/close valve
+[13.11],Furnace Exit Stopper lifting/lowering valve
+[13.12],Snap shear Open position
+[13.13],FEA Stoper Up Psotion
+[13.14],GRS1_SP_ENDPRS1_L1
+[13.15],GRS1_SP_ENDPRS2_L1
+[13.16],FFB2_SNP_SI_OPN
+[13.17],FFB2_SNP_VV_OPN
+[13.18],FFB2_Rollconsent1_airoil tank min min level
+[13.19],FFB2_Rollconsent1_airoil pumping phase1 failed twice
+[13.20],FFB2_Rollconsent1_airoil pumping phase2 failed twice
+[13.21],FFB2_Rollconsent1_accumulator level over low
+[13.22],FFB2_Rollconsent1_enough booster pumps are running
+[13.23],FFB2_Rollconsent1_airoil unit running ok
+[13.24],GRS1_DB.ManualMode
+[13.25],GRS1_DB.AutoCycleLine2
+[13.26],GRS1_DB.MP2RunRequest
+[13.27],GRS1_DB.MP1RunRequest
+[13.28],FFB1_SI_CBB_DTC
+[13.29],FFB1_SNP_SI_OPN
+[13.30],FFB1_SNP_VV_OPN
+[13.31],FFB2_SI_CBB_DTC
+[13.32],FFB2_Runconsent2_tank 1 oil level min min filtered
+[13.33],FFB2_Runconsent2_tank 2 oil level min min filtered
+[13.34],FFB2_Runconsent2_accumulator air pressure ok
+[13.35],FFB2_Runconsent2_accumulator level below high high
+[13.36],FFB2_Runconsent2_accumulator level over low low
+[13.37],FFB2_Runconsent2_shutoff valve lubrication opened
+[13.38],FFB2_Runconsent2_cooling water pressure ok
+[13.39],FFB2_Runconsent2_cooling waterdelivery flow ok
+[13.40],FFB2_Rollconsent1_bearing delivery oil temperature high
+[13.41],FFB2_Runconsent2_Runconsent1_tout
+[13.42],FFB2_Runconsent2_lubrication unit running ok
+[13.43],FFB2_Runconsent2_fast stop active
+[13.44],FFB2_Runconsent2_lubrication unit running ok
+[13.45],FFB2_Runconsent2_safetycover close
+[13.46],FFB2_Runconsent2_thermocouple reading on bearings above max
+[13.47],FFB2_Runconsent2_thermocouple reading on bearings fault
+[13.48],FFB2_snp_prm_mat presence in FFB
+[13.49],FFB2_snp_prm_Mot forward running
+[13.50],FFB2_Runconsent3_Emergency ok
+[13.51],FFB2_Runconsent3_immobilization ok
+[13.52],FFB2_Runconsent2_safetycover close
+[13.53],FFB2_Runconsent2_thermocouple reading on bearings below max
+[13.54],Lub unit for Finishing EMG
+[13.55],lub unit for roughing & intermediate emg
+[13.56],FFB2_Runconsent2_bearings delivery pressure min min
+[13.57],Cobble FFB Line 1
+[13.58],Cobble FFB Line 2
+[13.59],FFB2_Rollconsent1_bearing delivery oil temperature min
+[13.60],FFB2_snp_prm_FFB run consent type 2
+[13.61],FFB2_snp_prm_FFB run consent type 3
+[13.62],FFB2_snp_prm_FFB roll consent
+[13.63],FFB2_snp_prm_CVR ready to cut
+[13.64],Intermediate Stands Discharge valve open
+[13.65],Intermediate Stands Discharge valve close
+[13.66],Intermediate Stands delivery valve open
+[13.67],Intermediate Stands delivery valve close
+[13.68],up counter
+[13.69],Stand 06 Spindle lock
+[13.70],Stand 05 gearbox oil flow switch
+[13.71],Stand 07 spindle lock
+[13.72],Lub unit for Line-1 BGV EMG
+[13.73],Lub unit for Line-2  BGV EMG
+[13.74],LUB1_SL_TANK_MINLEV
+[13.75],Stand 01 spindle lock
+[13.76],stand 18 spindle lock
+[13.77],stand 18 gear box lubrication min flow
+[13.78],stand 05 spindle lock
+[13.79],stand 11 spindle lock
+[13.80],Stand 01 Rolls gap adjustment opening valve
+[13.81],Stand 01 Rolls gap adjustment closing valve
+[13.82],Stand 02 Rolls gap adjustment opening valve
+[13.83],Stand 02 Rolls gap adjustment closing valve
+[13.84],Stand 03 Rolls gap adjustment opening valve
+[13.85],Stand 03 Rolls gap adjustment closing valve
+[13.86],Stand 04 Rolls gap adjustment opening valve
+[13.87],Stand 04 Rolls gap adjustment closing valve
+[13.88],Stand 05 Rolls gap adjustment opening valve
+[13.89],Stand 05 Rolls gap adjustment closing valve
+[13.90],Stand 06 Rolls gap adjustment opening valve
+[13.91],Stand 06 Rolls gap adjustment closing valve
+[13.92],Stand 07 Rolls gap adjustment opening valve
+[13.93],Stand 07 Rolls gap adjustment closing valve
+[13.94],Stand 08 Rolls gap adjustment opening valve
+[13.95],Stand 08 Rolls gap adjustment closing valve
+[13.96],Stand 09 Rolls gap adjustment opening valve
+[13.97],Stand 09 Rolls gap adjustment closing valve
+[13.98],Stand 10 Rolls gap adjustment opening valve
+[13.99],Stand 10 Rolls gap adjustment closing valve
+[13.100],Stand 11 Rolls gap adjustment opening valve
+[13.101],Stand 11 Rolls gap adjustment closing valve
+[13.102],Stand 12 Rolls gap adjustment opening valve
+[13.103],Stand 12 Rolls gap adjustment closing valve
+[13.104],Stand 13 Rolls gap adjustment opening valve
+[13.105],Stand 13 Rolls gap adjustment closing valve
+[13.106],Stand 14 Rolls gap adjustment opening valve
+[13.107],Stand 14 Rolls gap adjustment closing valve
+[13.108],Stand 15 Rolls gap adjustment opening valve
+[13.109],Stand 15 Rolls gap adjustment closing valve
+[13.110],Stand 16H-V Rolls gap adjustment opening valve
+[13.111],Stand 16H-V Rolls gap adjustment closing valve
+[13.112],Stand 17 Rolls gap adjustment opening valve
+[13.113],Stand 17 Rolls gap adjustment closing valve
+[13.114],Stand 18 Rolls gap adjustment opening valve
+[13.115],Stand 18 Rolls gap adjustment closing valve
+[13.116],Stand 15 water flow detection
+[13.117],DSH PUMP1 WATER INLET PRESSURE
+[13.118],DSH PUMP1 LUB OIL  PRESSURE
+[13.119],DSH PUMP2 WATER INLET PRESSURE
+[13.120],DSH PUMP2 LUB OIL  PRESSURE
+[13.121],DSH PUMP3 WATER INLET PRESSURE
+[13.122],DSH PUMP3 LUB OIL  PRESSURE
+[13.123],Stand 17 gear fast position
+[13.124],Stand 17 gear slow  position
+[13.125],Stand 17 gear flow switch
+[13.126],Stand 18 gear fast position
+[13.127],Stand 18 gear slow position
+[13.128],Stand 16 vertical gearbox oil flow
+[13.129],FFB2 DEL VALVE OPEN COMMAND
+[13.130],FFB2 DEL VALVE CLOSE COMMAND
+[13.131],FFB2 DISCH VALVE OPEN COMMAND
+[13.132],FFB2 DISCH VALVE CLOSE COMMAND
+[13.133],FFB2 LABRYNTH OPEN POSITION
+[13.134],FFB2 LABRYNTH OPEN COMMAND
+[13.135],FFB2 LABRYNTH CLOSE POSITION
+[13.136],FFB2 LABRYNTH CLOSE COMMAND
+[13.137],FFB2 DEL OPEN POSITION
+[13.138],FFB2 DEL CLOSE POSITION
+[13.139],FFB2 DISCH OPEN POSITION
+[13.140],FFB2 DISCH CLOSE POSITION
+[13.141],Finishing Mill Lub min pressure switch
+[13.142],Finishing delivery valve open position
+[13.143],Finishing delivery valve close position
+[13.144],LCS01 Immobilization ON
+[13.145],LCS02 Immobilization ON
+[13.146],LCS03 Immobilization ON
+[13.147],LCS04 Immobilization ON
+[13.148],LCS05 Immobilization ON
+[13.149],LCS06 Immobilization ON
+[13.150],LCS07 Immobilization ON
+[13.151],LCS08 Immobilization ON
+[13.152],LCS09 Immobilization ON
+[13.153],LCS20 Immobilization ON
+[13.154],Roughing Mill Immobilization (0=ON; 1=OFF)
+[13.155],Intermdiate Mill Immobilization (0=ON; 1=OFF)
+[13.156],Finshing Mill Immobilization (0=ON; 1=OFF)
+[13.157],Stand 01 Water Flow + Pressure Switch
+[13.158],Roughing Stands water discharge open feedback
+[13.159],Roughing Stands water discharge close feedback
+[13.160],Roughing Stands water delivery open feedback
+[13.161],Roughing Stands water delivery close feedback
+[13.162],LUB4 Shut off Valve Open Command(Q231.0)
+[13.163],LUB4 Shut off Valve Open Feedback(I240.1)
+[13.164],LUB4 Shut off Valve Close Command(Q231.1)
+[13.165],LUB4 Shut off Valve Close Feedback(I240.2)
+[13.166],Lub 4 tank 1 min level switch
+[13.167],Lub 4 tank 1 min min  level switch
+[13.168],FFB1 Snap shear open position
+[13.169],FFB2 Snap shear open position
+[13.170],Descalar water unload valve open command
+[13.171],Descalar water unload valve close command
+[13.172],Descalar water unload valve opened
+[13.173],Descalar water unload valve closed
+[13.174],L1 FFB V ring air pressure min
+[13.175],L2 FFB V ring air pressure min
+[13.176],L2 FFB Lub delivery oil min pressure
+[13.178],Stand 03 direct cooling water min flow
+[13.179],Roughing direct cooling water delivery valve open command
+[13.180],Roughing direct cooling water delivery valve close command
+[13.181],Roughing direct cooling water discharge valve open command
+[13.182],Roughing direct cooling water delivery valve close command
+[13.183],Stand 05 gearbox lub flow
+[13.184],Stand 01 gearbox lub flow
+[13.185],Stand 02 gearbox lub flow
+[13.186],Stand 03 gearbox lub flow
+[13.187],Stand 04 gearbox lub flow
+[13.188],Stand 06 gearbox lub flow
+[13.189],Stand 07 gearbox lub flow
+[13.190],Stand 08 gearbox lub flow
+[13.191],Stand 09 gearbox lub flow
+[13.192],Stand 17 gearbox lub flow
+[13.193],Stand 18 gearbox lub flow
+[13.194],WTP 5 HOOTER FOR WATER LEVEL
+[13.195],DOG HOUSE GATE 1 CLOSE
+[13.196],DOG HOUSE GATE 2 CLOSE
+[13.197],DOG HOUSE GATE 3 CLOSE
+[13.200],Stand 10 gearbox lub flow
+[13.201],Stand 11 gearbox lub flow
+[13.202],Stand 12 gearbox lub flow
+[13.203],Stand 13 gearbox lub flow
+[13.204],Stand 14 gearbox lub flow
+[13.205],Stand 15 gearbox lub flow
+[13.206],Stand 16 bevel gearbox lub flow
+[13.207],Stand 16 vertical stand gearbox lub flow
+[14:0],STAND 2 VERTICAL ENCODER
+[14:1],14:1
+[16:0],16:0
+[16:1],16:1
+[16:2],S02_Groove encoder position feedback
+[16:18],S18_Groove encoder position feedback
+[17:0],TB2B Actual Torque
+[17:1],CB_Speed reference drive unit
+[17:2],TB 1A Actual Torque
+[17:3],TB1B Actual Torque
+[17:4],CB_Speed feedback (drive unit)
+[17:5],TB1A_Set Speed
+[17:6],TB1A_Actual Speed
+[17:7],TB1B_Actual Speed
+[17:8],TB1B_Set Speed
+[17:9],TB2A_Actual Speed
+[17:10],TB2A_Set Speed
+[17:11],TB2B_Set Speed
+[17:12],TB2B_Actual Speed
+[17:13],TWC1A Act Pos
+[17:14],TWC1B Act Pos
+[17:15],TWC2A Act Pos
+[17:16],TWC2B Act Pos
+[17:17],TB2A Actual Torque
+[17:18],TB1A Actual rolls pressure
+[17:19],TB2A Actual rolls pressure
+[17:20],TB2B Actual rolls pressure
+[17:21],TB1B Actual rolls pressure
+[17:22],cooling bed Actual position counter>270
+[17:23],cooling bed set position counter>270
+[17:24],CB_Speed reference before PID
+[17:25],CB_Set position
+[17:26],CB_Actual position
+[17:27],CB_Speed feedback (deg/s)
+[17:28],TB2A Head Pos
+[17:29],TB2A Tail Pos
+[17:30],TB2B Head Pos
+[17:31],TB2B Tail Pos
+[17:32],CB_WORK_DB.ActualTorquePct
+[17:33],TB1A Head Pos
+[17:34],TB1A Tail Pos
+[17:35],TB1B Head Pos
+[17:36],TB1B Tail Pos
+[17:37],17:37
+[17:38],17:38
+[17:39],17:39
+[17:40],17:40
+[17:41],17:41
+[17:42],17:42
+[17:43],17:43
+[17:44],17:44
+[17:45],17:45
+[17:47],TB1A Motor Current
+[17:48],TB1B Motor Current
+[17:49],TB2A Motor Current
+[17:50],TB2B Motor Current
+[17:51],TWC 2A Speed reference
+[17:52],TWC 2A Speed feedback
+[17:53],TWC 2B Speed reference
+[17:54],TWC 2B Speed feedback
+[17:55],TWC 1A Speed reference
+[17:56],TWC 1A Speed feedback
+[17:57],TWC 1B Speed reference
+[17:58],TWC 1B Speed feedback
+[17:59],TWC1A Torque Feedback
+[17:60],TWC1B Torque Feedback
+[17:61],TWC2A Torque Feedback
+[17:62],TWC2B Torque Feedback
+[17:63],17:63
+[17:64],17:64
+[17:65],17:65
+[17:66],17:66
+[17:67],17:67
+[17:68],17:68
+[17:69],17:69
+[17:70],17:70
+[17:71],17:71
+[17:72],17:72
+[17:73],17:73
+[17:74],17:74
+[17:75],17:75
+[17:76],17:76
+[17:77],17:77
+[17:78],17:78
+[17:79],17:79
+[17:80],17:80
+[17:81],17:81
+[17.0],CHOP REQ TO E35 TW1B
+[17.1],CHOP REQ TO E35 CB
+[17.2],CHOP REQ TO E35 Cobble
+[17.3],TB1B_WORK_DB.AirPressureON
+[17.4],CBFLU_DATA_DB.STS.ComprAir.PressOk
+[17.5],CHOP REQ TO E36 TB2A
+[17.6],CHOP REQ TO E36 TB2B
+[17.7],CHOP REQ TO E36 TBCar
+[17.8],APR_Bar Discharged to CB
+[17.9],CB Cycle Enable
+[17.10],CB Automatic
+[17.11],TAIL BREAKER INSTRUMENT AIR PRESSURE SWITCH
+[17.12],CHOP REQ TO E35 TB1A
+[17.13],CHOP REQ TO E35 TB1B
+[17.14],CHOP REQ TO E35 TB Car
+[17.15],CHOP REQ TO E35 TW1A
+[17.16],TB2A Rolls close cmd
+[17.17],TB2A Rolls close Hi pres
+[17.18],TB2B Rolls close cmd
+[17.19],TB2B Rolls close Hi pres
+[17.20],TWC 2B Motor cooling air alarm
+[17.21],TWC 2B Motor cooling water alarm
+[17.22],Cobble before TWC1A
+[17.23],Cobble before TWC1B
+[17.24],CHOP REQ TO E36 TW2A
+[17.25],CHOP REQ TO E36 TW2B
+[17.26],CHOP REQ TO E36 CB
+[17.27],CHOP REQ TO E36 Cobble
+[17.28],TB1A Rolls close cmd
+[17.29],TB1A Rolls close Hi pres
+[17.30],TB1B Rolls close cmd
+[17.31],TB1B Rolls close Hi pres
+[17.32],TB2B Fast Stop
+[17.33],CB Last Cycle
+[17.34],CB Stop Trigger
+[17.35],TB1A Breaking cycle Active
+[17.36],TB1B Breaking cycle Active
+[17.37],TB2A Breaking cycle Active
+[17.38],TB2B Breaking cycle Active
+[17.39],Bar presence in mill or after
+[17.40],Cobble before TWC2A
+[17.41],Cobble before TWC2B
+[17.42],TWC Line 1 cobble detection HMD
+[17.43],TWC Line 2 cobble detection HMD
+[17.44],TWC 2B Motor fan alarm
+[17.45],TB1A Fast Stop
+[17.46],TB1B Fast Stop
+[17.47],TB2A Fast Stop
+[17.48],CBGRS_DB.STS.GreasePressEndLine2Sw2
+[17.49],CBGRS_DB.Line2PressOkFilt
+[17.50],CBGRS_DB.AutoCycleLine1
+[17.51],CBGRS_DB.AutoCycleLine2
+[17.52],CBGRS_DB.CycleTimeOut
+[17.53],CBGRS_DB.STS.MP1MotorRunning
+[17.54],CBGRS_DB.STS.MP2MotorRunning
+[17.55],Cummulative run consent
+[17.56],Bar presence in last upstream stand
+[17.57],HMD TWC1A On Delay (for cobble detection)
+[17.58],HMD TWC1B On Delay (for cobble detection)
+[17.59],HMD TWC2A On Delay (for cobble detection)
+[17.60],HMD TWC2B On Delay (for cobble detection)
+[17.61],CBGRS_DB.STS.GreasePressEndLine1Sw2
+[17.62],CBGRS_DB.Line1PressOkFilt
+[17.63],CBGRS_DB.STS.GreasePressEndLine2Sw1
+[17.64],M 25.2
+[17.65],cooling bed slow down switch feedback_S101
+[17.66],cooling bed stop switch feedback_S102
+[17.67],To E50_ cooling bed position over bar deposition
+[17.68],Cooling bed area Emergency ok
+[17.69],Cooling bed hydraulic Emergency ok
+[17.70],TB LUB EMG
+[17.71],TWC2A Brake Release Command
+[17.72],Run consent 1
+[17.73],Run consent 2
+[17.74],Run consent 3
+[17.75],DB 160.DBX 102.0
+[17.76],DB 160.DBX 102.6
+[17.77],DB 1361.DBX 571.1
+[17.78],DB 1161.DBX 562.0
+[17.79],DB 1161.DBX 562.6
+[17.80],TWC2B Brake Release Command
+[17.81],TWC1A Brake Release Command
+[17.82],TWC1B Brake Release Command
+[17.83],TB Lub Acuumulator tank oil level not high
+[17.84],TB_1A_2B Leakage detector
+[17.85],TB_1B_2A Leakage detector
+[18:0],cooling bed work DB encoder raw from drive
+[21:0],DIV_SH2_SpeedRef(Drive Unit)
+[21:1],DIV_SH2_SpeedFEEDBACK(Drive Unit)
+[21:2],DSH2_Theor_Position
+[21:3],DSH2_Drive_Speed_Feedback
+[21:4],DSH2_Theor_Speed
+[21:5],DIVSH2_Point_Curve
+[21:6],SH3 Speed Ref to Drive
+[21:7],SH3 Cycle CNTR
+[21:8],SH3 PR SET Speed
+[21:9],SH3 PR ACT Speed
+[21:10],SH3 PR ACT Torque
+[21:11],SH3 PR SETTorque
+[21:12],QTB_PR Act Speed
+[21:13],QTB_PR Set  Speed
+[21:14],QTB_PR Act Torque
+[21:15],QTB_PR Set Torque
+[21:16],ACT-DATA1_DB.QTB1_WR_FLR_VLV1
+[21:17],ACT-DATA1_DB.QTB1_WR_FLR_VLV2
+[21:18],ACT-DATA1_DB.QTB2_WR_FLR_VLV3
+[21:19],ACT-DATA1_DB.QTB2_WR_FLR_VLV4
+[21:20],ACT-DATA1_DB.QTB_BP_AnalogVal.BPInletFlow
+[21:21],STAND 18 EXIT PYROMETER
+[21:22],QTB_BP_DB.HMI_VAL.BPInletFlow
+[21:23],DIV_SH2_Act_Position (PID)
+[21:24],DSH2 Trigger Point for diverter
+[21:25],DIV_SH2_SET_Position (PID)
+[21:26],DSH2_Theor_Speed(Input for PID)
+[21:27],DSH2_Theor_Speed(Out  PID)
+[21:28],SH1_Act_Position(forPID)
+[21:29],SH1_Teor_Position (for PID)
+[21:30],SH2_Act_Position(forPID)
+[21:31],SH2_Teor_Position (for PID)
+[21:32],SH3_Act_Position(forPID)
+[21:33],SH3_Teor_Position (for PID)
+[21:34],APR_Set_Discharge Position
+[21:35],APR_Tail_Position_BUF1
+[21:36],APR_Tail_Position_BUF2
+[21:37],APR_Tail_Position_BUF3
+[21:38],APR_Tail_Position_BUF4
+[21:39],APR_Tail_Position_BUF5
+[21:40],SH3 PID OUTPUT
+[21:41],SH3 Speed Calibr factor OWS
+[21:42],SH3 Speed Calibr factor measured
+[21:43],APR_Headl_Position_BUF1
+[21:44],APR_Headl_Position_BUF2
+[21:45],SH1_WORK_DB DRIVE IN TORQUE FEEDBACK
+[21:46],SH1_WORK_DB DRIVE IN SPEED FEEDBACK
+[21:47],SH1_WORK_DB DRIVEOUT SPEED REF
+[21:48],SH1_WORK_DB DRIVE IN CURRENT FEEDBACK
+[21:49],SH2_WORK_DB DRIVE IN TORQUE FEEDBACK
+[21:50],SH2_WORK_DB DRIVE IN CURRENT FEEDBACK
+[21:51],SH2_WORK_DB DRIVEOUT SPEED REF
+[21:52],SH2_WORK_DB DRIVE IN SPEED FEEDBACK
+[21:53],NUMBERS OF QTB BOOSTER PUMP SET FROM OWS
+[21:54],ACTUAL NUMBERS OF QTB BOOTER PUMP RUNNING
+[21:55],SH3 Motor Actual Speed
+[21:56],SH3 Motor Actual Torque
+[21:57],SH3 Motor Actual Current
+[21:58],QTB inlet pressure
+[21:59],BAR TEMPERATURE ON COOLING BED
+[21:60],APR_MAGN_DB_CURRENT REF TO DRIVE
+[21:61],APR_MAGN_DB_ACT CURRENT FDBK FROM DRIVE
+[21:62],APR_MAGN_DB_ACT OUTPUT VOLTAGE FROM DRIVE
+[21:63],QTB PR current output from drive
+[21:64],SH3 PR current output from drive
+[21:65],21:65
+[21:66],21:66
+[21:67],21:67
+[21:68],21:68
+[21:69],21:69
+[21:70],21:70
+[21:71],21:71
+[21:72],21:72
+[21:73],21:73
+[21:74],21:74
+[21:75],21:75
+[21:76],21:76
+[21:77],21:77
+[21:78],21:78
+[21:79],21:79
+[21:80],21:80
+[21:81],21:81
+[21.0],DSH2_WORK_DB.CYCLE_Permissive
+[21.1],DSH2_POS_DB.OUT_PositionKnown
+[21.2],DSH2_WORK_DB.MissedStart
+[21.3],DSH2_WORK_DB.CutEnable
+[21.4],DSH2_WORK_DB.AdjustMode
+[21.5],DSH2_WORK_DB.RunConsent3
+[21.6],DSH2_WORK_DB.EmergencyOk
+[21.7],DSH2_WORK_DB.LockedMode
+[21.8],HMD33_SH3_ExitSide
+[21.9],JD01E10_COMM_DB.CPU1_MPI_TO.E40_RTR
+[21.10],ApronDiverter_Valve
+[21.11],Apron_LIFT_Valve
+[21.12],Apron_LOWERING_Valve
+[21.13],DSH2_WORK_DB.DriveIn.Status.Started
+[21.14],SH1_PH0
+[21.15],SH1_PH01
+[21.16],SH2_CHOP_CMD_Communication E10
+[21.17],SH2_CHOP_CMD_Communication E35
+[21.18],SH2_CHOP_CMD_Communication E36
+[21.19],SH2_CHOP_CMD_Communication E40_2
+[21.20],SH2_CHOP_CMD_Communication E45
+[21.21],SH2_CHOP_CMD_RT1_1
+[21.22],SH2_CHOP_CMD_RT1_2
+[21.23],SH2_CHOP_CMD_QTB1
+[21.24],DSH2_WORK_DB.DriveIn.Status.PresetConfirm
+[21.25],DSH2_WORK_DB.DriveOut.Command.Preset
+[21.26],DSH2_WORK_DB.DriveIn.Status.Fault
+[21.27],DSH2_WORK_DB.DriveCommFlt
+[21.28],SH2_WORK_DB.BarInTheMill
+[21.29],SH2_CHOP_CMD_From E36 Uncond
+[21.30],SH2_CHOP_CMD_From E45 Cond
+[21.31],SH2_CHOP_CMD_From E45 Uncond
+[21.32],SH2_CHOP_CMD_SH2_Cut cycle enable
+[21.33],SH2_CHOP_CMD_DivSH2_Cut cycle enable
+[21.34],SH2_CHOP_CMD_From SH3_Condit chop req
+[21.35],SH2_CHOP_CMD_From SH3_Uncondit chop req
+[21.36],SH3_Cut cycle enable
+[21.37],SH3_Auto chop request memory
+[21.38],SH3_Auto chop request sum
+[21.39],SH3_Manual chop request sum
+[21.40],SH2_CHOP_CMD_QTB2
+[21.41],SH2_CHOP_CMD_QTB1_RT
+[21.42],SH2_CHOP_CMD_QTB1_PR
+[21.43],SH2_CHOP_CMD_QTB2_RT
+[21.44],SH2_CHOP_CMD_RT2_1
+[21.45],SH2_CHOP_CMD_RT2_2
+[21.46],SH2_CHOP_CMD_SH3_PR
+[21.47],SH2_CHOP_CMD_Chop mem any case
+[21.48],SH3_Chop CMD Apr_RT5
+[21.49],SH3_Chop CMD Apr_RT6
+[21.50],SH3_Chop CMD Aprons
+[21.51],SH3_Chop CMD Aprons Magnet
+[21.52],SH3_Chop CMD Chop memory any case
+[21.53],JD01E10_COMM_DB.CPU1_MPI_FROM.SH2_AUTO_CHOP_COMM
+[21.54],SH3_Chop CMD Data settings error
+[21.55],SH3_Chop CMD Div cut main HMD is not work properly
+[21.56],SH3_Chop CMD From Cooling Bed
+[21.57],SH3_Chop CMD_Bar continuity alarm in Div cut area
+[21.58],SH3_Chop CMD_for dividing cut errors
+[21.59],SH3_Chop CMD SH3_RT
+[21.60],SH3_Chop CMD Apr_RT1
+[21.61],SH3_Chop CMD Apr_RT2
+[21.62],SH3_Chop CMD Apr_RT3
+[21.63],SH3_Chop CMD Apr_RT4
+[21.64],SH1_CHOP_CMD_Upstreamshear Conditionl chop req
+[21.65],SH1_CHOP_CMD_Upstreamshear Unconditionl chop req
+[21.66],SH3_WORK_DB.FlywheelsPosOK
+[21.67],SH1_Chop_CMD_PH1_No view alarm
+[21.68],SH2_Chop_CMD_PH1_No view alarm
+[21.69],SH3_Chop_CMD_PH1_No view alarm
+[21.70],Bar_in the Mill (for choping)
+[21.71],SH2_Bar in Last stand
+[21.72],SH3_Chop rCMD requared Div cut not executed
+[21.73],SH3_Chop CMD Dividing table is empty
+[21.74],SH3_Chop CMD Dividing table contains to many bars
+[21.75],I_SH3_FlywheelOFF
+[21.76],SH3_HeadCount
+[21.77],I_SH3_FlywheelON
+[21.78],SH1_Chop CMD From E10
+[21.79],SH1_CHOP_CMD_Communication E10
+[21.80],HMI_BAR_DATA_BAR1_Short bar
+[21.81],HMI_BAR_DATA_BAR2_Normal bar
+[21.82],HMI_BAR_DATA_BAR2_Short bar
+[21.83],HMI_BAR_DATA_BAR3_Normal bar
+[21.84],HMI_BAR_DATA_BAR3_Short bar
+[21.85],HMI_BAR_DATA_BAR4_Normal bar
+[21.86],HMI_BAR_DATA_BAR4_Short bar
+[21.87],HMI_BAR_DATA_BAR5_Normal bar
+[21.88],SH2_CHOP for optimization
+[21.89],SH2_Chop Req main flag OB1
+[21.90],SH1_Chop Req main flag OB1
+[21.91],SH1_CHOP for optimization
+[21.92],SH1_CHOP_Pushbutton_MainPulpit
+[21.93],SH2_CHOP_Pushbutton_MainPulpit
+[21.94],SH2_CHOP for optimization
+[21.95],HMI_BAR_DATA_BAR1_Normal bar
+[21.96],Clear Optimization data for HMI (from 1 to 0=reset)
+[21.97],Clear Optimization data for HMI (Average Reset. 1=reset)
+[21.98],SH2_WORK_DB.AutoChopInterlock
+[21.99],SH1_Cut Cycle Enable
+[21.100],SH1_Automatic status
+[21.101],SH1_Speed Reference Enable
+[21.102],SH1_HeadCount
+[21.103],SH1_TailCount
+[21.104],HMI_BAR_DATA_BAR5_Short bar
+[21.105],JD01E35_COMM_DB.CPU1_MPI_FROM.I_E35_CondChopReq
+[21.106],HMI_BAR_DATA_BAR1_Last bar
+[21.107],HMI_BAR_DATA_BAR2_Last bar
+[21.108],HMI_BAR_DATA_BAR3_Last bar
+[21.109],HMI_BAR_DATA_BAR4_Last bar
+[21.110],HMI_BAR_DATA_BAR5_Last bar
+[21.111],JD01E35_COMM_DB.CPU1_MPI_FROM.I_E35_UncondChopReq
+[21.112],SH2_WORK_DB.BarInTheMill
+[21.113],SH3_Cut Cycle Enable
+[21.114],SH3_Automatic status
+[21.115],SH3_Speed Reference Enable
+[21.116],SH3_HeadCount
+[21.117],SH3_TailCount
+[21.118],SH3_Bar presence in knives cross point
+[21.119],SH2_WORK_DB.ChoppingMemoryActive
+[21.120],SH1_Bar presence in knives cross point
+[21.121],JD01E36_COMM_DB.CPU1_MPI_FROM.I_E36_CondChopReq
+[21.122],SH2_Cut Cycle Enable
+[21.123],SH2_Automatic status
+[21.124],SH2_Speed Reference Enable
+[21.125],SH2_HeadCount
+[21.126],SH2_TailCount
+[21.127],SH2_Bar presence in knives cross point
+[21.128],PH0M_Valid_Tail
+[21.129],PH0N_Valid_Tail
+[21.130],PH0OP_Valid_Tail
+[21.131],PHPH1_Valid_Tail
+[21.132],SH1_Valid_Tail
+[21.133],SH2_Valid_Tail
+[21.134],SH3_Valid_Tail
+[21.135],SH2_WORK_DB.ChoppingMemoryActive
+[21.136],SH2_WORK_DB.AutoChopInterlock
+[21.137],APRONS_WORK_DB.ApronsCycleInAct
+[21.138],APRONS_WORK_DB.ApronsCycleEndONS
+[21.139],APRONS_WORK_DB.ApronsCycle2ndPhase
+[21.140],APRONS_WORK_DB.ApronsCycleEndONS
+[21.141],APRONS_WORK_DB.CYCLE_Permissive
+[21.142],APRONS_WORK_DB.NewReqDuringAutCycle
+[21.143],PH0L_Valid_Tail
+[21.144],SH3  Manual cut wait
+[21.145],SH3  Cycle in active
+[21.146],Aprons #1 lifting sol.valve *BHI*
+[21.147],Aprons #1 lowering sol.valve *BHI*
+[21.148],SH3 Manual Cut Start TimeOut
+[21.149],SH3 Brake CMD
+[21.150],SH2_WORK_DB.AutChopReqMem
+[21.151],SH2_WORK_DB.UpstrUncondChopReq
+[21.152],SH2_WORK_DB.AutChopreq
+[21.153],PH0A_TailUpstream Device 1 Mem
+[21.154],PH0A_TailDeviceMem
+[21.155],PH0A_Bar at Device
+[21.156],SH3 Speed Ref Enable
+[21.157],SH3 Manual Cut Start
+[21.158],SH3  cycle running
+[21.159],SH3  Manual cycle running
+[21.160],SH3_PH2 (HMD33)
+[21.161],SH2 HeadCut Pos reached
+[21.162],SH2 HeadCut Requested
+[21.163],SH2 HeadCut in Active
+[21.164],SH2 Head Count
+[21.165],SH2 Incoming Tail
+[21.166],SH2 Tail Count
+[21.167],SH2 Bar presence at kn cros point
+[21.168],SH1 MAnual Cut Wait
+[21.169],SH1 MAnual Cut in Act
+[21.170],SH1 Manual Cut Request
+[21.171],SH1 Cycle in Active (CYC EXEC)
+[21.172],SH2_CUT_CYCLE_DB.OUT_CycleRunning
+[21.173],SH3 PR Close CMD
+[21.174],SH2_CUT_CYCLE_DB.OUT_ChopCycleRunning
+[21.175],SH3_PH1 (HMD19)
+[21.176],SH2 Brake open Stst
+[21.177],SH2 Drive Start CMD
+[21.178],SH2 Drive Start Confirm
+[21.179],SH2 Drive Motor brake released
+[21.180],SH2 exit diverter in rolling position *BHI*
+[21.181],SH2 Exit Diverter Close Valve
+[21.182],SH2 Exit Bottom Open Valve
+[21.183],SH2 Exit Bottom Open Closed
+[21.184],SH2 PH0
+[21.185],SH2 PH01
+[21.186],SH2 PH1
+[21.187],SH2 PH2
+[21.188],SH2 Chop in Active
+[21.189],SH2 HeadCut Order
+[21.190],SH2 Cycle ENable
+[21.191],SH2 Brake open CMD
+[21.192],SH1_WORK_DB.ChpReqMemory
+[21.193],SH1 Chop request billet too close
+[21.194],SH1 manual chop request
+[21.195],Bar presence at SH1 knives cross position
+[21.196],Layer forming area almost full
+[21.197],Layer forming area full
+[21.198],Layer forming in Auto mode
+[21.199],SH2 Low speed alarm
+[21.200],SH2_WORK_DB.AUTOCHOP_RequestOFF
+[21.201],sh2 exit diverter in rolling position
+[21.202],Cooling Bed Full (1=Healthy; 0=Full)
+[21.203],Furnace auto disch permissive from E40C1
+[21.204],spare
+[21.205],SH2 High speed alarm
+[21.206],QTB Pump 1 motor running
+[21.207],QTB Pump 2 motor running
+[21.208],SH1 protection cage closed
+[21.209],SH2 protection cage closed
+[21.210],QTB Pump 3 motor running
+[21.211],QTB Pump 4 motor running
+[21.212],QTB Pump 5 motor running
+[21.213],QTB Pump 6 motor running
+[21.214],SH1 Limit switch1 open status(1=open;0=close)
+[21.215],SH1 Limit switch2 open status(1=open;0=close)
+[21.216],Lifting apron high position
+[21.217],Lifting apron mid position
+[21.218],Lifting apron low  position
+[21.219],SH3_Chopping
+[21.220],QTB Booster pumps discharge valve open command (sov valve)
+[21.221],QTB Booster pumps discharge valve close command (sov valve)
+[21.222],QTB Booster pumps discharge valve in open position
+[21.223],QTB Booster pumps discharge valve in close position
+[21.234],APR_MAGN_DB_DRIVE OUT COMMAND
+[22:0],DIV_SH2_Act_Position from encoder
+[22:1],SH1 Head Cut off Length Accum
+[22:2],SH1 Head Cut off Length
+[22:3],SH1_HeadPosition
+[22:4],SH1_TailPosition
+[22:5],SH2_HeadPosition
+[22:6],SH2_TailPosition
+[22:7],SH3_HeadPosition
+[22:8],SH3_TailPosition
+[22:9],SH3_NEW_HeadPosition
+[22:10],SH3_Produced bar length
+[22:11],OPT_RemLenght_before_SH1
+[22:12],OPT_RemLenght_before_SH2
+[22:13],OPT_RemLenght_before_SH3
+[22:14],OPT_RemLenght_before_Div shear
+[22:15],DB 1360.DBD 92
+[22:16],SH2_HedPos_From last stand
+[22:17],SH2_Last stand-SH2 Distance
+[22:18],SH3_CHOOSEN DIV Lenght
+[22:19],Lenght to be chopped
+[22:20],SH1_Chopcompared Length
+[22:21],SH2_Chopcompared Length
+[22:22],Distance SH2-SH3 Average
+[22:23],Distance SH1-SH3 Average
+[22:24],PHB_Head_Dist_Count
+[22:25],PHB_Head_Dist_Count_Raw
+[22:26],PHB_Tail_Dist_Count
+[22:27],PHB_Tail_Dist_Count_Raw
+[22:28],PHC_Head_Dist_Count
+[22:29],PHC_Head_Dist_Count_Raw
+[22:30],PHC_Tail_Dist_Count
+[22:31],PHC_Tail_Dist_Count_Raw
+[22:32],PH0A_Tail_Dist_Count_
+[22:33],APR_Headl_Position_BUF3
+[22:34],APR_Head_Position_BUF4
+[22:35],APR_Headl_Position_BUF5
+[22:36],Extra time for DSH2
+[22:37],22:37
+[22:38],22:38
+[22:39],22:39
+[22:40],22:40
+[22:41],22:41
+[22:42],22:42
+[22:43],22:43
+[22:44],22:44
+[22:45],22:45
+[22:46],22:46
+[22:47],22:47
+[22:48],22:48
+[22:49],22:49
+[22:50],22:50
+[22:51],22:51
+[22:52],22:52
+[22:53],22:53
+[22:54],22:54
+[22:55],22:55
+[22:56],22:56
+[22:57],22:57
+[22:58],22:58
+[23:0],23:0
+[23:1],23:1
+[23:2],23:2
+[23:20],23:20
+[23:21],23:21
+[23:22],23:22
+[25:0],25:0
+[25:1],25:1
+[25:2],25:2
+[25:3],25:3
+[25:4],25:4
+[25:5],25:5
+[25:6],25:6
+[25:7],25:7
+[25:8],DM. M1 M2 Avg Value
+[25:9],DM. M1 LVDT
+[25:10],DM. M2 LVDT
+[25:11],WB. Lifting LVDT
+[25:12],WB. Transfer LVDT
+[25:13],ALIGNMENT PUSHER VALUE
+[25:14],CHARGING ROLL TABLE SPEED
+[25:15],HYD.OIL LEVEL
+[25:16],HYD OIL TEMP
+[25:17],HYD.OIL PRESSURE
+[25:18],EXPANSION TANK LEVEL
+[25:19],ALIGNMENT PUSHER LVDT
+[25:20],ENCODER 250ZT Charging inside RT
+[25:21],WB.Auto Cycle Time
+[25:22],BILLET DISCHARGE TIME
+[25:23],BILLET LENGTH
+[25:24],WB.Lifting Ref
+[25:25],WB.Transfer Ref
+[25:26],BILLET WEIGHT
+[25:27],WB SIM VALUE
+[25:28],WB SIM VALUE 1
+[25:29],ALIGNMENT PUSHER  Ref
+[25:30],Furnace cycle time(chg & dis)
+[25:31],Charging_Billet Target Position
+[25:32],After Tail FB
+[25:33],Target after tail 250ZY_01
+[25:34],LASER  ANGULAR VALUE
+[25:35],25:35
+[25:36],25:36
+[25:37],25:37
+[25:38],25:38
+[25:39],25:39
+[25:40],25:40
+[25:41],25:41
+[25:42],25:42
+[25:43],25:43
+[25:44],25:44
+[25:45],25:45
+[25:46],25:46
+[25:47],25:47
+[25:48],25:48
+[25:49],25:49
+[25:50],25:50
+[25:51],25:51
+[25:52],25:52
+[25:53],25:53
+[25:54],25:54
+[25:55],25:55
+[25:56],25:56
+[25:57],25:57
+[25:58],25:58
+[25:59],25:59
+[25:60],25:60
+[25:61],25:61
+[25:62],25:62
+[25:63],25:63
+[25:64],25:64
+[25:65],25:65
+[25:66],25:66
+[25:67],25:67
+[25:68],25:68
+[25:69],25:69
+[25:70],25:70
+[25:71],25:71
+[25:72],25:72
+[25:73],25:73
+[25:74],25:74
+[25:75],25:75
+[25:76],25:76
+[25:77],25:77
+[25:78],25:78
+[25:79],25:79
+[25:80],25:80
+[25:81],25:81
+[25:82],25:82
+[25:83],25:83
+[25:84],25:84
+[25:85],25:85
+[25:86],25:86
+[25:87],25:87
+[25:88],25:88
+[25:89],25:89
+[25:90],25:90
+[25:91],25:91
+[25:92],25:92
+[25:93],25:93
+[25:94],25:94
+[25:95],25:95
+[25:96],25:96
+[25:97],25:97
+[25:98],25:98
+[25:99],25:99
+[25:100],25:100
+[25:101],25:101
+[25:102],25:102
+[25:103],25:103
+[25:104],25:104
+[25:105],25:105
+[25:106],25:106
+[25:107],25:107
+[25:108],25:108
+[25:109],25:109
+[25:110],25:110
+[25:111],25:111
+[25:112],25:112
+[25:113],25:113
+[25:114],25:114
+[25:115],25:115
+[25:116],25:116
+[25:117],25:117
+[25:118],25:118
+[25:119],25:119
+[25:120],25:120
+[25:121],25:121
+[25:122],25:122
+[25:123],25:123
+[25.0],BILLET LAST POSITION
+[25.1],LASER CELL 250 ZY
+[25.2],FCE EXIT HMD
+[25.3],BILLET CALL FROM MILL
+[25.4],DIST METER AUTO FWD
+[25.5],CHARGING DOOR OPEN FB
+[25.6],CHARGING DOOR CLOSE FB
+[25.7],DISCHG DOOR OPEN FB
+[25.8],DISCHG DOOR CLOSE FB
+[25.9],DISCHARGING IN AUTO
+[25.10],DISCHARGING DOOR AUTO CLOSE REQUEST
+[25.11],DISCHARGING DOOR AUTO OPEN  REQUEST
+[25.12],WB AUTO SEL
+[25.13],WB MANUAL SEL
+[25.14],WB SEMI AUTO SEL
+[25.15],Billet aligned
+[25.16],Walking Beam position 1
+[25.17],Walking Beam position 2
+[25.18],Walking Beam position 3
+[25.19],Walking Beam position 4
+[25.20],Distance meter cycle
+[25.21],WB_Mid_Up_Position
+[25.22],WALKING BEAM MID UP PROXY
+[25.23],WB_Mid_Up_Proximity
+[25.24],BILLET HEAD LASER(NEW LASER)
+[25.25],DISCHARGING ROLLER FORWARD
+[25.26],DISCHARGING ROLLER REVERSE
+[25.27],DISCHARGING ROLLER RUNNING
+[25.28],CHARGING ROLLER FORWARD feedback
+[25.29],CHARGING ROLLER REVERSE feedback
+[25.30],CHARGING ROLLER RUNNING feedback
+[25.31],WB NEW UP POSITION PROXY
+[25.32],WB NEW DOWN  POSITION PROXY
+[25.33],WB UP LIMIT SWITCH
+[25.34],WB DOWN LIMIT SWITCH
+[25.35],WB UP POSITION THROUGH LVDT
+[25.36],WB DOWN  POSITION THROUGH LVDT
+[25.37],WB FRONT POSITION THROUGH LVDT
+[25.38],WB FWD CMD
+[25.39],WB BACK  POSITION THROUGH LVDT
+[25.40],25.4
+[25.41],WB FRONT LIMIT SWITCH
+[25.42],WB BACK  LIMIT SWITCH
+[25.43],DM Auto Fwd Cmd
+[25.44],Billet Positioned
+[25.45],Billet Aligned
+[25.46],DM Auto Bwd Cmd
+[25.47],Charging RT Auto stop request
+[25.48],Charging RT Auto fwd  request
+[25.49],Charging RT Auto rev  request
+[25.50],Charging RT Fwd command to drive
+[25.51],Charging RT Rev command to drive
+[25.52],WB.Auto UP Command
+[25.53],WB.Auto Down Command
+[25.54],WB.Auto Backward Command
+[25.55],WB.Auto Forward Command
+[25.56],Check Valves Lock/Unlock Order 8A (_0571VH_08)
+[25.57],Check Valves Lock/Unlock Order 8B(_0571VH_09)
+[25.58],_0571VH_01(LIFTING MOVEMENT)
+[25.59],_0571VH_02(DESCEND MOVEMENT)
+[25.60],_0571VH_03(DESCEND MOVEMENT)
+[25.61],_0571VH_04(DESCEND MOVEMENT)
+[25.62],_0571VH_05(LIFTING UP  MOVEMENT)
+[25.63],_0571VH_06(CIRCUIT IN PRESSURE BEFORE DESCEND MOVEMENT)
+[25.64],_0571VH_07(CYLINDERS CHECK VALVES LOCK/UNLOCK ORDER)
+[25.65],DISCHARGING DOOR OPEN\CLOSE PNEUMATIC VALVE COMMAND
+[25.66],WB.General COndition
+[25.67],WB.Auto Interlock
+[25.68],WB.Up Interlock
+[25.69],WB.Down Interlock
+[25.70],WB.Fwd Interlock
+[25.71],WB.Down Interlock
+[25.72],CHARGING ROLLTABLE DRIVE READY
+[25.73],DISCHARHING RT DRIVE READY
+[25.74],CHG RT FAULTY
+[25.75],25.75
+[25.76],25.76
+[25.77],25.77
+[25.78],25.78
+[25.79],25.79
+[25.80],25.8
+[25.81],25.81
+[25.82],25.82
+[25.83],25.83
+[25.84],25.84
+[25.85],25.85
+[25.86],RT1_Stop_Bit
+[25.87],250zy raw signal
+[25.88],DM2 Fwd_bwd command from hmi
+[25.89],25.89
+[25.90],25.9
+[25.91],25.91
+[25.92],25.92
+[25.93],25.93
+[25.94],25.94
+[25.95],25.95
+[25.96],25.96
+[25.97],25.97
+[25.98],25.98
+[25.99],25.99
+[25.100],25.1
+[25.101],25.101
+[25.102],25.102
+[25.103],25.103
+[25.104],25.104
+[25.105],25.105
+[25.106],25.106
+[25.107],25.107
+[25.108],25.108
+[25.109],25.109
+[25.110],25.11
+[25.111],25.111
+[25.112],25.112
+[25.113],25.113
+[25.114],25.114
+[25.115],25.115
+[25.116],25.116
+[25.117],25.117
+[25.118],25.118
+[25.119],25.119
+[25.120],25.12
+[25.121],25.121
+[25.122],25.122
+[25.123],25.123
+[26:0],26:0
+[26:1],26:1
+[26:2],26:2
+[26:3],26:3
+[26:4],26:4
+[26:5],26:5
+[26:6],26:6
+[26:7],26:7
+[26:8],RECUPERATIVE ZONE TEMP A SIDE TT01_1000A
+[26:9],RECUPERATIVE ZONE TEMP B SIDE TT01_1000B
+[26:10],RECUPERATIVE ZONE TOP TEMP  TT01_1000C
+[26:11],PREHEATING  ZONE TEMP A SIDE TT01_1020A
+[26:12],PREHEATING  ZONE TOP TEMP TT01_1010B
+[26:13],PREHEATING  ZONE TOP TEMP TT01_1010A
+[26:14],PREHEATING  ZONE TEMP B SIDE TT01_1020B
+[26:15],HEATING ZONE TEMP A SIDE TT01_1040A
+[26:16],HEATING ZONE TEMP B SIDE TT01_1040B
+[26:17],HEATING  ZONE TOP TEMP  TT01_1030A
+[26:18],HEATING  ZONE TOP TEMP  TT01_1030B
+[26:19],SOAKING  ZONE TEMP A SIDE TT01_1060A
+[26:20],SOAKING  ZONE TEMP B  SIDE TT01_1060B
+[26:21],SOAKING  ZONE TOP TEMP  TT01_1050A
+[26:22],SOAKING  ZONE TOP TEMP  TT01_1050B
+[26:23],Mixed gas press transmitter before safety  key PT01_1901A
+[26:24],Mixed gas press transmitter AFTER safety  key PT01_1901B
+[26:25],Combustion Air Pressure PT01_1904
+[26:26],Combustion Air Temperature  TT01_1904
+[26:27],Recuperator Entry Temperature TT01_1908
+[26:28],Recuperator Exit Temperature TT01_1924
+[26:29],Furnace pressure PT01_1900
+[26:30],Hot air exhaust temperature TT01_1909
+[26:31],Compressed air pressure PT01_1921
+[26:32],Nitrogen press transmitter PT01_1906
+[26:33],Mixed gas actual flow transmitter FT01_1901_1_ACT
+[26:34],Mixed gas pressure control valve PCV01_1901.in
+[26:35],CA FAN 2 SPEED CAF2_RPM
+[26:36],CA FAN 1 SPEED REFERENCE ER11VFD1_SPEED_REF
+[26:37],CA FAN 2 SPEED REFERENCE ER11VFD2_SPEED_REF
+[26:38],Heat demand of top preheating zone TIRC01_1310A.CVEU
+[26:39],Heat demand of bottom preheating zone TIRC01_1410B.CVEU
+[26:40],Heat demand of top heating zone TIRC01_1320A.CVEU
+[26:41],Heat demand of bottom  heating zone TIRC01_1420B.CVEU
+[26:42],Heat demand of top soaking zone TIRC01_1340A.CVEU
+[26:43],Heat demand of bottom soaking zone TIRC01_1440B.CVEU
+[26:44],Damper actual feedback PCV1900_FF_FB
+[26:45],SOX VALUE
+[26:46],NOX VALUE
+[26:47],CO ANALYSER VALUE
+[26:48],O2 FLUE GAS
+[26:49],Discharging Pyrometer
+[26:50],BACK END TEMP OF BILLET
+[26:51],FRONT END TEMP OF BILLET
+[26:52],CA FAN 1 MOTOR VIBRATION NDE 90
+[26:53],CA FAN 1 MOTOR VIBRATION NDE 180
+[26:54],CA FAN 1  VIBRATION NDE 90
+[26:55],CA FAN 1  VIBRATION NDE 180
+[26:56],CA FAN 2 MOTOR VIBRATION NDE 90
+[26:57],CA FAN 2 MOTOR VIBRATION NDE 180
+[26:58],CA FAN 2 VIBRATION 90
+[26:59],CA FAN 2 VIBRATION 180
+[26:60],CA FAN 1 MOTOR BEARING 1 TEMP
+[26:61],CA FAN 1 MOTOR BEARING 2 TEMP
+[26:62],CA FAN 2 MOTOR BEARING 1 TEMP
+[26:63],CA FAN 2 MOTOR BEARING 2 TEMP
+[26:64],RECUPERATOR ENTRY TEMP
+[26:65],RECUPERATOR EXIT TEMP
+[26:66],COMBUSTION AIR TEMP
+[26:67],CV VALUE
+[26:68],26:68
+[26:69],26:69
+[26:70],26:70
+[26:71],26:71
+[26:72],26:72
+[26:73],26:73
+[26:74],26:74
+[26:75],26:75
+[26:76],26:76
+[26:77],26:77
+[26:78],26:78
+[26:79],26:79
+[26:80],26:80
+[26:81],26:81
+[26:82],26:82
+[26:83],26:83
+[26:84],26:84
+[26:85],26:85
+[26:86],26:86
+[26:87],26:87
+[26:88],26:88
+[26:89],26:89
+[26:90],26:90
+[26:91],26:91
+[26:92],26:92
+[26:93],26:93
+[26:94],26:94
+[26:95],26:95
+[26:96],26:96
+[26:97],26:97
+[26:98],26:98
+[26:99],26:99
+[26:100],26:100
+[26:101],26:101
+[26:102],26:102
+[26:103],26:103
+[26:104],26:104
+[26:105],26:105
+[26:106],26:106
+[26:107],26:107
+[26:108],26:108
+[26:109],26:109
+[26:110],26:110
+[26:111],26:111
+[26:112],26:112
+[26:113],26:113
+[26:114],26:114
+[26:115],26:115
+[26:116],26:116
+[26:117],26:117
+[26:118],26:118
+[26:119],26:119
+[26:120],26:120
+[26:121],26:121
+[26:122],26:122
+[26:123],26:123
+[26.0],Mixed gas shut off valve FSV1901A.opend
+[26.1],Mixed gas shut off valve FSV1901A.closed
+[26.2],Mixed gas shut off valve FSV1901B.opend
+[26.3],Mixed gas shut off valve FSV1901B.closed
+[26.4],Mixed gas high press switch PSH1901
+[26.5],Mixed gas low press switch before safety key PSL1901A
+[26.6],Mixed gas low press switch after safety key PSL1901B
+[26.7],Combustion air low press switch PSL 1904 A (IN PRODUCTION  MODE)
+[26.8],Combustion air low press switch PSL 1904 B (IN HEATING  MODE)
+[26.9],Mixed gas low press switch after safety key PSL 1901 C
+[26.10],Indirect cooling water low press switch PSL 1916_1
+[26.11],Compressed air low press switch PSL 1921 A
+[26.12],Nitrogen high press switch PSH 1906
+[26.13],Nitrogen LOW press switch PSL 1906
+[26.14],26.14
+[26.15],26.15
+[26.16],26.16
+[26.17],26.17
+[26.18],26.18
+[26.19],26.19
+[26.20],26.2
+[26.21],26.21
+[26.22],26.22
+[26.23],26.23
+[26.24],26.24
+[26.25],26.25
+[26.26],26.26
+[26.27],26.27
+[26.28],26.28
+[26.29],26.29
+[26.30],26.3
+[26.31],26.31
+[26.32],26.32
+[26.33],26.33
+[26.34],26.34
+[26.35],26.35
+[26.36],26.36
+[26.37],26.37
+[26.38],26.38
+[26.39],26.39
+[26.40],26.4
+[26.41],26.41
+[26.42],26.42
+[26.43],26.43
+[26.44],26.44
+[26.45],26.45
+[26.46],26.46
+[26.47],26.47
+[26.48],26.48
+[26.49],26.49
+[26.50],26.5
+[26.51],26.51
+[26.52],26.52
+[26.53],26.53
+[26.54],26.54
+[26.55],26.55
+[26.56],26.56
+[26.57],26.57
+[26.58],26.58
+[26.59],26.59
+[26.60],26.6
+[26.61],26.61
+[26.62],26.62
+[26.63],26.63
+[26.64],26.64
+[26.65],26.65
+[26.66],26.66
+[26.67],26.67
+[26.68],26.68
+[26.69],26.69
+[26.70],26.7
+[26.71],26.71
+[26.72],26.72
+[26.73],26.73
+[26.74],26.74
+[26.75],26.75
+[26.76],26.76
+[26.77],26.77
+[26.78],26.78
+[26.79],26.79
+[26.80],26.8
+[26.81],26.81
+[26.82],26.82
+[26.83],26.83
+[26.84],26.84
+[26.85],26.85
+[26.86],26.86
+[26.87],26.87
+[26.88],26.88
+[26.89],26.89
+[26.90],26.9
+[26.91],26.91
+[26.92],26.92
+[26.93],26.93
+[26.94],26.94
+[26.95],26.95
+[26.96],26.96
+[26.97],26.97
+[26.98],26.98
+[26.99],26.99
+[26.100],26.1
+[26.101],26.101
+[26.102],26.102
+[26.103],26.103
+[26.104],26.104
+[26.105],26.105
+[26.106],26.106
+[26.107],26.107
+[26.108],26.108
+[26.109],26.109
+[26.110],26.11
+[26.111],26.111
+[26.112],26.112
+[26.113],26.113
+[26.114],26.114
+[26.115],26.115
+[26.116],26.116
+[26.117],26.117
+[26.118],26.118
+[26.119],26.119
+[26.120],26.12
+[26.121],26.121
+[26.122],26.122
+[26.123],26.123

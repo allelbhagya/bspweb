@@ -1,0 +1,268 @@
+* {
+  font-size: large;
+  box-sizing: border-box;
+}
+
+body {
+  color: #222;
+}
+
+main {
+  padding: 10px;
+  max-width: 1000px;
+  margin: 0 auto; /* Center the content horizontally */
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+header a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header a.logo {
+  font-weight: bolder;
+  font-size: x-large;
+}
+
+header nav {
+  display: flex;
+  gap: 15px;
+  font-weight:light;
+}
+
+form.login,
+form.register {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+input {
+  display: block;
+  margin-bottom: 5px;
+  width: 100%;
+  padding: 10px 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  border-bottom: 1px solid #ccc;
+  background-color: #fff;
+}
+
+button {
+  width: 100%;
+  display: block;
+  border: 0;
+  border-radius: 5px;
+  padding: 8px 0;
+}
+
+h1 {
+  text-align: left;
+}
+
+.logform {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.logform h2 {
+  text-align: center;
+}
+
+.logform label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.logform input,
+.logform textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+.logform textarea {
+  resize: vertical;
+}
+
+.logform input[type="time"] {
+  width: calc(100% - 18px);
+}
+
+.logform input[type="number"] {
+  width: calc(100% - 18px);
+}
+
+.log {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 0 auto; /* Center the table within the available width */
+}
+
+
+.log th,
+.log td {
+  border: 1px solid #000000;
+  padding: 2px;
+  text-align: left;
+}
+
+.log th {
+  background-color: #40afa2;
+}
+
+
+.log th,
+.log td {
+  max-width: 120px; /* Adjust the maximum width as needed */
+  overflow: hidden;
+  white-space: normal; /* Set to normal to allow text wrap */
+  word-wrap: break-word; /* Added for multiline content */
+  
+}
+
+.log th,
+.log td {
+  border: 1px solid #000000;
+  padding: 2px;
+}
+
+@media (max-width: 600px) {
+  .log th,
+  .log td {
+    padding: 2px;
+  }
+  .log th:nth-child(5),
+  .log td:nth-child(5),
+  .log th:nth-child(6),
+  .log td:nth-child(6),
+  .log th:nth-child(7),
+  .log td:nth-child(7),
+  .log th:nth-child(8),
+  .log td:nth-child(8)  {
+    display: none;
+  }
+}
+
+
+button,
+header nav .nav-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #287068;;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+button:hover,
+header nav .nav-button:hover {
+  background-color: #1c423b; /* Darker background on hover */
+}
+
+.region-options {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.region-option {
+  margin-right: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.region-option input {
+  margin-right: 5px;
+}
+
+.region-option label {
+  font-weight: unset;
+  margin-bottom: 0;
+}
+
+.stoppage-options {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.stoppage-option {
+  margin-right: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.stoppage-option input {
+  margin-right: 5px;
+}
+
+.stoppage-option label {
+  font-weight: unset;
+  margin-bottom: 0;
+}
+
+.logform label {
+  display: block;
+  margin-top: 15px; /* Adjust as needed for spacing */
+  font-size:large;
+}
+
+.logform input,
+.logform textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+
+.logform textarea {
+  resize: vertical;
+}
+
+.logform input[type="time"],
+.logform input[type="number"] {
+  width: calc(100% - 18px);
+}
+
+/* Add divider before each label except the first one in the main form */
+.logform > label:not(:first-child) {
+  border-top: 1px solid #000000; /* Add border above each label */
+  padding-top: 15px; /* Adjust as needed for spacing */
+}
+
+/* Remove top border for labels in region and stoppage sections */
+.region-option label,
+.stoppage-option label {
+  border-top: none;
+  padding-top: 0;
+}
+
+/* Add this CSS to your styles */
+.log-buttons {
+  display: flex;
+  gap: 8px;
+  justify-content: center; /* Center the buttons horizontally */
+}
+
+.log-buttons button {
+  font-size: 15px; /* Adjust font size as needed */
+  padding: 5px; /* Adjust padding as needed */ /* Adjust font size as needed */
+}
+
+/* styles.css */
+h1 {
+  font-size: 1.5em; /* You can adjust the value as needed */
+}
