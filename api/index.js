@@ -20,6 +20,8 @@ app.use(cookieParser());
 
 mongoose.connect("mongodb+srv://bsp:bsp@bsp.liemt4a.mongodb.net/?retryWrites=true&w=majority");
 
+console.log('ok')
+
 app.post('/register', async(req,res)=>{
     const {username, password} = req.body;
     try{
