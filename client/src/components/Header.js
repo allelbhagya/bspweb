@@ -3,23 +3,49 @@ import { Link } from "react-router-dom";
 import { UserContext } from "./UserContext";
 
 export default function Header() {
-  const {setUserInfo,userInfo} = useContext(UserContext);
+  const { setUserInfo, userInfo } = useContext(UserContext);
+
   useEffect(() => {
+    // Fetch user profile
     fetch('https://bspweb-api.vercel.app/profile', {
       method: 'GET',
       credentials: 'include',
       headers: {
-          'Content-Type': 'application/json',
-      },  
-    });
-  }, []);
+        'Content-Type': 'application/json',
+      },
+    })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Failed to fetch user profile');
+        }
+        return response.json();
+      })
+      .then(data => {
+        // Update user info in the context
+        setUserInfo(data);
+      })
+      .catch(error => {
+        // Handle error (e.g., redirect to login page)
+        console.error('Error fetching user profile:', error);
+      });
+  }, []); // Empty dependency array ensures the effect runs only once on mount
 
   function logout() {
+    // Logout logic
     fetch('https://bspweb-api.vercel.app/logout', {
       credentials: 'include',
       method: 'POST',
-    });
-    setUserInfo(null);
+    })
+      .then(response => response.json())
+      .then(data => {
+        // Clear user info in the context
+        setUserInfo(null);
+        console.log(data);
+      })
+      .catch(error => {
+        // Handle error (e.g., log or show an error message)
+        console.error('Error logging out:', error);
+      });
   }
 
   const username = userInfo?.username;
@@ -30,7 +56,7 @@ export default function Header() {
         cobble logs
       </Link>
       <nav>
-        {username && (
+        {username ? (
           <>
             <Link to="/analysis" className="nav-button">
               Analysis
@@ -42,7 +68,7 @@ export default function Header() {
               Logout
             </Link>
           </>
-        )}{!username&& (
+        ) : (
           <>
             <Link to="/analysis" className="nav-button">
               Analysis

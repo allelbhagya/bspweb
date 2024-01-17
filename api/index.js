@@ -52,70 +52,35 @@ app.post('/register', async (req, res) => {
 // ... (previous code)
 
 
-app.post('/login', async (req, res) => {
-  const { username, password } = req.body;
-  try {
-    const userDoc = await User.findOne({ username });
-
-    if (!userDoc) {
-      return res.status(400).json({ error: 'User not found' });
-    }
-
-    const passOk = bcrypt.compareSync(password, userDoc.password);
-
-    if (passOk) {
-      jwt.sign({ username, id: userDoc._id }, secret, { expiresIn: '7d' }, (err, token) => {
-        if (err) throw err;
-
-        res.cookie('token', token, {
-          httpOnly: true,
-          secure: process.env.NODE_ENV === 'production',
-          sameSite: 'None',
-          expires: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000), // Set cookie expiration to 7 days
-        }).json({
-          id: userDoc._id,
-          username,
-        });
+app.post('/login', async (req,res) => {
+  const {username,password} = req.body;
+  const userDoc = await User.findOne({username});
+  const passOk = bcrypt.compareSync(password, userDoc.password);
+  if (passOk) {
+    // logged in
+    jwt.sign({username,id:userDoc._id}, secret, {}, (err,token) => {
+      if (err) throw err;
+      res.cookie('token', token).json({
+        id:userDoc._id,
+        username,
       });
-    } else {
-      res.status(400).json({ error: 'Incorrect password' });
-    }
-  } catch (error) {
-    console.error('Login error:', error);
-    res.status(500).json({ error: 'Internal Server Error' });
+    });
+  } else {
+    res.status(400).json('wrong credentials');
   }
 });
 
-
-app.get('/profile', (req, res) => {
-  const { token } = req.cookies;
-
-  if (!token) {
-    console.log('No token found');
-    return res.status(401).json({ error: 'Unauthorized' });
-  }
-
-  console.log('Token found:', token);
-
-  jwt.verify(token, secret, (err, info) => {
-    if (err) {
-      console.error('JWT Verification Error:', err.message);
-      return res.status(401).json({ error: 'Unauthorized' });
-    }
-
-    res.header('Access-Control-Allow-Origin', 'https://bspweb-client.vercel.app');
-    res.header('Access-Control-Allow-Methods', 'GET');
-    res.header('Access-Control-Allow-Credentials', 'true');
-    res.header('Cache-Control', 'no-store, max-age=0').json(info);
+app.get('/profile', (req,res) => {
+  const {token} = req.cookies;
+  jwt.verify(token, secret, {}, (err,info) => {
+    if (err) throw err;
+    res.json(info);
   });
 });
 
 app.post('/logout', (req,res) => {
-  res.clearCookie('token', { sameSite: 'None', secure: process.env.NODE_ENV === 'production' }).json({ message: 'Logged out successfully' });
+  res.cookie('token', '').json('ok');
 });
-
-// ... (remaining code)
-
 
 app.post('/log', upload.none(), async (req, res) => {
   const { time, duration, region, sensorID, stoppage, profile, comment, measure } = req.body;
