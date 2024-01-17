@@ -14,7 +14,7 @@ const app = express();
 const salt = bcrypt.genSaltSync(10);
 const secret = "qddi10eu90ikj1wqmn";
 
-const allowedOrigins = ['https://bspweb-client.vercel.app/', 'https://bspweb-client-6bl1o3f3x-allelbhagya.vercel.app'];
+const allowedOrigins = ['https://bspweb-client.vercel.app', 'https://bspweb-client-6bl1o3f3x-allelbhagya.vercel.app'];
 app.use(cors({
   methods: ["POST", "GET"],
   credentials: true,
