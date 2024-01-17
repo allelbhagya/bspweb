@@ -7,23 +7,13 @@ export default function Header() {
 
   useEffect(() => {
     fetch('https://bspweb-api.vercel.app/profile', {
-        credentials: 'include',
-    })
-    .then(response => {
-        if (!response.ok) {
-            throw new Error(`HTTP error! Status: ${response.status}`);
-        }
-        return response.json();
-    })
-    .then(userInfo => {
+      credentials: 'include',
+    }).then(response => {
+      response.json().then(userInfo => {
         setUserInfo(userInfo);
-    })
-    .catch(error => {
-        console.error('Fetch error:', error);
-        // Handle the error as needed
+      });
     });
-}, [setUserInfo]);
-
+  }, []);
 
 
 async function logout() {
