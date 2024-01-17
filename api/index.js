@@ -71,20 +71,21 @@ app.post('/login', async (req,res) => {
   }
 });
 
-app.get('/profile', (req,res) => {
+app.get('/profile', (req, res) => {
   const { token } = req.cookies;
   console.log(req.headers); 
   jwt.verify(token, secret, (err, info) => {
-      if (err) {
-          console.error('JWT Verification Error:', err.message);
-          return res.status(401).json({ error: 'Unauthorized' });
-      }
-      res.header('Access-Control-Allow-Origin', 'https://bspweb-client.vercel.app');
-      res.header('Access-Control-Allow-Methods', 'GET');
-      res.header('Access-Control-Allow-Credentials', 'true');
-      res.json(info);  
+    if (err) {
+      console.error('JWT Verification Error:', err.message);
+      return res.status(401).json({ error: 'Unauthorized' });
+    }
+    res.header('Access-Control-Allow-Origin', 'https://bspweb-client.vercel.app');
+    res.header('Access-Control-Allow-Methods', 'GET');
+    res.header('Access-Control-Allow-Credentials', 'true');
+    res.header('Cache-Control', 'no-store, max-age=0').json(info);
   });
 });
+
 
 app.post('/logout', (req,res) => {
   res.cookie('token', '').json('ok');
