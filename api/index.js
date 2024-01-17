@@ -60,56 +60,34 @@ app.post('/register', async (req, res) => {
   }
 });
 
-app.post('/login', async (req, res) => {
-  const { username, password } = req.body;
-  const userDoc = await User.findOne({ username });
-
-  if (!userDoc) {
-    return res.status(400).json({ error: 'User not found' });
-  }
-
-  const passOk = bcrypt.compareSync(password, userDoc.password);
-
-  if (passOk) {
-    jwt.sign({ username, id: userDoc._id }, secret, (err, token) => {
-      if (err) throw err;
-      res.cookie('token', token).json({
-        id: userDoc._id,
-        username,
+app.post('/login', async (req,res) => {
+    const {username,password} = req.body;
+    const userDoc = await User.findOne({username});
+    const passOk = bcrypt.compareSync(password, userDoc.password);
+    if (passOk) {
+      jwt.sign({username,id:userDoc._id}, secret, {}, (err,token) => {
+        if (err) throw err;
+        res.cookie('token', token).json({
+          id:userDoc._id,
+          username,
+        });
       });
-    });
-  } else {
-    return res.status(400).json({ error: 'Wrong credentials' });
-  }
-});
-
-app.get('/profile', (req, res) => {
-    const { token } = req.cookies;
-
-    if (!token) {
-        return res.status(401).json({ error: 'Unauthorized: Token not provided' });
+    } else {
+      res.status(400).json('wrong credentials');
     }
+  });
 
-    jwt.verify(token, secret, {}, (err, info) => {
-        if (err) {
-            console.error('Token verification error:', err);
-            if (err.name === 'JsonWebTokenError') {
-                return res.status(401).json({ error: 'Unauthorized: Invalid token' });
-            } else {
-                return res.status(500).json({ error: 'Internal Server Error' });
-            }
-        }
-
-        console.log('Decoded user information:', info);
-
-        res.json(info);
+  app.get('/profile', (req,res) => {
+    const {token} = req.cookies;
+    jwt.verify(token, secret, {}, (err,info) => {
+      if (err) throw err;
+      res.json(info);
     });
-});
-
-
-app.post('/logout', (req, res) => {
-  res.cookie('token', '').json('ok');
-});
+  });
+  
+  app.post('/logout', (req,res) => {
+    res.cookie('token', '').json('ok');
+  });
 
 app.post('/log', upload.none(), async (req, res) => {
   const { time, duration, region, sensorID, stoppage, profile, comment, measure } = req.body;
