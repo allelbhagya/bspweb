@@ -3,25 +3,55 @@ import { Link } from "react-router-dom";
 import { UserContext } from "./UserContext";
 
 export default function Header() {
-  const {setUserInfo,userInfo} = useContext(UserContext);
+  const { setUserInfo, userInfo } = useContext(UserContext);
+
   useEffect(() => {
-    fetch('https://bspweb-api.vercel.app/profile', {
-      credentials: 'include',
-    }).then(response => {
-      response.json().then(userInfo => {
-        setUserInfo(userInfo);
-      });
-    });
-  }, []);
+    // Fetch user profile only if there is a token
+    const token = getStoredToken(); // Implement this function to retrieve the stored token
+
+    if (token) {
+      fetch('https://bspweb-api.vercel.app/profile', {
+        method: 'GET',
+        credentials: 'include',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${token}`,
+        },
+      })
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Failed to fetch user profile');
+          }
+          return response.json();
+        })
+        .then(data => {
+          // Update user info in the context
+          setUserInfo(data);
+        })
+        .catch(error => {
+          // Handle error (e.g., redirect to login page)
+          console.error('Error fetching user profile:', error);
+        });
+    }
+  }, [setUserInfo]); // Include setUserInfo in the dependency array to avoid potential issues
 
   function logout() {
+    // Logout logic
     fetch('https://bspweb-api.vercel.app/logout', {
       credentials: 'include',
       method: 'POST',
-    });
-    setUserInfo(null);
+    })
+      .then(response => response.json())
+      .then(data => {
+        // Clear user info in the context
+        setUserInfo(null);
+        console.log(data);
+      })
+      .catch(error => {
+        // Handle error (e.g., log or show an error message)
+        console.error('Error logging out:', error);
+      });
   }
-
 
   const username = userInfo?.username;
 
@@ -34,7 +64,7 @@ export default function Header() {
         {username ? (
           <>
             <Link to="/analysis" className="nav-button">
-              Analysis, {username}
+              Analysis
             </Link>
             <Link to="/create" className="nav-button">
               Create new log
