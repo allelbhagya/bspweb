@@ -8,7 +8,7 @@ export default function Header() {
   useEffect(() => {
     fetch('https://bspweb-api.vercel.app/profile', {
         method: 'GET',
-        credentials: 'include',  // Make sure to include credentials
+        credentials: 'include',  // Include credentials for cookies
         headers: {
             'Content-Type': 'application/json',
             // Add your other headers if needed
@@ -28,6 +28,7 @@ export default function Header() {
         // Handle the error as needed
     });
 }, [setUserInfo]);
+
 
 
 

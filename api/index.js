@@ -84,27 +84,28 @@ app.post('/login', async (req, res) => {
 });
 
 app.get('/profile', (req, res) => {
-  const { token } = req.cookies;
+    const { token } = req.cookies;
 
-  if (!token) {
-    return res.status(401).json({ error: 'Unauthorized: Token not provided' });
-  }
-
-  jwt.verify(token, secret, {}, (err, info) => {
-    if (err) {
-      console.error('Token verification error:', err);
-      if (err.name === 'JsonWebTokenError') {
-        return res.status(401).json({ error: 'Unauthorized: Invalid token' });
-      } else {
-        return res.status(500).json({ error: 'Internal Server Error' });
-      }
+    if (!token) {
+        return res.status(401).json({ error: 'Unauthorized: Token not provided' });
     }
 
-    console.log('Decoded user information:', info);
+    jwt.verify(token, secret, {}, (err, info) => {
+        if (err) {
+            console.error('Token verification error:', err);
+            if (err.name === 'JsonWebTokenError') {
+                return res.status(401).json({ error: 'Unauthorized: Invalid token' });
+            } else {
+                return res.status(500).json({ error: 'Internal Server Error' });
+            }
+        }
 
-    res.json(info);
-  });
+        console.log('Decoded user information:', info);
+
+        res.json(info);
+    });
 });
+
 
 app.post('/logout', (req, res) => {
   res.cookie('token', '').json('ok');
