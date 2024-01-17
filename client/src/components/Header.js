@@ -34,7 +34,7 @@ export default function Header() {
         {username ? (
           <>
             <Link to="/analysis" className="nav-button">
-              Analysis
+              Analysis, {username}
             </Link>
             <Link to="/create" className="nav-button">
               Create new log
