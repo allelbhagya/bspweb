@@ -5,7 +5,7 @@ import { UserContext } from "./UserContext";
 export default function Header() {
   const {setUserInfo,userInfo} = useContext(UserContext);
   useEffect(() => {
-    fetch('https://bspweb-api.vercel.app/profile?cacheBust=' + Date.now(), {
+    fetch('https://bspweb-api.vercel.app/profile', {
       method: 'GET',
       credentials: 'include',
       headers: {
