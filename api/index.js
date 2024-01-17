@@ -19,24 +19,13 @@ app.use(cors({
   methods: ["POST", "GET"],
   credentials: true,
   origin: function (origin, callback) {
-    if (!origin) return callback(null, true);
-    if (allowedOrigins.indexOf(origin) === -1) {
-      const msg = 'The CORS policy for this site does not allow access from the specified origin.';
-      return callback(new Error(msg), false);
+    if (!origin || allowedOrigins.indexOf(origin) !== -1) {
+      callback(null, true);
+    } else {
+      callback(new Error('The CORS policy for this site does not allow access from the specified origin.'));
     }
-    return callback(null, true);
   }
 }));
-
-// Add the following code before your route handlers
-app.use((req, res, next) => {
-    res.header('Access-Control-Allow-Origin', 'https://bspweb-client.vercel.app');
-    res.header('Access-Control-Allow-Credentials', true);
-    res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
-    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
-    next();
-});
-
 
 app.use(express.json());
 app.use(cookieParser());
@@ -61,33 +50,33 @@ app.post('/register', async (req, res) => {
 });
 
 app.post('/login', async (req,res) => {
-    const {username,password} = req.body;
-    const userDoc = await User.findOne({username});
-    const passOk = bcrypt.compareSync(password, userDoc.password);
-    if (passOk) {
-      jwt.sign({username,id:userDoc._id}, secret, {}, (err,token) => {
-        if (err) throw err;
-        res.cookie('token', token).json({
-          id:userDoc._id,
-          username,
-        });
-      });
-    } else {
-      res.status(400).json('wrong credentials');
-    }
-  });
-
-  app.get('/profile', (req,res) => {
-    const {token} = req.cookies;
-    jwt.verify(token, secret, {}, (err,info) => {
+  const {username,password} = req.body;
+  const userDoc = await User.findOne({username});
+  const passOk = bcrypt.compareSync(password, userDoc.password);
+  if (passOk) {
+    jwt.sign({username,id:userDoc._id}, secret, {}, (err,token) => {
       if (err) throw err;
-      res.json(info);
+      res.cookie('token', token).json({
+        id:userDoc._id,
+        username,
+      });
     });
+  } else {
+    res.status(400).json('wrong credentials');
+  }
+});
+
+app.get('/profile', (req,res) => {
+  const {token} = req.cookies;
+  jwt.verify(token, secret, {}, (err,info) => {
+    if (err) throw err;
+    res.json(info);
   });
-  
-  app.post('/logout', (req,res) => {
-    res.cookie('token', '').json('ok');
-  });
+});
+
+app.post('/logout', (req,res) => {
+  res.cookie('token', '').json('ok');
+});
 
 app.post('/log', upload.none(), async (req, res) => {
   const { time, duration, region, sensorID, stoppage, profile, comment, measure } = req.body;
