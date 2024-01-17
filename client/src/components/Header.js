@@ -7,35 +7,37 @@ export default function Header() {
 
   useEffect(() => {
     fetch('https://bspweb-api.vercel.app/profile', {
-      credentials: 'include',
+        credentials: 'include',
     })
     .then(response => {
-      if (!response.ok) {
-        throw new Error(`HTTP error! Status: ${response.status}`);
-      }
-      return response.json();
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        return response.json();
     })
     .then(userInfo => {
-      setUserInfo(userInfo);
+        setUserInfo(userInfo);
     })
     .catch(error => {
-      console.error('Fetch error:', error);
-      // Handle the error as needed
+        console.error('Fetch error:', error);
+        // Handle the error as needed
     });
-  }, []);
+}, [setUserInfo]);
 
-  async function logout() {
-    try {
+
+async function logout() {
+  try {
       await fetch("https://bspweb-api.vercel.app/logout", {
-        credentials: 'include',
-        method: 'POST',
+          credentials: 'include',
+          method: 'POST',
       });
       setUserInfo(null);
-    } catch (error) {
+  } catch (error) {
       console.error('Logout error:', error);
       // Handle the error as needed
-    }
   }
+}
+
 
   const username = userInfo?.username;
 

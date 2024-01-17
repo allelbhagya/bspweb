@@ -49,13 +49,19 @@ app.post('/register', async(req,res)=>{
     } 
 })
 
-app.post('/login', async(req,res)=>{
-    const {username, password} = req.body;
-    const userDoc = await User.findOne({username});
+
+app.post('/login', async (req, res) => {
+    const { username, password } = req.body;
+    const userDoc = await User.findOne({ username });
+
+    if (!userDoc) {
+        return res.status(400).json({ error: 'User not found' });
+    }
+
     const passOk = bcrypt.compareSync(password, userDoc.password);
-    if(passOk){
-        //logged in
-        jwt.sign({username, id:userDoc._id }, secret, {}, (err, token)=>{
+
+    if (passOk) {
+        jwt.sign({ username, id: userDoc._id }, secret, { expiresIn: '1h' }, (err, token) => {
             if(err) throw err;
             res.cookie('token', token).json({
                 id:userDoc._id,
@@ -63,11 +69,11 @@ app.post('/login', async(req,res)=>{
             });
         });
         //res.json();
+    } else {
+        return res.status(400).json({ error: 'Wrong credentials' });
     }
-    else{
-        res.status(400).json('wrong credentials');
-    }
-})
+});
+
 
 app.get('/profile', (req, res) => {
     const { token } = req.cookies;
@@ -78,7 +84,7 @@ app.get('/profile', (req, res) => {
 
     jwt.verify(token, secret, {}, (err, info) => {
         if (err) {
-            console.error(err);
+            console.error('Token verification error:', err);
             if (err.name === 'JsonWebTokenError') {
                 return res.status(401).json({ error: 'Unauthorized: Invalid token' });
             } else {
@@ -86,9 +92,12 @@ app.get('/profile', (req, res) => {
             }
         }
 
+        console.log('Decoded user information:', info);
+
         res.json(info);
     });
 });
+
 
 
 
