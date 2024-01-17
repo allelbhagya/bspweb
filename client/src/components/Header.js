@@ -80,6 +80,7 @@ export default function Header() {
       <nav>
         {username ? (
           <>
+          <h2>Hi {username}!</h2>
             <Link to="/analysis" className="nav-button">
               Analysis
             </Link>
