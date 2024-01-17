@@ -1,6 +1,21 @@
 import { useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import { UserContext } from "./UserContext";
+
+// Save the token to localStorage
+const setStoredToken = (token) => {
+  localStorage.setItem('token', token);
+};
+
+// Retrieve the token from localStorage
+const getStoredToken = () => {
+  return localStorage.getItem('token');
+};
+
+// Remove the token from localStorage
+const removeStoredToken = () => {
+  localStorage.removeItem('token');
+};
 // ... (imports)
 
 export default function Header() {
