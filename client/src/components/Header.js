@@ -3,53 +3,24 @@ import { Link } from "react-router-dom";
 import { UserContext } from "./UserContext";
 
 export default function Header() {
-  const { setUserInfo, userInfo } = useContext(UserContext);
-
+  const {setUserInfo,userInfo} = useContext(UserContext);
   useEffect(() => {
     fetch('https://bspweb-api.vercel.app/profile', {
-        method: 'GET',
-        credentials: 'include',
-        headers: {
-            'Content-Type': 'application/json',
-            // Add your other headers if needed
-        },
-    })
-    .then(response => {
-        console.log('Response status:', response.status);
-        console.log('Response headers:', response.headers);
-  
-        if (!response.ok) {
-            throw new Error(`HTTP error! Status: ${response.status}`);
-        }
-        return response.json();
-    })
-    .then(userInfo => {
-        console.log('User info:', userInfo);
+      credentials: 'include',
+    }).then(response => {
+      response.json().then(userInfo => {
         setUserInfo(userInfo);
-    })
-    .catch(error => {
-        console.error('Fetch error:', error);
-        // Handle the error as needed
-    });
-  
-}, [setUserInfo]);
-
-
-
-
-async function logout() {
-  try {
-      await fetch("https://bspweb-api.vercel.app/logout", {
-          credentials: 'include',
-          method: 'POST',
       });
-      setUserInfo(null);
-  } catch (error) {
-      console.error('Logout error:', error);
-      // Handle the error as needed
-  }
-}
+    });
+  }, []);
 
+  function logout() {
+    fetch('https://bspweb-api.vercel.app/logout', {
+      credentials: 'include',
+      method: 'POST',
+    });
+    setUserInfo(null);
+  }
 
   const username = userInfo?.username;
 
@@ -59,7 +30,7 @@ async function logout() {
         cobble logs
       </Link>
       <nav>
-        {username ? (
+        {username && (
           <>
             <Link to="/analysis" className="nav-button">
               Analysis
@@ -71,7 +42,7 @@ async function logout() {
               Logout
             </Link>
           </>
-        ) : (
+        )}{!username&& (
           <>
             <Link to="/analysis" className="nav-button">
               Analysis
