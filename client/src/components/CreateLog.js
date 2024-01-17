@@ -93,6 +93,7 @@ export default function CreateLog() {
     const response = await fetch('https://bspweb-api.vercel.app/log', {
       method: 'POST',
       body: data,
+      credentials: 'include',
     });
 
     if (response.ok) {

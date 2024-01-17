@@ -10,9 +10,10 @@ const LogSchema = new Schema({
     stoppage: String,
     profile: String,
     measure: String,
-    comment: String},{
-        timestamps:true,
-    });
+    comment: String,
+    author: {type:Schema.Types.ObjectId, ref:'User'},
+},{timestamps:true,}
+);
 
 const LogModel = model('Logs', LogSchema);
 module.exports = LogModel;
