@@ -52,10 +52,10 @@ app.post('/register', async (req, res) => {
 // ... (previous code)
 
 
-app.post('/login', async (req,res) => {
-  const {username, password} = req.body;
+app.post('/login', async (req, res) => {
+  const { username, password } = req.body;
   try {
-    const userDoc = await User.findOne({username});
+    const userDoc = await User.findOne({ username });
 
     if (!userDoc) {
       return res.status(400).json({ error: 'User not found' });
@@ -64,7 +64,7 @@ app.post('/login', async (req,res) => {
     const passOk = bcrypt.compareSync(password, userDoc.password);
 
     if (passOk) {
-      jwt.sign({username, id: userDoc._id}, secret, { expiresIn: '7d' }, (err, token) => {
+      jwt.sign({ username, id: userDoc._id }, secret, { expiresIn: '7d' }, (err, token) => {
         if (err) throw err;
 
         res.cookie('token', token, {
@@ -85,6 +85,7 @@ app.post('/login', async (req,res) => {
     res.status(500).json({ error: 'Internal Server Error' });
   }
 });
+
 
 app.get('/profile', (req, res) => {
   const { token } = req.cookies;
