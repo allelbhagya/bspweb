@@ -25,6 +25,7 @@ export default function Header() {
 }, [setUserInfo]);
 
 
+
 async function logout() {
   try {
       await fetch("https://bspweb-api.vercel.app/logout", {
