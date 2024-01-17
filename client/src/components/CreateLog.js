@@ -90,7 +90,7 @@ export default function CreateLog() {
     data.set('comment', comms);
     data.set('measure', mea);
     ev.preventDefault();
-    const response = await fetch('http://localhost:4000/log', {
+    const response = await fetch('https://bspweb-api.vercel.app/log', {
       method: 'POST',
       body: data,
     });

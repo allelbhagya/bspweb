@@ -9,7 +9,7 @@ export default function IndexPage() {
   const [searchTerm, setSearchTerm] = useState('');
 
   useEffect(() => {
-    fetch('http://localhost:4000/log')
+    fetch('https://bspweb-api.vercel.app//log')
       .then(response => response.json())
       .then(logs => {
         setLogs(logs);
@@ -24,7 +24,7 @@ const handleDelete = async (logId) => {
 
   if (confirmed) {
     try {
-      const response = await fetch(`http://localhost:4000/log/${logId}`, {
+      const response = await fetch(`https://bspweb-api.vercel.app//log/${logId}`, {
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json',

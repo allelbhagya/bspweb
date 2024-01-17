@@ -19,7 +19,7 @@ export default function EditLog() {
   useEffect(() => {
     const fetchLogData = async () => {
       try {
-        const response = await fetch(`http://localhost:4000/log/${id}`);
+        const response = await fetch(`https://bspweb-api.vercel.app/log/${id}`);
         if (response.ok) {
           const logData = await response.json();
           setTimes(new Date(logData.time).toISOString().slice(0, 16));
@@ -45,7 +45,7 @@ export default function EditLog() {
     ev.preventDefault();
 
     try {
-      const response = await fetch(`http://localhost:4000/log/${id}`, {
+      const response = await fetch(`https://bspweb-api.vercel.app/log/${id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
