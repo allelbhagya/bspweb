@@ -20,6 +20,10 @@ app.use(cors({methods: ["POST", "GET"],
 app.use(express.json());
 app.use(cookieParser());
 
+app.get("/", (req,res)=>{
+    res.json("ok works");
+})
+
 mongoose.connect("mongodb+srv://bsp:bsp@bsp.liemt4a.mongodb.net/?retryWrites=true&w=majority");
 
 app.post('/register', async(req,res)=>{
