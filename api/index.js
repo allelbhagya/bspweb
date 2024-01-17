@@ -48,14 +48,6 @@ app.post('/register', async (req, res) => {
     res.status(400).json(e);
   }
 });
-const token = req.headers.authorization.split(' ')[1];
-
-try {
-  const decoded = jwt.verify(token, 'your-secret-key');
-  console.log(decoded);
-} catch (error) {
-  console.error('JWT Verification Error:', error.message);
-}
 
 app.post('/login', async (req,res) => {
   const {username,password} = req.body;
@@ -76,6 +68,7 @@ app.post('/login', async (req,res) => {
 
 app.get('/profile', (req,res) => {
   const {token} = req.cookies;
+   
   jwt.verify(token, secret, {}, (err,info) => {
     if (err) throw err;
     res.header('Access-Control-Allow-Origin', 'https://bspweb-client.vercel.app');
