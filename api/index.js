@@ -16,7 +16,7 @@ const secret = "qddi10eu90ikj1wqmn";
 
 app.use(cors({methods: ["POST", "GET"],
     credentials:true, 
-    origin:'http://localhost:3000'}))
+    origin:'https://bspweb-client.vercel.app/'}))
 app.use(express.json());
 app.use(cookieParser());
 
