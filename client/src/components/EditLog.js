@@ -128,36 +128,66 @@ export default function EditLog() {
             value={duration}
             onChange={ev => setDuration(ev.target.value)}
           />
-          <label>Affected Region</label>
-          <div className="region-options">
-            {regionOptions.map((region) => (
-              <div key={region} className="region-option">
-                <input
-                  type="checkbox"
-                  id={region}
-                  value={region}
-                  checked={selectedRegions.includes(region)}
-                  onChange={() => handleRegionChange(region)}
-                />
-                <label htmlFor={region}>{region}</label>
-              </div>
+<div className="table-options">
+  <div className="table-option">
+    <div className="options-table">
+      <div className="options-table-column">
+        <label>Affected Region</label>
+        <table className="region-table">
+          <tbody>
+            {regionOptions.map((region, index) => (
+              index % 4 === 0 && (
+                <tr key={index}>
+                  {regionOptions.slice(index, index + 4).map((option) => (
+                    <td key={option} className="region-option">
+                      <input
+                        type="checkbox"
+                        id={option}
+                        value={option}
+                        checked={selectedRegions.includes(option)}
+                        onChange={() => handleRegionChange(option)}
+                      />
+                      <label htmlFor={option}>{option}</label>
+                    </td>
+                  ))}
+                </tr>
+              )
             ))}
-          </div>
-          <label>Stoppage</label>
-          <div className="stoppage-options">
-      {stoppageOptions.map((stoppage) => (
-        <div key={stoppage} className="stoppage-option">
-          <input
-            type="checkbox"
-            id={stoppage}
-            value={stoppage}
-            checked={selectedStoppages.includes(stoppage)}
-            onChange={() => handleStoppageChange(stoppage)}
-          />
-          <label htmlFor={stoppage}>{stoppage}</label>
-        </div>
-      ))}
+          </tbody>
+        </table>
+      </div>
     </div>
+
+    <div className="options-table">
+      <div className="options-table-column">
+        <label>Stoppage</label>
+        <table className="stoppage-table">
+          <tbody>
+            {stoppageOptions.map((stoppage, index) => (
+              index % 4 === 0 && (
+                <tr key={index}>
+                  {stoppageOptions.slice(index, index + 4).map((option) => (
+                    <td key={option} className="stoppage-option">
+                      <input
+                        type="checkbox"
+                        id={option}
+                        value={option}
+                        checked={selectedStoppages.includes(option)}
+                        onChange={() => handleStoppageChange(option)}
+                      />
+                      <label htmlFor={option}>{option}</label>
+                    </td>
+                  ))}
+                </tr>
+              )
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
     
     
           <label>

@@ -171,47 +171,57 @@ header nav .nav-button:hover {
   background-color: #1c423b; /* Darker background on hover */
 }
 
-.region-options {
-  display: flex;
-  flex-wrap: wrap;
+.table-options {
+  display: table;
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 10px; /* Adjust the spacing between cells */
 }
 
-.region-option {
-  margin-right: 10px;
-  margin-bottom: 10px;
-  display: flex;
-  align-items: center;
+.table-option {
+  display: table-row;
 }
 
-.region-option input {
-  margin-right: 5px;
+.table-option > * {
+  padding: 15px; /* Increase cell padding for larger boxes */
 }
 
-.region-option label {
-  font-weight: unset;
-  margin-bottom: 0;
+.options-table {
+  width: 100%; /* Make sure each table takes full width */
+  margin-bottom: 20px; /* Add margin between the two tables */
 }
 
-.stoppage-options {
-  display: flex;
-  flex-wrap: wrap;
+.options-table-column {
+  margin-right: 20px; /* Adjust as needed to create spacing between columns */
 }
 
+.region-table,
+.stoppage-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 10px; /* Add margin between the tables */
+}
+
+.region-option,
 .stoppage-option {
-  margin-right: 10px;
-  margin-bottom: 10px;
-  display: flex;
-  align-items: center;
+  width: 25%; /* 100% / 4 options per row */
+  padding: 10px; /* Adjust as needed to create spacing between cells */
+  border: 1px solid black; /* Add border to the cells */
 }
 
+.region-option input,
 .stoppage-option input {
   margin-right: 5px;
 }
 
+.region-option label,
 .stoppage-option label {
   font-weight: unset;
   margin-bottom: 0;
+  font-size: 12px; /* Adjust font size for smaller text */
 }
+
+
 
 .logform label {
   display: block;

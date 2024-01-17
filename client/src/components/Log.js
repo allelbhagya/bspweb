@@ -1,7 +1,7 @@
 // Log.js
 import React from 'react';
 
-const Log = ({ _id, time, duration, region, sensorID, profile, stoppage, measure, comment, onDelete, onEdit }) => {
+const Log = ({ _id, time, duration, region, sensorID, profile, stoppage, measure, comment, onDelete, onEdit, createdAt }) => {
   const removeUnwantedCharacters = (value) => value.replace(/[\\\"\'\`]/g, '');
 
   const formatData = (data) => {
@@ -20,7 +20,6 @@ const Log = ({ _id, time, duration, region, sensorID, profile, stoppage, measure
     return data;
   };
 
-  // Format time or display original value if it's an invalid date
   let formattedTime;
   try {
     formattedTime = new Date(time).toLocaleString();
@@ -29,20 +28,29 @@ const Log = ({ _id, time, duration, region, sensorID, profile, stoppage, measure
     formattedTime = time;
   }
 
+  let formattedCreatedAt;
+  try {
+    formattedCreatedAt = new Date(createdAt).toLocaleString();
+  } catch (error) {
+    console.error('Invalid date:', createdAt);
+    formattedCreatedAt = createdAt;
+  }
+
   const formatRegion = formatData(region);
   const formatSensorID = formatData(sensorID);
   const formatStoppage = formatData(stoppage);
 
   return (
     <tr>
+      <td>{formattedCreatedAt}</td>
       <td>{formattedTime}</td>
       <td>{duration}</td>
       <td className="region-head">{formatRegion}</td>
       <td>{formatSensorID}</td>
       <td>{profile}</td>
       <td>{formatStoppage}</td>
-      <td>{(measure)}</td>
-      <td>{(comment)}</td>
+      <td>{measure}</td>
+      <td>{comment}</td>
       <td>
         <div className='log-buttons'>
           <button onClick={() => onEdit(_id)}>Edit</button>

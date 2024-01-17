@@ -20,8 +20,6 @@ app.use(cookieParser());
 
 mongoose.connect("mongodb+srv://bsp:bsp@bsp.liemt4a.mongodb.net/?retryWrites=true&w=majority");
 
-console.log('ok')
-
 app.post('/register', async(req,res)=>{
     const {username, password} = req.body;
     try{
@@ -82,7 +80,10 @@ app.post('/log', upload.none(), async(req, res) => {
 });
 
 app.get('/log', async(req,res)=>{
-    res.json(await Logs.find());
+    res.json(
+        await Logs.find()
+          .sort({createdAt: -1})
+      );
 })
 
 app.delete('/log/:id', async (req, res) => {
