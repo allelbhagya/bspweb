@@ -51,11 +51,12 @@ app.post('/register', async (req, res) => {
 
 // ... (previous code)
 
+
 app.post('/login', async (req,res) => {
   const {username, password} = req.body;
   try {
     const userDoc = await User.findOne({username});
-    
+
     if (!userDoc) {
       return res.status(400).json({ error: 'User not found' });
     }
@@ -63,13 +64,14 @@ app.post('/login', async (req,res) => {
     const passOk = bcrypt.compareSync(password, userDoc.password);
 
     if (passOk) {
-      jwt.sign({username, id: userDoc._id}, secret, {}, (err, token) => {
+      jwt.sign({username, id: userDoc._id}, secret, { expiresIn: '7d' }, (err, token) => {
         if (err) throw err;
 
         res.cookie('token', token, {
           httpOnly: true,
           secure: process.env.NODE_ENV === 'production',
           sameSite: 'None',
+          expires: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000), // Set cookie expiration to 7 days
         }).json({
           id: userDoc._id,
           username,
