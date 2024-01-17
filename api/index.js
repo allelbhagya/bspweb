@@ -52,18 +52,19 @@ app.post('/register', async (req, res) => {
 // ... (previous code)
 
 
-app.post('/login', async (req,res) => {
-  const {username,password} = req.body;
-  const userDoc = await User.findOne({username});
+app.post('/login', async (req, res) => {
+  const { username, password } = req.body;
+  const userDoc = await User.findOne({ username });
   const passOk = bcrypt.compareSync(password, userDoc.password);
   if (passOk) {
     // logged in
-    jwt.sign({username,id:userDoc._id}, secret, {}, (err,token) => {
+    jwt.sign({ username, id: userDoc._id }, secret, {}, (err, token) => {
       if (err) throw err;
-      res.cookie('token', token).json({
-        id:userDoc._id,
+      res.cookie('token', token, { httpOnly: true }).json({
+        id: userDoc._id,
         username,
       });
+      console.log('Token set:', token);
     });
   } else {
     res.status(400).json('wrong credentials');

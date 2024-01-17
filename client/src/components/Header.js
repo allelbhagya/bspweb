@@ -1,72 +1,57 @@
 import { useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import { UserContext } from "./UserContext";
-
-// Save the token to localStorage
-const setStoredToken = (token) => {
-  localStorage.setItem('token', token);
-};
-
-// Retrieve the token from localStorage
-const getStoredToken = () => {
-  return localStorage.getItem('token');
-};
-
-// Remove the token from localStorage
-const removeStoredToken = () => {
-  localStorage.removeItem('token');
-};
+// ... (imports)
 
 export default function Header() {
   const { setUserInfo, userInfo } = useContext(UserContext);
 
-  useEffect(() => {
-    // Fetch user profile only if there is a token
+  useEffect(async () => {
     const token = getStoredToken();
 
     if (token) {
-      fetch('https://bspweb-api.vercel.app/profile', {
-        method: 'GET',
-        credentials: 'include',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${token}`,
-        },
-      })
-        .then(response => {
-          if (!response.ok) {
-            throw new Error('Failed to fetch user profile');
-          }
-          return response.json();
-        })
-        .then(data => {
-          // Update user info in the context
-          setUserInfo(data);
-        })
-        .catch(error => {
-          // Handle error (e.g., redirect to login page)
-          console.error('Error fetching user profile:', error);
+      try {
+        const response = await fetch('https://bspweb-api.vercel.app/profile', {
+          method: 'GET',
+          credentials: 'include',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${token}`,
+          },
         });
+
+        if (!response.ok) {
+          throw new Error(`Failed: ${response.status} - ${response.statusText}`);
+        }
+
+        const data = await response.json();
+        setUserInfo(data);
+      } catch (error) {
+        console.error('Error fetching user profile:', error);
+        // Handle error (e.g., redirect to login page)
+      }
     }
   }, [setUserInfo]);
 
   function logout() {
-    // Logout logic
     fetch('https://bspweb-api.vercel.app/logout', {
       credentials: 'include',
       method: 'POST',
     })
-      .then(response => response.json())
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`Failed: ${response.status} - ${response.statusText}`);
+        }
+        return response.json();
+      })
       .then(data => {
-        // Clear user info in the context
         setUserInfo(null);
-        // Remove the token from localStorage
         removeStoredToken();
         console.log(data);
       })
       .catch(error => {
-        // Handle error (e.g., log or show an error message)
         console.error('Error logging out:', error);
+        // Handle error (e.g., log or show an error message)
       });
   }
 
@@ -78,9 +63,11 @@ export default function Header() {
         cobble logs
       </Link>
       <nav>
+        {username && (
+          <h2>Hi {username}!</h2>
+        )}
         {username ? (
           <>
-          <h2>Hi {username}!</h2>
             <Link to="/analysis" className="nav-button">
               Analysis
             </Link>
