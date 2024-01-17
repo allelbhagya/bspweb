@@ -7,6 +7,7 @@ export default function IndexPage() {
   const navigate = useNavigate();
   const [logs, setLogs] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     fetch('https://bspweb-api.vercel.app/log')
