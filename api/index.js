@@ -16,7 +16,7 @@ const secret = "qddi10eu90ikj1wqmn";
 const allowedOrigins = ['https://bspweb-client.vercel.app', 'https://bspweb-client-6bl1o3f3x-allelbhagya.vercel.app'];
 
 app.use(cors({
-  methods: ["POST", "GET"],
+    methods: ["POST", "GET", "DELETE"],
   credentials: true,
   origin: function (origin, callback) {
     if (!origin || allowedOrigins.indexOf(origin) !== -1) {
