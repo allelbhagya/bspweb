@@ -14,7 +14,9 @@ const app = express();
 const salt = bcrypt.genSaltSync(10);
 const secret = "qddi10eu90ikj1wqmn";
 
-app.use(cors({credentials:true, origin:'http://localhost:3000'}))
+app.use(cors({methods: ["POST", "GET"],
+    credentials:true, 
+    origin:'http://localhost:3000'}))
 app.use(express.json());
 app.use(cookieParser());
 
