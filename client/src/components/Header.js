@@ -8,25 +8,30 @@ export default function Header() {
   useEffect(() => {
     fetch('https://bspweb-api.vercel.app/profile', {
         method: 'GET',
-        credentials: 'include',  // Include credentials for cookies
+        credentials: 'include',
         headers: {
             'Content-Type': 'application/json',
             // Add your other headers if needed
         },
     })
     .then(response => {
+        console.log('Response status:', response.status);
+        console.log('Response headers:', response.headers);
+  
         if (!response.ok) {
             throw new Error(`HTTP error! Status: ${response.status}`);
         }
         return response.json();
     })
     .then(userInfo => {
+        console.log('User info:', userInfo);
         setUserInfo(userInfo);
     })
     .catch(error => {
         console.error('Fetch error:', error);
         // Handle the error as needed
     });
+  
 }, [setUserInfo]);
 
 

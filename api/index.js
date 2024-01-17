@@ -56,8 +56,13 @@ app.post('/login', async (req,res) => {
   if (passOk) {
     jwt.sign({username,id:userDoc._id}, secret, {}, (err,token) => {
       if (err) throw err;
-      res.cookie('token', token).json({
-        id:userDoc._id,
+
+      res.cookie('token', token, {
+        httpOnly: true,
+        secure: process.env.NODE_ENV === 'production', // set to true in production
+        sameSite: 'None', // set to 'None' for cross-site cookies
+      }).json({
+        id: userDoc._id,
         username,
       });
     });
@@ -68,6 +73,7 @@ app.post('/login', async (req,res) => {
 
 app.get('/profile', (req,res) => {
   const { token } = req.cookies;
+  console.log(req.headers); 
   jwt.verify(token, secret, (err, info) => {
       if (err) {
           console.error('JWT Verification Error:', err.message);
