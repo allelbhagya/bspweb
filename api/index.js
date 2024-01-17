@@ -87,7 +87,7 @@ app.get('/profile', (req,res) => {
 });
 
 app.post('/logout', (req, res) => {
-  res.clearCookie('token').json('ok');
+  res.clearCookie('token').header('Cache-Control', 'no-store, max-age=0').send('ok');
 });
 
 app.post('/log', upload.none(), async (req, res) => {
