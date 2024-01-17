@@ -28,6 +28,16 @@ app.use(cors({
   }
 }));
 
+// Add the following code before your route handlers
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', 'https://bspweb-client.vercel.app');
+    res.header('Access-Control-Allow-Credentials', true);
+    res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+    next();
+});
+
+
 app.use(express.json());
 app.use(cookieParser());
 
