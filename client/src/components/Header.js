@@ -2,12 +2,27 @@ import { useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import { UserContext } from "./UserContext";
 
+// Save the token to localStorage
+const setStoredToken = (token) => {
+  localStorage.setItem('token', token);
+};
+
+// Retrieve the token from localStorage
+const getStoredToken = () => {
+  return localStorage.getItem('token');
+};
+
+// Remove the token from localStorage
+const removeStoredToken = () => {
+  localStorage.removeItem('token');
+};
+
 export default function Header() {
   const { setUserInfo, userInfo } = useContext(UserContext);
 
   useEffect(() => {
     // Fetch user profile only if there is a token
-    const token = getStoredToken(); // Implement this function to retrieve the stored token
+    const token = getStoredToken();
 
     if (token) {
       fetch('https://bspweb-api.vercel.app/profile', {
@@ -33,7 +48,7 @@ export default function Header() {
           console.error('Error fetching user profile:', error);
         });
     }
-  }, [setUserInfo]); // Include setUserInfo in the dependency array to avoid potential issues
+  }, [setUserInfo]);
 
   function logout() {
     // Logout logic
@@ -45,6 +60,8 @@ export default function Header() {
       .then(data => {
         // Clear user info in the context
         setUserInfo(null);
+        // Remove the token from localStorage
+        removeStoredToken();
         console.log(data);
       })
       .catch(error => {
