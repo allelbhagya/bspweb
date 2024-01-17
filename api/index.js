@@ -49,36 +49,54 @@ app.post('/register', async (req, res) => {
   }
 });
 
-app.post('/login', async (req,res) => {
-  const {username,password} = req.body;
-  const userDoc = await User.findOne({username});
-  const passOk = bcrypt.compareSync(password, userDoc.password);
-  if (passOk) {
-    jwt.sign({username,id:userDoc._id}, secret, {}, (err,token) => {
-      if (err) throw err;
+// ... (previous code)
 
-      res.cookie('token', token, {
-        httpOnly: true,
-        secure: process.env.NODE_ENV === 'production', // set to true in production
-        sameSite: 'None', // set to 'None' for cross-site cookies
-      }).json({
-        id: userDoc._id,
-        username,
+app.post('/login', async (req,res) => {
+  const {username, password} = req.body;
+  try {
+    const userDoc = await User.findOne({username});
+    
+    if (!userDoc) {
+      return res.status(400).json({ error: 'User not found' });
+    }
+
+    const passOk = bcrypt.compareSync(password, userDoc.password);
+
+    if (passOk) {
+      jwt.sign({username, id: userDoc._id}, secret, {}, (err, token) => {
+        if (err) throw err;
+
+        res.cookie('token', token, {
+          httpOnly: true,
+          secure: process.env.NODE_ENV === 'production',
+          sameSite: 'None',
+        }).json({
+          id: userDoc._id,
+          username,
+        });
       });
-    });
-  } else {
-    res.status(400).json('wrong credentials');
+    } else {
+      res.status(400).json({ error: 'Incorrect password' });
+    }
+  } catch (error) {
+    console.error('Login error:', error);
+    res.status(500).json({ error: 'Internal Server Error' });
   }
 });
 
 app.get('/profile', (req, res) => {
   const { token } = req.cookies;
-  console.log(req.headers); 
+
+  if (!token) {
+    return res.status(401).json({ error: 'Unauthorized' });
+  }
+
   jwt.verify(token, secret, (err, info) => {
     if (err) {
       console.error('JWT Verification Error:', err.message);
       return res.status(401).json({ error: 'Unauthorized' });
     }
+
     res.header('Access-Control-Allow-Origin', 'https://bspweb-client.vercel.app');
     res.header('Access-Control-Allow-Methods', 'GET');
     res.header('Access-Control-Allow-Credentials', 'true');
@@ -86,10 +104,12 @@ app.get('/profile', (req, res) => {
   });
 });
 
-
 app.post('/logout', (req,res) => {
-  res.cookie('token', '').json('ok');
+  res.clearCookie('token', { sameSite: 'None', secure: process.env.NODE_ENV === 'production' }).json({ message: 'Logged out successfully' });
 });
+
+// ... (remaining code)
+
 
 app.post('/log', upload.none(), async (req, res) => {
   const { time, duration, region, sensorID, stoppage, profile, comment, measure } = req.body;
