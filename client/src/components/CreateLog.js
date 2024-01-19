@@ -54,8 +54,6 @@ export default function CreateLog() {
     fetchSensorOptions();
   }, []);
   
-  
-
   const regionOptions = [
     "CVR_L1", "CVR_L2", "CVAH_L1", "CVAH_L2", "Pinch_Roll_L1",
     "Pinch_Roll_L2", "HMD", "SH1", "SH2", "SH3", "Stand_01-06",
@@ -117,7 +115,6 @@ export default function CreateLog() {
       console.error('Error creating log:', error);
     }
   }
-  
 
   if (redirect) {
     return <Navigate to={'/'} />;
@@ -136,7 +133,6 @@ export default function CreateLog() {
       return "Invalid timestamp";
     }
   };
-  
 
   return (
     <>
@@ -149,7 +145,7 @@ export default function CreateLog() {
           {formatTimestamp(initialCobbleTime)}
         </div>
 
-    <label>End time</label>
+        <label>End time</label>
         <input
           type="datetime-local"
           value={times}
@@ -162,112 +158,109 @@ export default function CreateLog() {
           onChange={(ev) => setDuration(ev.target.value)}
         />
 
+        <div className="table-options">
+          <div className="table-option">
+            <div className="options-table">
+              <div className="options-table-column">
+                <label>Affected Region</label>
+                <table className="region-table">
+                  <tbody>
+                    {regionOptions.map((region, index) => (
+                      index % 4 === 0 && (
+                        <tr key={index}>
+                          {regionOptions.slice(index, index + 4).map((option) => (
+                            <td key={option} className="region-option">
+                              <input
+                                type="checkbox"
+                                id={option}
+                                value={option}
+                                checked={selectedRegions.includes(option)}
+                                onChange={() => handleRegionChange(option)}
+                              />
+                              <label htmlFor={option}>{option}</label>
+                            </td>
+                          ))}
+                        </tr>
+                      )
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
 
-    <div className="table-options">
-    <div className="table-option">
-    <div className="options-table">
-      <div className="options-table-column">
-        <label>Affected Region</label>
-        <table className="region-table">
-          <tbody>
-            {regionOptions.map((region, index) => (
-              index % 4 === 0 && (
-                <tr key={index}>
-                  {regionOptions.slice(index, index + 4).map((option) => (
-                    <td key={option} className="region-option">
-                      <input
-                        type="checkbox"
-                        id={option}
-                        value={option}
-                        checked={selectedRegions.includes(option)}
-                        onChange={() => handleRegionChange(option)}
-                      />
-                      <label htmlFor={option}>{option}</label>
-                    </td>
-                  ))}
-                </tr>
-              )
-            ))}
-          </tbody>
-        </table>
-      </div>
-    </div>
+            <div className="options-table">
+              <div className="options-table-column">
+                <label>Stoppage</label>
+                <table className="stoppage-table">
+                  <tbody>
+                    {stoppageOptions.map((stoppage, index) => (
+                      index % 4 === 0 && (
+                        <tr key={index}>
+                          {stoppageOptions.slice(index, index + 4).map((option) => (
+                            <td key={option} className="stoppage-option">
+                              <input
+                                type="checkbox"
+                                id={option}
+                                value={option}
+                                checked={selectedStoppages.includes(option)}
+                                onChange={() => handleStoppageChange(option)}
+                              />
+                              <label htmlFor={option}>{option}</label>
+                            </td>
+                          ))}
+                        </tr>
+                      )
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
 
-    <div className="options-table">
-      <div className="options-table-column">
-        <label>Stoppage</label>
-        <table className="stoppage-table">
-          <tbody>
-            {stoppageOptions.map((stoppage, index) => (
-              index % 4 === 0 && (
-                <tr key={index}>
-                  {stoppageOptions.slice(index, index + 4).map((option) => (
-                    <td key={option} className="stoppage-option">
-                      <input
-                        type="checkbox"
-                        id={option}
-                        value={option}
-                        checked={selectedStoppages.includes(option)}
-                        onChange={() => handleStoppageChange(option)}
-                      />
-                      <label htmlFor={option}>{option}</label>
-                    </td>
-                  ))}
-                </tr>
-              )
-            ))}
-          </tbody>
-        </table>
-      </div>
-    </div>
-    </div>
-    </div>
-
-
-    <label>
-        SensorID and Tag name
-      </label>
-      <Select
-        isMulti // enable multi-select
-        value={selectedSensors}
-        options={sensorOptions.map(option => ({ value: option, label: option }))}
-        onChange={selectedOptions => setSelectedSensors(selectedOptions)}
-        placeholder="Select Sensor ID"
-      />
-          <label>
-            Profile
-          </label>
-          <Select
-  value={{ value: prof, label: prof }}
-  options={profileOptions.map((profileOption) => ({
-    value: profileOption,
-    label: profileOption,
-  }))}
-  onChange={handleProfileChange}
-  placeholder="Select Profile"
-/>
-      <label>
-        Correctness Measure
-      </label>
-      <textarea
-        name=""
-        id=""
-        rows="3"
-        value={mea}
-        onChange={ev => setMea(ev.target.value)}
-      ></textarea>
-      <label>
-        Comments
-      </label>
-      <input
-        type="text"
-        placeholder="comment"
-        value={comms}
-        onChange={ev => setComms(ev.target.value)}
-      />
-      <button>Submit log</button>
-    </form>
+        <label>
+          SensorID and Tag name
+        </label>
+        <Select
+          isMulti // enable multi-select
+          value={selectedSensors}
+          options={sensorOptions.map(option => ({ value: option, label: option }))}
+          onChange={selectedOptions => setSelectedSensors(selectedOptions)}
+          placeholder="Select Sensor ID"
+        />
+        <label>
+          Profile
+        </label>
+        <Select
+          value={{ value: prof, label: prof }}
+          options={profileOptions.map((profileOption) => ({
+            value: profileOption,
+            label: profileOption,
+          }))}
+          onChange={handleProfileChange}
+          placeholder="Select Profile"
+        />
+        <label>
+          Correctness Measure
+        </label>
+        <textarea
+          name=""
+          id=""
+          rows="3"
+          value={mea}
+          onChange={ev => setMea(ev.target.value)}
+        ></textarea>
+        <label>
+          Comments
+        </label>
+        <input
+          type="text"
+          placeholder="comment"
+          value={comms}
+          onChange={ev => setComms(ev.target.value)}
+        />
+        <button>Submit log</button>
+      </form>
     </>
-
   )
 }
