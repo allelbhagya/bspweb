@@ -92,25 +92,38 @@ app.post('/logout', (req,res) => {
 });
 
 app.post('/log', upload.none(), async (req, res) => {
-  const {token} = req.cookies;
-  jwt.verify(token, secret, {}, async (err,info) => {
-  if (err) throw err;
-  const { time, duration, region, sensorID, stoppage, profile, comment, measure } = req.body;
-  const logDoc = await Logs.create({
-    time,
-    duration,
-    region,
-    sensorID,
-    stoppage,
-    profile,
-    comment,
-    measure,
-    author: info.id,
-  });
-  res.json(logDoc);
+  try {
+    // Uncomment the line below if you want to allow access without a token
+    // const { token } = req.cookies;
+    
+    // Comment the line below if you want to allow access without a token
+    const token = null;
+
+    // jwt.verify(token, secret, {}, async (err, info) => {
+    //   if (err) throw err;
+
+    const { time, duration, region, sensorID, stoppage, profile, comment, measure } = req.body;
+    const logDoc = await Logs.create({
+      time,
+      duration,
+      region,
+      sensorID,
+      stoppage,
+      profile,
+      comment,
+      measure,
+      // Uncomment the line below if you want to include the author field
+      // author: info.id,
+    });
+
+    res.json(logDoc);
+    // });
+  } catch (error) {
+    console.error('Error in /log endpoint:', error);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
 });
 
-});
 
 app.get('/log', async (req, res) => {
   res.json(
