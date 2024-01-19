@@ -115,12 +115,18 @@ export default function CreateLog() {
 
   const formatTimestamp = (timestamp) => {
     try {
-      return new Date(timestamp).toLocaleString();
+      const date = new Date(timestamp);
+      if (!isNaN(date.getTime())) {
+        return date.toLocaleString();
+      } else {
+        return "Invalid timestamp";
+      }
     } catch (error) {
-      console.error('Invalid date:', timestamp);
-      return timestamp;
+      console.error('Error formatting timestamp:', error);
+      return "Invalid timestamp";
     }
   };
+  
 
   return (
     <>
