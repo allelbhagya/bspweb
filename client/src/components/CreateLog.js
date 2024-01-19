@@ -52,7 +52,7 @@ export default function CreateLog() {
     };
   
     fetchSensorOptions();
-  }, []);
+  }, [initialCobbleTime]);
   
   const regionOptions = [
     "CVR_L1", "CVR_L2", "CVAH_L1", "CVAH_L2", "Pinch_Roll_L1",
