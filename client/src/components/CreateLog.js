@@ -90,7 +90,7 @@ export default function CreateLog() {
 
   async function createNewLog(ev) {
     const data = new FormData();
-    data.set('createdAt', createdAtTimestamp); 
+    data.set('createdAt', initialCobbleTime); // Set createdAt to initialCobbleTime
     data.set('time', times);
     data.set('duration', duration);
     data.set('region', JSON.stringify(selectedRegions));
@@ -100,16 +100,24 @@ export default function CreateLog() {
     data.set('comment', comms);
     data.set('measure', mea);
     ev.preventDefault();
-    const response = await fetch('https://bspweb-api.vercel.app/log', {
-      method: 'POST',
-      body: data,
-      credentials: 'include',
-    });
-
-    if (response.ok) {
-      setRedirect(true);
+    
+    try {
+      const response = await fetch('https://bspweb-api.vercel.app/log', {
+        method: 'POST',
+        body: data,
+        credentials: 'include',
+      });
+  
+      if (response.ok) {
+        setRedirect(true);
+      } else {
+        console.error('Error creating log:', response.status);
+      }
+    } catch (error) {
+      console.error('Error creating log:', error);
     }
   }
+  
 
   if (redirect) {
     return <Navigate to={'/'} />;
