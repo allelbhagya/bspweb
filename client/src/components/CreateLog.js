@@ -18,16 +18,11 @@ export default function CreateLog() {
   const [createdAtTimestamp, setCreatedAtTimestamp] = useState('');
   const [initialCobbleTime, setInitialCobbleTime] = useState('');
 
-  const handleEndTimeChange = (ev) => {
-    const endTime = new Date(ev.target.value);
-    const currentTime = new Date();
-    const timeDifferenceInMinutes = Math.floor((endTime - currentTime) / (1000 * 60));
-
-    setDuration(timeDifferenceInMinutes >= 0 ? timeDifferenceInMinutes : '');
-    setTimes(ev.target.value);
-  };
-
   useEffect(() => {
+    const currentTimeStamp = new Date();
+    setCreatedAtTimestamp(currentTimeStamp.toISOString());
+    setInitialCobbleTime(currentTimeStamp.toISOString());
+
     const fetchSensorOptions = async () => {
       try {
         const response = await fetch('/sensor.csv');
@@ -43,17 +38,23 @@ export default function CreateLog() {
         });
   
         setSensorOptions(options);
-        const currentTimeStamp = new Date();
-        setCreatedAtTimestamp(currentTimeStamp.toISOString());
-        setInitialCobbleTime(currentTimeStamp.toISOString());
       } catch (error) {
         console.error('Error fetching or parsing CSV file:', error);
       }
     };
   
     fetchSensorOptions();
-  }, [initialCobbleTime]);
-  
+  }, []);
+
+  const handleEndTimeChange = (ev) => {
+    const endTime = new Date(ev.target.value);
+    const currentTime = new Date();
+    const timeDifferenceInMinutes = Math.floor((endTime - currentTime) / (1000 * 60));
+
+    setDuration(timeDifferenceInMinutes >= 0 ? timeDifferenceInMinutes : '');
+    setTimes(ev.target.value);
+  };
+
   const regionOptions = [
     "CVR_L1", "CVR_L2", "CVAH_L1", "CVAH_L2", "Pinch_Roll_L1",
     "Pinch_Roll_L2", "HMD", "SH1", "SH2", "SH3", "Stand_01-06",
