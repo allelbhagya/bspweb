@@ -30,10 +30,10 @@ const Log = ({ _id, time, duration, region, sensorID, profile, stoppage, measure
 
   let formattedInitTime;
   try {
-    formattedCreatedAt = new Date(initialCobbleTime).toLocaleString();
+    formattedInitTime = new Date(initialCobbleTime).toLocaleString();
   } catch (error) {
     console.error('Invalid date:', initialCobbleTime);
-    formattedCreatedAt = initialCobbleTime;
+    formattedInitTime = initialCobbleTime;
   }
 
   const formatRegion = formatData(region);
