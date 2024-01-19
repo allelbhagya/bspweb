@@ -11,6 +11,9 @@ const LogSchema = new Schema({
     profile: String,
     measure: String,
     comment: String,
+    initialCobbleTime: {
+        type: Date,
+      },
     author: {type:Schema.Types.ObjectId, ref:'User'},
 },{timestamps:true,}
 );

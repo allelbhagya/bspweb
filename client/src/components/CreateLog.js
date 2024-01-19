@@ -88,7 +88,8 @@ export default function CreateLog() {
   };
 
   async function createNewLog(ev) {
-    const data = new FormData();   
+    const data = new FormData();  
+    data.set('initialCobbleTime', initialCobbleTime); 
     data.set('time', times);
     data.set('duration', duration);
     data.set('region', JSON.stringify(selectedRegions));

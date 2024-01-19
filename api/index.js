@@ -112,6 +112,7 @@ app.post('/log', upload.none(), async (req, res) => {
       profile,
       comment,
       measure,
+      initialCobbleTime,
       // Uncomment the line below if you want to include the author field
       // author: info.id,
     });

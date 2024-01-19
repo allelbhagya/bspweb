@@ -1,7 +1,7 @@
 // Log.js
 import React from 'react';
 
-const Log = ({ _id, time, duration, region, sensorID, profile, stoppage, measure, comment, onDelete, onEdit, createdAt }) => {
+const Log = ({ _id, time, duration, region, sensorID, profile, stoppage, measure, comment, onDelete, onEdit, createdAt, initialCobbleTime }) => {
   const removeUnwantedCharacters = (value) => value.replace(/[\\\"\'\`]/g, '');
 
   const formatData = (data) => {
@@ -28,12 +28,12 @@ const Log = ({ _id, time, duration, region, sensorID, profile, stoppage, measure
     formattedTime = time;
   }
 
-  let formattedCreatedAt;
+  let formattedInitTime;
   try {
-    formattedCreatedAt = new Date(createdAt).toLocaleString();
+    formattedCreatedAt = new Date(initialCobbleTime).toLocaleString();
   } catch (error) {
-    console.error('Invalid date:', createdAt);
-    formattedCreatedAt = createdAt;
+    console.error('Invalid date:', initialCobbleTime);
+    formattedCreatedAt = initialCobbleTime;
   }
 
   const formatRegion = formatData(region);
@@ -42,7 +42,7 @@ const Log = ({ _id, time, duration, region, sensorID, profile, stoppage, measure
 
   return (
     <tr>
-      <td>{formattedCreatedAt}</td>
+      <td>{formattedInitTime}</td>
       <td>{formattedTime}</td>
       <td>{duration}</td>
       <td className="region-head">{formatRegion}</td>
