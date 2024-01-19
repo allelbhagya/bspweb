@@ -27,14 +27,17 @@ export default function CreateLog() {
   };
 
   useEffect(() => {
-    const currentTimeStamp = new Date();
-    setCreatedAtTimestamp(currentTimeStamp.toISOString());
+    if (!createdAtTimestamp) {
+      const currentTimeStamp = new Date();
+      setCreatedAtTimestamp(currentTimeStamp.toISOString());
+    }
+  
     const fetchSensorOptions = async () => {
       try {
         const response = await fetch('/sensor.csv');
         const csvData = await response.text();
   
-        console.log('CSV Data:', csvData); 
+        console.log('CSV Data:', csvData);
   
         const lines = csvData.split('\n');
         const options = lines.slice(1).map(line => {
@@ -47,7 +50,7 @@ export default function CreateLog() {
           console.log('Trimmed sensorID:', trimmedSensorID);
           console.log('Trimmed tagName:', trimmedTagName);
   
-          return `${trimmedSensorID}: ${trimmedTagName}`;
+          return { value: trimmedSensorID, label: trimmedTagName };
         });
   
         setSensorOptions(options);
@@ -57,7 +60,8 @@ export default function CreateLog() {
     };
   
     fetchSensorOptions();
-  }, []); 
+  }, [createdAtTimestamp]);
+  
   
 
   const regionOptions = [
