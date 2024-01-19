@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Navigate } from "react-router-dom";
 import { useEffect } from "react";
-import Select from "react-select"; 
+import Select from "react-select"; // Import react-select
 
 export default function CreateLog() {
   const [times, setTimes] = useState('');
@@ -15,35 +15,28 @@ export default function CreateLog() {
   const [comms, setComms] = useState('');
   const [sensorOptions, setSensorOptions] = useState([]);
   const [redirect, setRedirect] = useState(false);
-  const [createdAtTimestamp, setCreatedAtTimestamp] = useState('');
-
-  const handleEndTimeChange = (ev) => {
-    const endTime = new Date(ev.target.value);
-    const currentTime = new Date();
-    const timeDifferenceInMinutes = Math.floor((endTime - currentTime) / (1000 * 60));
-
-    setDuration(timeDifferenceInMinutes >= 0 ? timeDifferenceInMinutes : '');
-    setTimes(ev.target.value);
-  };
 
   useEffect(() => {
-    const currentTimeStamp = new Date();
-    setCreatedAtTimestamp(currentTimeStamp.toISOString());
     const fetchSensorOptions = async () => {
       try {
         const response = await fetch('/sensor.csv');
         const csvData = await response.text();
   
-        console.log('CSV Data:', csvData); 
+        console.log('CSV Data:', csvData); // Log CSV data to the console
   
         const lines = csvData.split('\n');
         const options = lines.slice(1).map(line => {
           const [sensorID, tagName] = line.split(',');
   
+          // Log sensorID and tagName to identify any issues
           console.log('Raw sensorID:', sensorID);
           console.log('Raw tagName:', tagName);
+  
+          // Trim and handle cases where sensorID or tagName might be undefined
           const trimmedSensorID = sensorID ? sensorID.trim() : '';
           const trimmedTagName = tagName ? tagName.trim() : '';
+  
+          // Log trimmed values
           console.log('Trimmed sensorID:', trimmedSensorID);
           console.log('Trimmed tagName:', trimmedTagName);
   
@@ -57,7 +50,7 @@ export default function CreateLog() {
     };
   
     fetchSensorOptions();
-  }, []); 
+  }, []); // Empty dependency array to run the effect only once on component mount
   
 
   const regionOptions = [
@@ -71,8 +64,6 @@ export default function CreateLog() {
     "Equipment Breakdown", "Cooling bed fill", "Furnace discharge delay",
     "Auto / manual chopping", "Dog house long tail check L1", "Dog house long tail check L2"
   ];
-
-  const profileOptions = ["2x10MM", "2x8MM", "2x16MM", "2x12MM", "2x20MM"]
 
   const handleRegionChange = (selectedRegion) => {
     const updatedRegions = selectedRegions.includes(selectedRegion)
@@ -88,13 +79,8 @@ export default function CreateLog() {
     setSelectedStoppages(updatedStoppages);
   };
 
-  const handleProfileChange = (selectedProfile) => {
-    setProf(selectedProfile.value);
-  };
-
   async function createNewLog(ev) {
     const data = new FormData();
-    data.set('createdAt', createdAtTimestamp); 
     data.set('time', times);
     data.set('duration', duration);
     data.set('region', JSON.stringify(selectedRegions));
@@ -118,46 +104,28 @@ export default function CreateLog() {
   if (redirect) {
     return <Navigate to={'/'} />;
   }
-  const currTime = new Date();
-
-  const formatTimestamp = (timestamp) => {
-    try {
-      return new Date(timestamp).toLocaleString();
-    } catch (error) {
-      console.error('Invalid date:', timestamp);
-      return timestamp;
-    }
-  };
 
   return (
-    <>
-        <div>
-        <h1>Report cobble</h1>
-        </div>
     <form className="logform" onSubmit={createNewLog}>
-
-      <div>
-      <label>Cobble Report time</label>
-      {formatTimestamp(currTime.toISOString())}
-    </div>
-
-
-    <label>End time</label>
-        <input
-          type="datetime-local"
-          value={times}
-          onChange={handleEndTimeChange} 
-        />
-        <label>Duration (in minutes)</label>
-        <input
-          type="number"
-          value={duration}
-          onChange={(ev) => setDuration(ev.target.value)}
-        />
+      <h1>Report a cobble</h1>
+      <label>Report time</label>
+      <input
+        type="datetime-local"
+        value={times}
+        onChange={(ev) => setTimes(ev.target.value)}
+      />
+      <label>
+        Duration (in minutes)
+      </label>
+      <input
+        type="number"
+        value={duration}
+        onChange={ev => setDuration(ev.target.value)}
+      />
 
 
-    <div className="table-options">
-    <div className="table-option">
+<div className="table-options">
+  <div className="table-option">
     <div className="options-table">
       <div className="options-table-column">
         <label>Affected Region</label>
@@ -213,32 +181,29 @@ export default function CreateLog() {
         </table>
       </div>
     </div>
-    </div>
-    </div>
+  </div>
+</div>
 
 
-    <label>
+<label>
         SensorID and Tag name
       </label>
       <Select
-        isMulti // enable multi-select
+        isMulti // Enable multi-select
         value={selectedSensors}
         options={sensorOptions.map(option => ({ value: option, label: option }))}
         onChange={selectedOptions => setSelectedSensors(selectedOptions)}
         placeholder="Select Sensor ID"
       />
-          <label>
-            Profile
-          </label>
-          <Select
-  value={{ value: prof, label: prof }}
-  options={profileOptions.map((profileOption) => ({
-    value: profileOption,
-    label: profileOption,
-  }))}
-  onChange={handleProfileChange}
-  placeholder="Select Profile"
-/>
+      <label>
+        Profile
+      </label>
+      <input
+        type="text"
+        placeholder="profile"
+        value={prof}
+        onChange={ev => setProf(ev.target.value)}
+      />
       <label>
         Correctness Measure
       </label>
@@ -260,7 +225,5 @@ export default function CreateLog() {
       />
       <button>Submit log</button>
     </form>
-    </>
-
   )
 }
