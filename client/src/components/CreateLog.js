@@ -16,8 +16,7 @@ export default function CreateLog() {
   const [sensorOptions, setSensorOptions] = useState([]);
   const [redirect, setRedirect] = useState(false);
   const [createdAtTimestamp, setCreatedAtTimestamp] = useState('');
-
-  const initialCobbleTime = createdAtTimestamp;
+  const [initialCobbleTime, setInitialCobbleTime] = useState('');
 
   const handleEndTimeChange = (ev) => {
     const endTime = new Date(ev.target.value);
@@ -33,24 +32,28 @@ export default function CreateLog() {
       try {
         const response = await fetch('/sensor.csv');
         const csvData = await response.text();
-
+  
         const lines = csvData.split('\n');
         const options = lines.slice(1).map(line => {
           const [sensorID, tagName] = line.split(',');
           const trimmedSensorID = sensorID ? sensorID.trim() : '';
           const trimmedTagName = tagName ? tagName.trim() : '';
-
+  
           return { value: trimmedSensorID, label: trimmedTagName };
         });
-
+  
         setSensorOptions(options);
+        const currentTimeStamp = new Date();
+        setCreatedAtTimestamp(currentTimeStamp.toISOString());
+        setInitialCobbleTime(currentTimeStamp.toISOString());
       } catch (error) {
         console.error('Error fetching or parsing CSV file:', error);
       }
     };
-
+  
     fetchSensorOptions();
   }, []);
+  
   
 
   const regionOptions = [
@@ -111,7 +114,6 @@ export default function CreateLog() {
   if (redirect) {
     return <Navigate to={'/'} />;
   }
-  const currTime = new Date();
 
   const formatTimestamp = (timestamp) => {
     try {
