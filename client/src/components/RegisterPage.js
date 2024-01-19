@@ -9,6 +9,7 @@ export default function Register(){
             method: 'POST',
             body: JSON.stringify({username, password}),
             headers: {'Content-Type':'application/json'},
+            credentials: 'include',
         })
         if(response.status === 200){
             alert('registration sucessful');
