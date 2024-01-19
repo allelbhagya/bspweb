@@ -88,7 +88,7 @@ export default function CreateLog() {
 
   async function createNewLog(ev) {
     const data = new FormData();
-    data.set('createdAt', initialCobbleTime); // Set createdAt to initialCobbleTime
+    data.set('createdAt', initialCobbleTime);    
     data.set('time', times);
     data.set('duration', duration);
     data.set('region', JSON.stringify(selectedRegions));
@@ -120,19 +120,21 @@ export default function CreateLog() {
     return <Navigate to={'/'} />;
   }
 
-  const formatTimestamp = (timestamp) => {
-    try {
-      const date = new Date(timestamp);
-      if (!isNaN(date.getTime())) {
-        return date.toLocaleString();
-      } else {
-        return "Invalid timestamp";
-      }
-    } catch (error) {
-      console.error('Error formatting timestamp:', error);
+// Update the formatTimestamp function
+const formatTimestamp = (timestamp) => {
+  try {
+    const date = new Date(timestamp);
+    if (!isNaN(date.getTime())) {
+      return date.toLocaleString();
+    } else {
       return "Invalid timestamp";
     }
-  };
+  } catch (error) {
+    console.error('Error formatting timestamp:', error);
+    return "Invalid timestamp";
+  }
+};
+
 
   return (
     <>
