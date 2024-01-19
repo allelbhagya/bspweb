@@ -15,6 +15,14 @@ export default function CreateLog() {
   const [comms, setComms] = useState('');
   const [sensorOptions, setSensorOptions] = useState([]);
   const [redirect, setRedirect] = useState(false);
+  const [createdAtTimestamp, setCreatedAtTimestamp] = useState('');
+
+  const profileOptions = ["2x10MM", "2x8MM", "2x16MM", "2x12MM", "2x20MM"]
+
+  const handleProfileChange = (selectedProfile) => {
+    setProf(selectedProfile.value);
+  };
+
 
   useEffect(() => {
     const fetchSensorOptions = async () => {
@@ -195,15 +203,18 @@ export default function CreateLog() {
         onChange={selectedOptions => setSelectedSensors(selectedOptions)}
         placeholder="Select Sensor ID"
       />
-      <label>
-        Profile
-      </label>
-      <input
-        type="text"
-        placeholder="profile"
-        value={prof}
-        onChange={ev => setProf(ev.target.value)}
-      />
+          <label>
+            Profile
+          </label>
+          <Select
+  value={{ value: prof, label: prof }}
+  options={profileOptions.map((profileOption) => ({
+    value: profileOption,
+    label: profileOption,
+  }))}
+  onChange={handleProfileChange}
+  placeholder="Select Profile"
+/>
       <label>
         Correctness Measure
       </label>
